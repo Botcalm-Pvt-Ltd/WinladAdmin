@@ -11,6 +11,7 @@ import hiddenCar from '../assets/hiddenCar.png';
 import BarChart from '../components/BarChart'
 import Pagination from '../components/Pagination'
 import TableLight from '../components/TableLight'
+import TopBar from '../components/TopBar'
 
 
 const AdminDashboard = () => {
@@ -125,11 +126,7 @@ const AdminDashboard = () => {
                     <img src={hiddenCar} className='w-50 mt-auto absolute bottom-0 left-0' />
                 </div>
                 <div className='p-5'>
-                    <div className='flex items-center justify-end gap-3 w-full mb-3'>
-                        <Inputsearch />
-                        <UserIcon />
-                        <RoundIcon />
-                    </div>
+                    <TopBar/>
                     <div className='flex items-center justify-end gap-3 w-full z-10 mt-5'>
                     <GreenCard  text={100} subtext={'Active Lottery'}/>
                         <GreenCard text={'100/150'} subtext={'Average User Convergentratio'}/>
