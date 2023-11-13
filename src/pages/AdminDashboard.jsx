@@ -1,5 +1,4 @@
 import React from 'react'
-import SideNavBar from './SideNavBar'
 import Inputsearch from '../components/Inputsearch'
 import RoundIcon from '../components/roundIcon'
 import UserIcon from '../components/userIcon'
@@ -7,11 +6,12 @@ import GreenCard from '../components/GreenCard'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
 import PieChart from '../components/PieChart'
 import { PiMagnifyingGlassThin } from 'react-icons/pi';
-import hiddenCar from '../assets/hiddenCar.png';
 import BarChart from '../components/BarChart'
 import Pagination from '../components/Pagination'
 import TableLight from '../components/TableLight'
 import TopBar from '../components/TopBar'
+import SideNavComponent from '../components/SideNavComponent/SideNavComponent'
+import BackSquare from '../components/BackgroundBlackSquare/BackSquare'
 
 
 const AdminDashboard = () => {
@@ -119,18 +119,16 @@ const AdminDashboard = () => {
         }
     ];
     return (
-        <div className='flex lg:flex-row flex-col  items-start justify-center'>
-            <SideNavBar />
-            <div className='w-full lg:w-5/6 bg-white'>
-                <div className='absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl  bg-black w-1/2 h-1/3 lg:h-1/2'>
-                    <img src={hiddenCar} className='w-50 mt-auto absolute bottom-0 left-0' />
-                </div>
-                <div className='p-5'>
-                    <TopBar/>
+        <div className='flex lg:flex-row flex-row  items-start justify-between'>
+            <SideNavComponent />
+            <div className='w-full lg:w-full bg-white overflow-hidden'>
+                <BackSquare />
+                <div className='lg:p-5 p-1'>
+                    <TopBar />
                     <div className='flex items-center justify-end gap-3 w-full z-10 mt-5'>
-                    <GreenCard  text={100} subtext={'Active Lottery'}/>
-                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'}/>
-                        <div className='bg-yellow-300 p-2 rounded-md flex items-center justify-between w-1/5 z-10'>
+                        <GreenCard text={100} subtext={'Active Lottery'} />
+                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'} />
+                        <div className='bg-yellow-300 p-2 rounded-md flex items-center justify-between w-1/6 z-10'>
                             <input type="date" name="calendar" placeholder='Calendar' className='bg-transparent outline-none w-full' />
                             <AiOutlineDown />
                         </div>
@@ -144,8 +142,8 @@ const AdminDashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-start justify-between gap-3 mt-3">
-                    <div className='w-8/12'>
+                <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
+                    <div className='lg:w-8/12 w-full px-3 lg-px-0'>
                         <div className='flex items-center justify-between'>
                             <div className=' bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between'>
                                 <div htmlFor="search" className='text-2xl mt-0'><PiMagnifyingGlassThin /></div>
@@ -165,18 +163,18 @@ const AdminDashboard = () => {
                         </div>
 
                     </div>
-                    <div className="bg-black p-3 w-4/12 rounded-tl-3xl rounded-bl-3xl">
+                    <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl">
                         <BarChart />
                     </div>
                 </div>
-                <div className='w-full my-14 '>
-                    <div className='mx-auto flex items-center gap-3 justify-center'>
-                        <GreenCard  text={'100'} subtext={'Total UserCount'}/>
-                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'}/>
-                        <GreenCard text={'20'} subtext={'Unverify User Convergentratio'}/>
+                <div className='my-5 lg:my-12 '>
+                    <div className=' flex items-center gap-3 justify-center'>
+                        <GreenCard text={'100'} subtext={'Total UserCount'} />
+                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'} />
+                        <GreenCard text={'20'} subtext={'Unverify User Convergentratio'} />
                     </div>
                 </div>
-                <div className="relative overflow-x-auto  sm:rounded-lg py-0 my-14 px-3">
+                <div className="relative overflow-x-auto  sm:rounded-lg py-0 my-6 lg:my-14 px-3">
                     <div className='flex items-center justify-between'>
                         <div className=' bg-yellow-300 rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between'>
                             <div htmlFor="search" className='text-2xl mt-0'><PiMagnifyingGlassThin /></div>
