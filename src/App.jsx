@@ -15,7 +15,8 @@ function App() {
           <Route path='/' element={<AdminDashboard />} />
           <Route path='/user-permisson-role-1' element={<UserPermisson />} />
           <Route path='/user-permisson-role-2' element={<UserPermisson2 />} />
-          <Route path='/user-permisson-role-3' element={<UserPermisson3 />} />  
+          <Route path='/user-permisson-role-3' element={<UserPermisson3 />} />
+  
     </Routes>
     </BrowserRouter>
     

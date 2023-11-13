@@ -28,7 +28,7 @@ const SideNavComponent = ({ screen }) => {
     return (
       <OutsideClickHandler onOutsideClick={notExpandSidebar}>
         <div
-          className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] ${
+          className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] px-5 py-5 ${
             expanded ? "" : "side-nav-half"
           } w-12 xl:w-full    `}
         >
