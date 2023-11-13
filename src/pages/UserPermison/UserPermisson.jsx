@@ -48,7 +48,7 @@ function UserPermisson() {
         />
       </div>
       <div className="">User</div>
-      <div className=" flex justify-center items-center xl:w-2/5 xl:ml-10  mt-10 ">
+      <div className=" flex justify-center items-center xl:w-2/5  mt-10 ">
         <UserPermissionComponent />
       </div>
       <div className=" flex flex-col xl:mt-80 ">

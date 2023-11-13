@@ -15,15 +15,15 @@ import Logohome from "../../assets/SideNav/Logo-home.png";
 
 
 const SideNavComponent = ({ screen }) => {
-    const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-    const expandSidebar = () => {
-      setExpanded((pre) => true);
-    };
+  const expandSidebar = () => {
+    setExpanded((pre) => true);
+  };
 
-    const notExpandSidebar = () => {
-      setExpanded((pre) => false);
-    };
+  const notExpandSidebar = () => {
+    setExpanded((pre) => false);
+  };
 
     return (
       <OutsideClickHandler onOutsideClick={notExpandSidebar}>
@@ -37,23 +37,21 @@ const SideNavComponent = ({ screen }) => {
             className="flex flex-row items-center mb-10"
           ></div>
 
-  
+          <Link to="/profile">
             <div>
               <img src={Logohome} alt="user" />
             </div>
-        
+          </Link>
           <div className="flex flex-col space-y-4">
             <div onClick={expandSidebar}>
- 
-                <button className="side-nav-contain">
-                  <img src={Home} alt="protect" />
-                  <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Home
-                    </p>
-                  </span>
-                </button>
-      
+              <button className="side-nav-contain">
+                <img src={Home} alt="protect" />
+                <span className="mobile-hide">
+                  <p className="link-no-underlin font-bold invisible xl:visible text-black">
+                    Home
+                  </p>
+                </span>
+              </button>
             </div>
 
             <div onClick={expandSidebar}>
@@ -69,7 +67,7 @@ const SideNavComponent = ({ screen }) => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/user-permisson-role-1">
                 <button className="side-nav-contain">
                   <img src={UserManagement} alt="protect" />
                   <span className="mobile-hide">
@@ -157,7 +155,7 @@ const SideNavComponent = ({ screen }) => {
         </div>
       </OutsideClickHandler>
     );
-  };
+};
 
 export default SideNavComponent
 
