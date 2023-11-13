@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const PieChart = () => {
+const PieChart = ({ position = 'left', chartSeries = [22, 33, 50], labels = ['Label1', 'Label2', 'Label3'],heading } ) => {
   const chartOptions = {
     chart: {
       type: 'donut',
       width: 400,
-      legend: {
-        position: 'bottom',
-      },
     },
-    
-     responsive: [{
+    labels: labels,
+    // Remove the stroke from the chart
+    stroke: {
+      show: false,
+    },
+    // Align the legend to the left side
+    legend: {
+      position: position,
+    },
+    responsive: [{
       breakpoint: 480,
       options: {
         chart: {
@@ -23,11 +28,13 @@ const PieChart = () => {
       },
     }],
   };
-  const chartSeries = [44, 55, 41, 17];
+
 
   return (
-
-      <ReactApexChart options={chartOptions} width={500} series={chartSeries} type="donut" />
+    <>
+      {heading}
+      <ReactApexChart options={chartOptions} series={chartSeries} type='donut' />
+    </>
 
   );
 };

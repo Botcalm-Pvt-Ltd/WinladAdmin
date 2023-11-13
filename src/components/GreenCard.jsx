@@ -3,7 +3,7 @@ import { AiOutlineLineChart } from 'react-icons/ai'
 
 const GreenCard = ({icon, text, subtext}) => {
   return (
-    <div className='bg-green-400 flex items-center justify-center px-3 py-1 rounded-xl w-40 z-10'>
+    <div className='bg-green-400 flex items-center justify-center px-3 py-0.5 rounded-xl w-40 z-10'>
         <div className='w-1/3 text-3xl'>
            <AiOutlineLineChart/>
         </div>

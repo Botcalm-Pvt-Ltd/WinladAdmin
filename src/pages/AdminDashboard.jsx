@@ -34,13 +34,12 @@ const AdminDashboard = () => {
                             <AiOutlineDown />
                         </div>
                     </div>
-                    <h1>Lottery Configuration</h1>
-                    <div className="chart-container flex items-center justify-between mt-3">
-                        <div className='w-2/5'>
-                            <PieChart />
+                    <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-3">
+                        <div className='md:w-2/5 w-full z-10'>
+                            <PieChart labels={['Luxury Range', 'Mid Range', 'Low Range']} heading={<h1>Lottery Configurations</h1>}/>
                         </div>
-                        <div className='w-2/5'>
-                            <PieChart />
+                        <div className='md:w-2/5 w-full z-10'>
+                            <PieChart labels={['Bornze', 'Silver', 'Gold', 'Platinum', 'Titanium']} chartSeries={[51,2,11,18,27]} heading={<h1 className='text-white'>Subscription Distributions</h1>}/>
                         </div>
                     </div>
                 </div>
