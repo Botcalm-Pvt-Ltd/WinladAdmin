@@ -2,24 +2,25 @@ import MainCar from "../../assets/Dashboard/MainCar.png";
 import { motion } from "framer-motion";
 function UserPermission2() {
   return (
-    <div className="flex-col flex-1 space-y-4 hidden xl:flex">
+    <div className="flex-col flex-1 space-y-4 xl:flex">
+      <div className="">User Permissions Management </div>
       <div className=" bg-gradient-to-br  from-[#FFECA8] to-[#FFECA8]  rounded-3xl pl-4 flex flex-row justify-between py-20  cursor-pointer">
         {/* <div className="gold-card-inner-sec1"> */}
-        <div className="flex flex-col xl:gap-3 space-y-1 px-2">
-          <span className="xl:text-2xl  text-3xl">Admin Dashboard</span>
-          <span className="xl:text-2xl  text-3xl">View Settings</span>
-          <span className="xl:text-2xl  text-3xl">Edit Settings</span>
-          <span className="xl:text-2xl  text-3xl">View User</span>
-          <span className="xl:text-2xl  text-3xl">View Raffle Details</span>
-          <span className="xl:text-2xl  text-3xl">Edit Raffle Details</span>
-          <span className="xl:text-2xl  text-3xl">View Permissions</span>
-          <span className="xl:text-2xl  text-3xl">Edit Permissions</span>
-          <span className="xl:text-2xl  text-3xl">View FAQ Settings</span>
-          <span className="xl:text-2xl  text-3xl">Edit FAQ Settings</span>
-          <span className="xl:text-2xl  text-3xl">View Report</span>
-          <span className="xl:text-2xl  text-3xl">Export Reports</span>
+        <div className="flex flex-col xl:gap-3 gap-2 space-y-1 px-2">
+          <span className="xl:text-2xl  text-md">Admin Dashboard</span>
+          <span className="xl:text-2xl  text-md">View Settings</span>
+          <span className="xl:text-2xl  text-md">Edit Settings</span>
+          <span className="xl:text-2xl  text-md">View User</span>
+          <span className="xl:text-2xl  text-md">View Raffle Details</span>
+          <span className="xl:text-2xl  text-md">Edit Raffle Details</span>
+          <span className="xl:text-2xl  text-md">View Permissions</span>
+          <span className="xl:text-2xl  text-md">Edit Permissions</span>
+          <span className="xl:text-2xl  text-md">View FAQ Settings</span>
+          <span className="xl:text-2xl  text-md">Edit FAQ Settings</span>
+          <span className="xl:text-2xl  text-md">View Report</span>
+          <span className="xl:text-2xl  text-md">Export Reports</span>
         </div>
-        <div className="flex flex-col xl:gap-5 gap-1 items-center xl:mr-4 px-2">
+        <div className="flex flex-col xl:gap-5 gap-2 items-center xl:mr-4 px-2">
           <input
             type="checkbox"
             id="hs-basic-usage"

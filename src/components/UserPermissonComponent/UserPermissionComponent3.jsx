@@ -3,26 +3,27 @@ import { motion } from "framer-motion";
 
 function UserPermission3() {
   return (
-    <div className="flex-col flex-1 space-y-4 hidden xl:flex">
+    <div className="flex-col flex-1 space-y-4 xl:flex">
+      <div className="">User Permissions Management </div>
       <div className=" bg-gradient-to-br  from-[#FFECA8] to-[#FFECA8]  rounded-3xl pl-4 flex flex-row justify-between py-20 cursor-pointer">
         {/* <div className="gold-card-inner-sec1"> */}
-        <div className="flex flex-col xl:gap-3 space-y-1 px-2">
-          <span className="xl:text-2xl  text-3xl">Mobile Home</span>
-          <span className="xl:text-2xl  text-3xl">Subscription Purchases</span>
-          <span className="xl:text-2xl  text-3xl">
+        <div className="flex flex-col xl:gap-3 gap-2 space-y-1 px-2">
+          <span className="xl:text-2xl  text-md">Mobile Home</span>
+          <span className="xl:text-2xl  text-md">Subscription Purchases</span>
+          <span className="xl:text-2xl  text-md">
             Raffle Purchases/Join For Raffle
           </span>
-          <span className="xl:text-2xl  text-3xl">News</span>
-          <span className="xl:text-2xl  text-3xl">Business Card</span>
-          <span className="xl:text-2xl  text-3xl">Raffle Broadcast</span>
-          <span className="xl:text-2xl  text-3xl">Transaction History</span>
-          <span className="xl:text-2xl  text-3xl">Fund Transfer</span>
-          <span className="xl:text-2xl  text-3xl">FAQ</span>
-          <span className="xl:text-2xl  text-3xl">Support</span>
-          <span className="xl:text-2xl  text-3xl">Local Diestel</span>
-          <span className="xl:text-2xl  text-3xl">Wallet Payment</span>
+          <span className="xl:text-2xl  text-md">News</span>
+          <span className="xl:text-2xl  text-md">Business Card</span>
+          <span className="xl:text-2xl  text-md">Raffle Broadcast</span>
+          <span className="xl:text-2xl  text-md">Transaction History</span>
+          <span className="xl:text-2xl  text-md">Fund Transfer</span>
+          <span className="xl:text-2xl  text-md">FAQ</span>
+          <span className="xl:text-2xl  text-md">Support</span>
+          <span className="xl:text-2xl  text-md">Local Diestel</span>
+          <span className="xl:text-2xl  text-md">Wallet Payment</span>
         </div>
-        <div className="flex flex-col xl:gap-5 gap-1 items-center xl:mr-4 px-2">
+        <div className="flex flex-col xl:gap-5 gap-2 items-center xl:mr-4 px-2">
           <input
             type="checkbox"
             id="hs-basic-usage"

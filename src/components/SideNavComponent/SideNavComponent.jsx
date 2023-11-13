@@ -37,14 +37,14 @@ const SideNavComponent = ({ screen }) => {
             className="flex flex-row items-center mb-10"
           ></div>
 
-          <Link to="/profile">
+  
             <div>
               <img src={Logohome} alt="user" />
             </div>
-          </Link>
+        
           <div className="flex flex-col space-y-4">
             <div onClick={expandSidebar}>
-              <Link to="/">
+ 
                 <button className="side-nav-contain">
                   <img src={Home} alt="protect" />
                   <span className="mobile-hide">
@@ -53,7 +53,7 @@ const SideNavComponent = ({ screen }) => {
                     </p>
                   </span>
                 </button>
-              </Link>
+      
             </div>
 
             <div onClick={expandSidebar}>
