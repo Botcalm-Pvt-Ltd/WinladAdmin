@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const ApexChart = () => {
-  const [chartData, setChartData] = React.useState({
+  const [chartData, setChartData] = useState({
     series: [
       {
-        name: 'Net Profit',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        name: 'Category 1',
+        data: [44, 55, 57, 56, 61, 58, 63],
       },
       {
-        name: 'Revenue',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        name: 'Category 2',
+        data: [76, 85, 101, 98, 87, 105, 91],
       },
     ],
     options: {
@@ -18,10 +18,16 @@ const ApexChart = () => {
         type: 'bar',
         height: 350,
       },
+      legend: {
+        labels: {
+          position:'left',
+          colors: '#fff', // Set the legend text color to white
+        },
+      },
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: '55%',
+          columnWidth: '75%',
           endingShape: 'rounded',
         },
       },
@@ -33,12 +39,22 @@ const ApexChart = () => {
         width: 2,
         colors: ['transparent'],
       },
-      xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-      },
+      // yaxis: {
+      //   title: {
+      //     text: '$ (thousands)',
+      //   },
+      // },
       yaxis: {
+        labels: {
+          style: {
+            colors: '#fff', // Set the y-axis text color to white
+          },
+        },
         title: {
-          text: '$ (thousands)',
+          text: '$K',
+          style: {
+            color: '#fff', // Set the y-axis title color to white
+          },
         },
       },
       fill: {
