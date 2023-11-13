@@ -26,7 +26,7 @@ const AdminDashboard = () => {
                         <UserIcon />
                         <RoundIcon />
                     </div>
-                    <div className='flex items-center justify-end gap-3 w-full z-10'>
+                    <div className='flex items-center justify-end gap-3 w-full z-10 mt-5'>
                         <GreenCard />
                         <GreenCard />
                         <div className='bg-yellow-400 p-2 rounded-md flex items-center justify-between w-1/5 z-10'>
@@ -34,16 +34,16 @@ const AdminDashboard = () => {
                             <AiOutlineDown />
                         </div>
                     </div>
-                    <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-3">
+                    <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-4">
                         <div className='md:w-2/5 w-full z-10'>
                             <PieChart labels={['Luxury Range', 'Mid Range', 'Low Range']} heading={<h1>Lottery Configurations</h1>}/>
                         </div>
                         <div className='md:w-2/5 w-full z-10'>
-                            <PieChart labels={['Bornze', 'Silver', 'Gold', 'Platinum', 'Titanium']} chartSeries={[51,2,11,18,27]} heading={<h1 className='text-white'>Subscription Distributions</h1>}/>
+                            <PieChart labels={['Bornze', 'Silver', 'Gold', 'Platinum', 'Titanium']} labelCOlor='#fff' chartSeries={[51,2,11,18,27]} heading={<h1 className='text-white'>Subscription Distributions</h1>}/>
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex items-start justify-between gap-3">
                     <div className='w-8/12'>
                         <div className='flex items-center justify-between'>
                             <div className=' bg-yellow-400 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between'>
@@ -216,11 +216,11 @@ const AdminDashboard = () => {
                         </div>
 
                     </div>
-                    <div className="bg-black p-5 w-4/12 rounded-lg">
+                    <div className="bg-black p-3 w-4/12 rounded-tl-3xl rounded-bl-3xl">
                         <BarChart />
                     </div>
                 </div>
-                <div className='w-full my-20'>
+                <div className='w-full my-20 hidden'>
                     <div className='mx-auto flex items-center gap-3 justify-center'>
                         <GreenCard />
                         <GreenCard />
