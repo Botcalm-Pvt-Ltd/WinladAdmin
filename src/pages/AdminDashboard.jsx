@@ -12,6 +12,7 @@ import TableLight from '../components/TableLight'
 import TopBar from '../components/TopBar'
 import SideNavComponent from '../components/SideNavComponent/SideNavComponent'
 import BackSquare from '../components/BackgroundBlackSquare/BackSquare'
+import ColEightTable from '../components/Col8Table/ColEightTable'
 
 
 const AdminDashboard = () => {
@@ -72,51 +73,63 @@ const AdminDashboard = () => {
         {
             id: '01',
             name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
             status: 'Active',
 
         },
         {
-            id: '02',
+            id: '01',
             name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
+            status: 'Active',
+
+        },
+        {
+            id: '01',
+            name: 'Loto Max',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
+            status: 'Active',
+
+        },
+        {
+            id: '01',
+            name: 'Loto Max',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
+            status: 'Active',
+
+        },
+        {
+            id: '01',
+            name: 'Loto Max',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
             status: 'Inactive',
 
         },
         {
-            id: '02',
+            id: '01',
             name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
+            vlevel: 'Level 01',
+            role: 'User',
+            email:'test@email.com',
+            passport: 'ND123456',
             status: 'Inactive',
 
         },
-        {
-            id: '02',
-            name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
-            status: 'Inactive',
-
-        },
-        {
-            id: '02',
-            name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
-            status: 'Inactive',
-
-        },
-        {
-            id: '02',
-            name: 'Loto Max',
-            category: 'Level 01',
-            date: 'User',
-            status: 'Inactive',
-
-        }
     ];
     return (
         <div className='flex lg:flex-row flex-row  items-start justify-between'>
@@ -184,7 +197,8 @@ const AdminDashboard = () => {
                             <option value="">Filter</option>
                         </select>
                     </div>
-                    <TableLight cols={table2Cols} data={table2Data} />
+                    <ColEightTable cols={table2Cols} data={table2Data}/>
+                    {/* <TableLight cols={table2Cols} data={table2Data} /> */}
                     <div className='w-full'>
                         <Pagination />
                     </div>
