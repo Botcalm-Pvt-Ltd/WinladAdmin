@@ -7,11 +7,12 @@ import GreenCard from '../components/GreenCard'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
 import PieChart from '../components/PieChart'
 import { PiMagnifyingGlassThin } from 'react-icons/pi';
-import hiddenCar from '../assets/hiddenCar.png';
 import BarChart from '../components/BarChart'
 import Pagination from '../components/Pagination'
 import TableLight from '../components/TableLight'
 import TopBar from '../components/TopBar'
+import SideNavComponent from '../components/SideNavComponent/SideNavComponent'
+import BackSquare from '../components/BackgroundBlackSquare/BackSquare'
 
 
 const AdminDashboard = () => {
@@ -119,12 +120,10 @@ const AdminDashboard = () => {
         }
     ];
     return (
-        <div className='flex lg:flex-row flex-col  items-start justify-center'>
-            <SideNavBar />
-            <div className='w-full lg:w-5/6 bg-white'>
-                <div className='absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl  bg-black w-1/2 h-1/3 lg:h-1/2'>
-                    <img src={hiddenCar} className='w-50 mt-auto absolute bottom-0 left-0' />
-                </div>
+        <div className='flex lg:flex-row flex-col  items-start justify-between'>
+            <SideNavComponent/>
+            <div className='w-full lg:w-full bg-white'>
+                <BackSquare/>
                 <div className='p-5'>
                     <TopBar/>
                     <div className='flex items-center justify-end gap-3 w-full z-10 mt-5'>
