@@ -28,16 +28,16 @@ const SideNavComponent = ({ screen }) => {
     return (
       <OutsideClickHandler onOutsideClick={notExpandSidebar}>
         <div
-          className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] px-5 py-5 ${
+          className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF]  px-5 ${
             expanded ? "" : "side-nav-half"
           } w-12 xl:w-full    `}
         >
           <div
             onClick={expandSidebar}
-            className="flex flex-row items-center mb-10"
+            className="flex flex-row items-center mb-10 "
           ></div>
 
-          <Link to="/">
+          <Link to="/profile">
             <div>
               <img src={Logohome} alt="user" />
             </div>
@@ -72,7 +72,7 @@ const SideNavComponent = ({ screen }) => {
                   <img src={UserManagement} alt="protect" />
                   <span className="mobile-hide">
                     <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      User Management
+                      UserManagent
                     </p>
                   </span>
                 </button>
