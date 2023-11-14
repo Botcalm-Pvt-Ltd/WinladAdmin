@@ -18,7 +18,7 @@ function UserPermisson2() {
           <UserIcon />
           <RoundIcon />
         </div>
-        <div className="flex flex-row gap-10 px-5">
+        <div className="flex flex-row gap-10 px-5 mt-5">
           <span className="bg-yellow-400 xl:w-3/4  w-1/2   px-3 py-2  text-center rounded-lg  outline-none">
             <Link to="/user-permisson-role-2">Role</Link>
           </span>

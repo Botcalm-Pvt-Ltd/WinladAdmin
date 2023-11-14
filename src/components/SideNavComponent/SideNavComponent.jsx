@@ -37,7 +37,7 @@ const SideNavComponent = ({ screen }) => {
             className="flex flex-row items-center mb-10"
           ></div>
 
-          <Link to="/profile">
+          <Link to="/">
             <div>
               <img src={Logohome} alt="user" />
             </div>

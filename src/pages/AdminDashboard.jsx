@@ -119,80 +119,123 @@ const AdminDashboard = () => {
         }
     ];
     return (
-        <div className='flex lg:flex-row flex-row  items-start justify-between'>
-            <SideNavComponent />
-            <div className='w-full lg:w-full bg-white overflow-hidden'>
-                <BackSquare />
-                <div className='lg:p-5 p-1'>
-                    <TopBar />
-                    <div className='flex items-center justify-end gap-3 w-full z-10 mt-5'>
-                        <GreenCard text={100} subtext={'Active Lottery'} />
-                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'} />
-                        <div className='bg-yellow-300 p-2 rounded-md flex items-center justify-between w-1/6 z-10'>
-                            <input type="date" name="calendar" placeholder='Calendar' className='bg-transparent outline-none w-full' />
-                            <AiOutlineDown />
-                        </div>
-                    </div>
-                    <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-4">
-                        <div className='md:w-2/5 w-full z-10'>
-                            <PieChart labels={['Luxury Range', 'Mid Range', 'Low Range']} heading={<h1>Lottery Configurations</h1>} />
-                        </div>
-                        <div className='md:w-2/5 w-full z-10'>
-                            <PieChart labels={['Bornze', 'Silver', 'Gold', 'Platinum', 'Titanium']} labelCOlor='#fff' chartSeries={[51, 2, 11, 18, 27]} heading={<h1 className='text-white'>Subscription Distributions</h1>} />
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
-                    <div className='lg:w-8/12 w-full px-3 lg-px-0'>
-                        <div className='flex items-center justify-between'>
-                            <div className=' bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between'>
-                                <div htmlFor="search" className='text-2xl mt-0'><PiMagnifyingGlassThin /></div>
-                                <input type="search" name="search" placeholder='Search For Anything' className='px-4 py-2 w-full border-none  outline-none bg-yellow-300' />
-                            </div>
-                            <select name="filter" className='bg-yellow-300 px-3 py-2 rounded-lg'>
-                                <option value="">Filter</option>
-                            </select>
-                        </div>
-
-
-                        <div className="relative overflow-x-auto  sm:rounded-lg py-4">
-                            <TableLight cols={table1cOls} data={table1Data} />
-                        </div>
-                        <div className='w-full'>
-                            <Pagination />
-                        </div>
-
-                    </div>
-                    <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl">
-                        <BarChart />
-                    </div>
-                </div>
-                <div className='my-5 lg:my-12 '>
-                    <div className=' flex items-center gap-3 justify-center'>
-                        <GreenCard text={'100'} subtext={'Total UserCount'} />
-                        <GreenCard text={'100/150'} subtext={'Average User Convergentratio'} />
-                        <GreenCard text={'20'} subtext={'Unverify User Convergentratio'} />
-                    </div>
-                </div>
-                <div className="relative overflow-x-auto  sm:rounded-lg py-0 my-6 lg:my-14 px-3">
-                    <div className='flex items-center justify-between'>
-                        <div className=' bg-yellow-300 rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between'>
-                            <div htmlFor="search" className='text-2xl mt-0'><PiMagnifyingGlassThin /></div>
-                            <input type="search" name="search" placeholder='Search For Anything' className='px-4 py-2 w-full border-none  outline-none bg-yellow-300' />
-                        </div>
-                        <select name="filter" className='bg-yellow-300 px-3 py-2 rounded-lg'>
-                            <option value="">Filter</option>
-                        </select>
-                    </div>
-                    <TableLight cols={table2Cols} data={table2Data} />
-                    <div className='w-full'>
-                        <Pagination />
-                    </div>
-                </div>
-
-            </div>
+      <div className="flex lg:flex-row flex-row  items-start justify-between">
+        <div className="">
+          <SideNavComponent />
         </div>
-    )
+        <div className="w-full lg:w-full bg-white overflow-hidden">
+          <BackSquare />
+          <div className="lg:p-5 p-1">
+            <TopBar />
+            <div className="flex items-center justify-end gap-3 w-full z-10 mt-5">
+              <GreenCard text={100} subtext={"Active Lottery"} />
+              <GreenCard
+                text={"100/150"}
+                subtext={"Average User Convergentratio"}
+              />
+              <div className="bg-yellow-300 p-2 rounded-md flex items-center justify-between w-1/6 z-10">
+                <input
+                  type="date"
+                  name="calendar"
+                  placeholder="Calendar"
+                  className="bg-transparent outline-none w-full"
+                />
+                <AiOutlineDown />
+              </div>
+            </div>
+            <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-4">
+              <div className="md:w-2/5 w-full z-10">
+                <PieChart
+                  labels={["Luxury Range", "Mid Range", "Low Range"]}
+                  heading={<h1>Lottery Configurations</h1>}
+                />
+              </div>
+              <div className="md:w-2/5 w-full z-10">
+                <PieChart
+                  labels={["Bornze", "Silver", "Gold", "Platinum", "Titanium"]}
+                  labelCOlor="#fff"
+                  chartSeries={[51, 2, 11, 18, 27]}
+                  heading={
+                    <h1 className="text-white">Subscription Distributions</h1>
+                  }
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
+            <div className="lg:w-8/12 w-full px-3 lg-px-0">
+              <div className="flex items-center justify-between">
+                <div className=" bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
+                  <div htmlFor="search" className="text-2xl mt-0">
+                    <PiMagnifyingGlassThin />
+                  </div>
+                  <input
+                    type="search"
+                    name="search"
+                    placeholder="Search For Anything"
+                    className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
+                  />
+                </div>
+                <select
+                  name="filter"
+                  className="bg-yellow-300 px-3 py-2 rounded-lg"
+                >
+                  <option value="">Filter</option>
+                </select>
+              </div>
+
+              <div className="relative overflow-x-auto  sm:rounded-lg py-4">
+                <TableLight cols={table1cOls} data={table1Data} />
+              </div>
+              <div className="w-full">
+                <Pagination />
+              </div>
+            </div>
+            <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl">
+              <BarChart />
+            </div>
+          </div>
+          <div className="my-5 lg:my-12 ">
+            <div className=" flex items-center gap-3 justify-center">
+              <GreenCard text={"100"} subtext={"Total UserCount"} />
+              <GreenCard
+                text={"100/150"}
+                subtext={"Average User Convergentratio"}
+              />
+              <GreenCard
+                text={"20"}
+                subtext={"Unverify User Convergentratio"}
+              />
+            </div>
+          </div>
+          <div className="relative overflow-x-auto  sm:rounded-lg py-0 my-6 lg:my-14 px-3">
+            <div className="flex items-center justify-between">
+              <div className=" bg-yellow-300 rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
+                <div htmlFor="search" className="text-2xl mt-0">
+                  <PiMagnifyingGlassThin />
+                </div>
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search For Anything"
+                  className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
+                />
+              </div>
+              <select
+                name="filter"
+                className="bg-yellow-300 px-3 py-2 rounded-lg"
+              >
+                <option value="">Filter</option>
+              </select>
+            </div>
+            <TableLight cols={table2Cols} data={table2Data} />
+            <div className="w-full">
+              <Pagination />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
 }
 
 export default AdminDashboard
