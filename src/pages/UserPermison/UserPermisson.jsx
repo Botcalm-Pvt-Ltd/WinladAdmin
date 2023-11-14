@@ -23,7 +23,7 @@ function UserPermisson() {
         <div className="lg:p-5 p-1">
           <TopBar />
         </div>
-        <div className="flex flex-row gap-10 px-5 mt-5">
+        {/* <div className="flex flex-row gap-10 px-5 mt-5">
           <span className="bg-yellow-400 w-1/2  px-3 py-2  text-center rounded-lg  outline-none">
             <Link to="/user-permisson-role-2">Role</Link>
           </span>
@@ -33,13 +33,22 @@ function UserPermisson() {
           <span className="bg-yellow-400 w-1/2  px-3 py-2  text-center rounded-lg  outline-none">
             <Link to="/user-permisson-role-1">Group</Link>
           </span>
+        </div> */}
+        <div className="xl:w-1/2 w-1/2">
+          <UserPermissionComponent />
+        </div>
+
+        <div className="top-0 right-0 xl:w-1/2 w-3/4 ">
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            src={MainCar}
+            alt="Your Logo"
+            className="background-image-join"
+          ></motion.img>
         </div>
       </div>
-
-      {/* <div className="">
-        <UserPermissionComponent />
-      </div> */}
-
     </div>
   );
 }

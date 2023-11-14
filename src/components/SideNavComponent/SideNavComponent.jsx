@@ -28,20 +28,27 @@ const SideNavComponent = ({ screen }) => {
     return (
       <OutsideClickHandler onOutsideClick={notExpandSidebar}>
         <div
-          className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF]  px-5 ${
+          className={`pt-20  h-full  pr-10 rounded-r-xl gap-4 bg-[#D6F6FF]  px-5 ${
             expanded ? "" : "side-nav-half"
-          } w-12 xl:w-full    `}
+          } `}
         >
           <div
             onClick={expandSidebar}
             className="flex flex-row items-center mb-10 "
           ></div>
+          <div onClick={expandSidebar}>
+            <Link to="/">
+              <button className="side-nav-contain">
+                <img src={Logohome} alt="protect" />
+                <span className="mobile-hide">
+                  <p className="link-no-underlin font-bold invisible xl:visible text-black">
+                    Winlands
+                  </p>
+                </span>
+              </button>
+            </Link>
+          </div>
 
-          <Link to="/profile">
-            <div>
-              <img src={Logohome} alt="user" />
-            </div>
-          </Link>
           <div className="flex flex-col space-y-4">
             <div onClick={expandSidebar}>
               <button className="side-nav-contain">
@@ -72,7 +79,7 @@ const SideNavComponent = ({ screen }) => {
                   <img src={UserManagement} alt="protect" />
                   <span className="mobile-hide">
                     <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      UserManagent
+                      User Management
                     </p>
                   </span>
                 </button>
@@ -85,7 +92,7 @@ const SideNavComponent = ({ screen }) => {
                   <img src={RafflesMange} alt="protect" />
                   <span className="mobile-hide">
                     <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Raffles Mange
+                      Raffles Manage
                     </p>
                   </span>
                 </button>
