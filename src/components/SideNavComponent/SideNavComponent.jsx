@@ -79,7 +79,7 @@ const SideNavComponent = ({ screen }) => {
                   <img src={UserManagement} alt="protect" />
                   <span className="mobile-hide">
                     <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      User Management
+                      User Permisson
                     </p>
                   </span>
                 </button>

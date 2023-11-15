@@ -5,22 +5,10 @@ import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
 import { useState } from "react";
 import AddUser from "./AddUser";
 
-// const PaymentModal = ({ handleClose, show }) => {
-//   return (
-//     <div className={show ? "block" : "hidden"}>
-//       <section className="modal-main">
-//         {/* Your payment method form or content goes here */}
-//         text
-//         <button onClick={handleClose}>Close</button>
-//       </section>
-//     </div>
-//   );
-// };
-
 
 function UserManagementComponent() {
 
-  // const [UserModal, setUserModal] = useState(false);
+  const [UserModal, setUserModal] = useState(false);
 
     const table2Cols = [
       "User Id",
@@ -110,7 +98,8 @@ function UserManagementComponent() {
             Add Users
           </button>
 
-          {/* {UserModal && <PopUpUserForm onClose={() => setUserModal(false)} />} */}
+          {UserModal && <AddUser onClose={() => setUserModal(false)} />}
+
 
           <select name="filter" className="bg-yellow-300 px-3 py-2 rounded-lg">
             <option value="">Filter</option>
@@ -126,31 +115,18 @@ function UserManagementComponent() {
         <div className="absolute top-[600px] right-[100px] max-lg:top-96 max-lg:right-0">
           <img src={RMBackground} alt="" className="opacity-20 -z-10" />
         </div>
-  
       </div>
     </div>
   );
 }
 
-// function PopUpUserForm ({ onClose }) {
-
-//   function handleBackdropClick(event) {
-//     if (event.target.classList.contains("subCard")) {
-//       onClose();
-//     }
-//   }  
-//      return (
-//        <div
-//          className="subCard fixed top-0 left-0 xl:w-full h-full flex justify-center lg:justify-start items-center  bg-opacity-50  backdrop-blur-sm"
-//          onClick={handleBackdropClick}
-//        >
-//          <div className=" flex flex-col ">
-//            <AddUser />
-//          </div>
-//        </div>
-//      );
-// }
 
 
 
 export default UserManagementComponent;
+
+
+
+
+
+
