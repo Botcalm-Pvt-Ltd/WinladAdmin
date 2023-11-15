@@ -85,9 +85,20 @@ const SideNavComponent = ({ screen }) => {
                 </button>
               </Link>
             </div>
-
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/user-management">
+                <button className="side-nav-contain">
+                  <img src={UserManagement} alt="protect" />
+                  <span className="mobile-hide">
+                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
+                      User Management
+                    </p>
+                  </span>
+                </button>
+              </Link>
+            </div>
+            <div onClick={expandSidebar}>
+              <Link to="/RafflesManagement">
                 <button className="side-nav-contain">
                   <img src={RafflesMange} alt="protect" />
                   <span className="mobile-hide">

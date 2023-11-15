@@ -1,8 +1,26 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../../components/Pagination";
 import ColEightTable from "../../components/Col8Table/ColEightTable";
+import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
+import { useState } from "react";
+import AddUser from "./AddUser";
+
+// const PaymentModal = ({ handleClose, show }) => {
+//   return (
+//     <div className={show ? "block" : "hidden"}>
+//       <section className="modal-main">
+//         {/* Your payment method form or content goes here */}
+//         text
+//         <button onClick={handleClose}>Close</button>
+//       </section>
+//     </div>
+//   );
+// };
+
 
 function UserManagementComponent() {
+
+  // const [UserModal, setUserModal] = useState(false);
 
     const table2Cols = [
       "User Id",
@@ -72,7 +90,7 @@ function UserManagementComponent() {
       ];
   return (
     <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
-      <div className="lg:w-8/12 w-full px-3 lg-px-0">
+      <div className="w-full px-3 lg-px-0">
         <div className="flex items-center justify-between">
           <div className=" bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
             <div htmlFor="search" className="text-2xl mt-0">
@@ -85,6 +103,15 @@ function UserManagementComponent() {
               className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
             />
           </div>
+          <button
+            className="bg-yellow-300 px-3 py-2 rounded-lg"
+            onClick={() => setUserModal(true)}
+          >
+            Add Users
+          </button>
+
+          {/* {UserModal && <PopUpUserForm onClose={() => setUserModal(false)} />} */}
+
           <select name="filter" className="bg-yellow-300 px-3 py-2 rounded-lg">
             <option value="">Filter</option>
           </select>
@@ -96,9 +123,34 @@ function UserManagementComponent() {
         <div className="w-full">
           <Pagination />
         </div>
+        <div className="absolute top-[600px] right-[100px] max-lg:top-96 max-lg:right-0">
+          <img src={RMBackground} alt="" className="opacity-20 -z-10" />
+        </div>
+  
       </div>
     </div>
   );
 }
+
+// function PopUpUserForm ({ onClose }) {
+
+//   function handleBackdropClick(event) {
+//     if (event.target.classList.contains("subCard")) {
+//       onClose();
+//     }
+//   }  
+//      return (
+//        <div
+//          className="subCard fixed top-0 left-0 xl:w-full h-full flex justify-center lg:justify-start items-center  bg-opacity-50  backdrop-blur-sm"
+//          onClick={handleBackdropClick}
+//        >
+//          <div className=" flex flex-col ">
+//            <AddUser />
+//          </div>
+//        </div>
+//      );
+// }
+
+
 
 export default UserManagementComponent;
