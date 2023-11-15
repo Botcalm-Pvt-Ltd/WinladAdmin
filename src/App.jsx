@@ -6,6 +6,7 @@ import UserPermisson2 from "./pages/UserPermison/UserPermisson2";
 import UserPermisson3 from "./pages/UserPermison/UserPermisson3";
 import UserManagement from './pages/UserManagement/UserManagement'; 
 
+import RafflesManagement from './components/RafflesManagement/RafflesManagement';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/user-permisson-role-2" element={<UserPermisson2 />} />
           <Route path="/user-permisson-role-3" element={<UserPermisson3 />} />
           <Route path="/user-management" element={<UserManagement />} />
+          <Route path="/RafflesManagement" element={<RafflesManagement />} />
         </Routes>
       </BrowserRouter>
     </>
