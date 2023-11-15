@@ -4,24 +4,25 @@ import AdminDashboard from './pages/AdminDashboard'
 import UserPermisson from "./pages/UserPermison/UserPermisson";
 import UserPermisson2 from "./pages/UserPermison/UserPermisson2";
 import UserPermisson3 from "./pages/UserPermison/UserPermisson3";
+import UserManagement from './pages/UserManagement/UserManagement'; 
+
 
 function App() {
 
 
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-          <Route path='/' element={<AdminDashboard />} />
-          <Route path='/user-permisson-role-1' element={<UserPermisson />} />
-          <Route path='/user-permisson-role-2' element={<UserPermisson2 />} />
-          <Route path='/user-permisson-role-3' element={<UserPermisson3 />} />
-  
-    </Routes>
-    </BrowserRouter>
-    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AdminDashboard />} />
+          <Route path="/user-permisson-role-1" element={<UserPermisson />} />
+          <Route path="/user-permisson-role-2" element={<UserPermisson2 />} />
+          <Route path="/user-permisson-role-3" element={<UserPermisson3 />} />
+          <Route path="/user-management" element={<UserManagement />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App
