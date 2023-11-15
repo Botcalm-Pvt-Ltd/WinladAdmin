@@ -7,12 +7,14 @@ import UserPermisson3 from "./pages/UserPermison/UserPermisson3";
 import UserManagement from './pages/UserManagement/UserManagement'; 
 
 import RafflesManagement from './components/RafflesManagement/RafflesManagement';
+import AddRiffles from './components/RafflesManagement/AddRaffles'
 
 function App() {
 
 
   return (
     <>
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AdminDashboard />} />
@@ -21,6 +23,7 @@ function App() {
           <Route path="/user-permisson-role-3" element={<UserPermisson3 />} />
           <Route path="/user-management" element={<UserManagement />} />
           <Route path="/RafflesManagement" element={<RafflesManagement />} />
+          <Route path="/addRiffles" element={<AddRiffles />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TableLight from "../TableLight";
 import Pagination from "../Pagination";
 import SideNavComponent from "../SideNavComponent/SideNavComponent";
@@ -6,8 +6,10 @@ import TopBar from "../TopBar";
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import RMBlackSquare from "./RMBlackSquare";
 import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
+import AddRaffles from "./AddRaffles";
 
 const RafflesManagement = () => {
+    const [showModal, setShowModal] = useState(false);
   const tableCols = [
     "Raffle ID",
     "Raffles Name",
@@ -88,7 +90,7 @@ const RafflesManagement = () => {
                 />
               </div>
               <div className="flex gap-5">
-                <button className="bg-yellow-300 px-3 py-2 rounded-lg">
+                <button className="bg-yellow-300 px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
                   Add Raffles
                 </button>
                 <select
@@ -112,6 +114,7 @@ const RafflesManagement = () => {
           </div>
         </div>
       </div>
+      {showModal ? <AddRaffles onClose={() => setShowModal(false)}/> : null}
     </div>
   );
 };
