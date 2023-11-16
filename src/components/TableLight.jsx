@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
+import UserDetailViewComponent from './UserDetailView/UserDetailViewComponent'
 
 const TableLight = ({ cols, data }) => {
     return (
@@ -47,8 +48,9 @@ const TableLight = ({ cols, data }) => {
                              </td>
                              <td className="px-6 py-4 text-2xl text-gray-400">
                                 <button className='mr-2'><AiFillEye /></button>
-                                <button><AiFillEdit /></button>
+                                <UserDetailViewComponent/>
                             </td>
+
                             </tr>
                         )
                     })

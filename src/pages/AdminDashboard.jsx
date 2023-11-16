@@ -136,14 +136,12 @@ const AdminDashboard = () => {
   ];
   return (
     <div className="flex lg:flex-row flex-row  items-start justify-between">
-
-        <SideNavComponent  />
-
-      <div className="w-full lg:w-full bg-white overflow-hidden">
+      <SideNavComponent />
+      <div className="w-full lg:w-full bg-white overflow-hidden py-3">
         <BackSquare />
         <div className="lg:p-5 p-1">
           <TopBar />
-          <div className="flex items-center justify-end gap-3 w-full z-10 mt-5">
+          <div className="flex items-center justify-end gap-3 w-full z-10 mt-5 px-3 lg:px-0">
             <GreenCard text={100} subtext={"Active Lottery"} />
             <GreenCard
               text={"100/150"}
@@ -160,17 +158,23 @@ const AdminDashboard = () => {
             </div>
           </div>
           <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-4">
-            <div className="md:w-2/5 w-full z-10">
+            <div className="lg:w-2/5 w-full z-10 leading-none">
               <PieChart
                 labels={["Luxury Range", "Mid Range", "Low Range"]}
                 heading={<h1>Lottery Configurations</h1>}
               />
             </div>
-            <div className="md:w-2/5 w-full z-10">
+            <div className="lg:w-2/5 w-full z-10 leading-none">
               <PieChart
-                labels={["Bornze", "Silver", "Gold", "Platinum", "Titanium"]}
-                labelCOlor="#fff"
+                labels={[
+                  "Bornze Pack",
+                  "Silver Pack",
+                  "Gold Pack",
+                  "Platinum Pack",
+                  "Titanium Pack",
+                ]}
                 chartSeries={[51, 2, 11, 18, 27]}
+                labelCOlor="#fff"
                 heading={
                   <h1 className="text-white">Subscription Distributions</h1>
                 }
@@ -178,8 +182,8 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
-          <div className="lg:w-8/12 w-full px-3 lg-px-0">
+        <div className="flex items-start justify-between gap-3 mt-8 flex-col lg:flex-row px-3 lg:px-0">
+          <div className="lg:w-8/12 w-full">
             <div className="flex items-center justify-between">
               <div className=" bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
                 <div htmlFor="search" className="text-2xl mt-0">
@@ -207,7 +211,7 @@ const AdminDashboard = () => {
               <Pagination />
             </div>
           </div>
-          <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl">
+          <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl lg:rounded-tr-none lg:rounded-br-none rounded-tr-3xl rounded-br-3xl">
             <BarChart />
           </div>
         </div>
@@ -221,7 +225,7 @@ const AdminDashboard = () => {
             <GreenCard text={"20"} subtext={"Unverify User Convergentratio"} />
           </div>
         </div>
-        <div className="relative overflow-x-auto  sm:rounded-lg py-0 my-6 lg:my-14 px-3">
+        <div className="relative   sm:rounded-lg py-0 my-6 lg:my-14 px-3">
           <div className="flex items-center justify-between">
             <div className=" bg-yellow-300 rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
               <div htmlFor="search" className="text-2xl mt-0">
@@ -241,7 +245,10 @@ const AdminDashboard = () => {
               <option value="">Filter</option>
             </select>
           </div>
-          <ColEightTable cols={table2Cols} data={table2Data} />
+          <div className="overflow-x-auto">
+            <ColEightTable cols={table2Cols} data={table2Data} />
+          </div>
+
           {/* <TableLight cols={table2Cols} data={table2Data} /> */}
           <div className="w-full">
             <Pagination />
