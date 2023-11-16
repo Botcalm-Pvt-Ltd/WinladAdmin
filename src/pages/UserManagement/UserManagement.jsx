@@ -13,7 +13,7 @@ function UserManagement() {
           <TopBar />
         </div>
         <div>
-          <h1 className="text-xl px-20 pt-10 max-md:pt-20">
+          <h1 className="xl:text-2xl text-md font-semibold  px-10 xl:pt-10 pt-20 max-md:pt-20">
             Users Management
           </h1>
         </div>

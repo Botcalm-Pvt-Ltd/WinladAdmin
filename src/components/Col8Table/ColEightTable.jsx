@@ -59,15 +59,14 @@ const ColEightTable = ({ cols, data }) => {
                                 </div>
                               )}
                             </td>
-                            <td className="px-6 py-4 text-2xl text-gray-400">
+                            <td className=" xl:px-6 py-4 text-2xl text-gray-400">
                               <button className="mr-2">
                                 <AiFillEye />
                               </button>
                               <button>
                                 <AiFillEdit />
                               </button>
-                                    <button
-                                        onClick={handleDelete}>
+                              <button onClick={handleDelete}>
                                 <MdDelete />
                               </button>
                             </td>
