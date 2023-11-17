@@ -109,12 +109,25 @@ const SideNavComponent = ({ screen }) => {
                 </button>
               </Link>
               <div onClick={expandSidebar}>
-                <Link to="/">
+                <Link to="/master-data-category">
                   <button className="side-nav-contain">
                     <img src={MasterData} alt="protect" />
                     <span className="mobile-hide">
                       <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Master Data
+                        Master Data Category
+                      </p>
+                    </span>
+                  </button>
+                </Link>
+              </div>
+
+              <div onClick={expandSidebar}>
+                <Link to="/master-data-details">
+                  <button className="side-nav-contain">
+                    <img src={MasterData} alt="protect" />
+                    <span className="mobile-hide">
+                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
+                        Master Data Details
                       </p>
                     </span>
                   </button>
@@ -133,7 +146,7 @@ const SideNavComponent = ({ screen }) => {
                 </Link>
               </div>
               <div onClick={expandSidebar}>
-                <Link to="/">
+                <Link to="/subscription-management">
                   <button className="side-nav-contain">
                     <img src={Subscription} alt="protect" />
                     <span className="mobile-hide">

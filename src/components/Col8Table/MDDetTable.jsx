@@ -4,52 +4,45 @@ import UserDetailViewComponent from "../UserDetailView/UserDetailViewComponent";
 import { MdDelete } from "react-icons/md";
 import swal from "sweetalert";
 
-const ColEightTable = ({ cols, data }) => {
-
-      const handleDelete = () =>
-        swal({
-          title: "Are you sure?",
-          text: "Are you sure that you want to leave this page?",
-          icon: "warning",
-          dangerMode: true,
-        }).then((willDelete) => {
-          if (willDelete) {
-            swal(
-              "Deleted!",
-              "Your imaginary file has been deleted!",
-              "success"
-            );
-          }
-        });
-
+const MDDetTable = ({ cols, data }) => {
+  const handleDelete = () =>
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to leave this page?",
+      icon: "warning",
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Deleted!", "Your imaginary file has been deleted!", "success");
+      }
+    });
   return (
     <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
       <thead className="text-xs text-gray-7=600 capitalize bg-white">
         <tr>
-          {cols.map((el, key) => {
+          {cols.map((mdel, key) => {
             return (
               <th scope="col" className="px-6 py-3" key={key}>
-                {el}
+                {mdel}
               </th>
             );
           })}
         </tr>
       </thead>
       <tbody>
-        {data.map((el, key) => {
+        {data.map((mdel, key) => {
           return (
             <tr
               className="odd:bg-white  border-b dark:border-gray-300"
               key={key}
             >
-              <td className="px-6 py-4">{el.id}</td>
-              <td className="px-6 py-4">{el.name}</td>
-              <td className="px-6 py-4">{el.vlevel}</td>
-              <td className="px-6 py-4">{el.role}</td>
-              <td className="px-6 py-4">{el.email}</td>
-              <td className="px-6 py-4">{el.passport}</td>
+              <td className="px-6 py-4">{mdel.id}</td>
+              <td className="px-6 py-4">{mdel.categoryName}</td>
+              <td className="px-6 py-4">{mdel.name}</td>
+              <td className="px-6 py-4">{mdel.description}</td>
+              <td className="px-6 py-4">{mdel.SortID}</td>
               <td className="px-6 py-4">
-                {el.status == "Active" ? (
+                {mdel.status == "Active" ? (
                   <div className="px-3 py-2 rounded-md border border-1 border-green-400 bg-green-200 w-20 text-center">
                     Active
                   </div>
@@ -59,14 +52,14 @@ const ColEightTable = ({ cols, data }) => {
                   </div>
                 )}
               </td>
-              <td className="px-6 py-4 text-2xl text-gray-400">
+              <td className="xl:px-6 py-4 text-2xl text-gray-400">
                 <button className="mr-2">
                   <AiFillEye />
                 </button>
+                <UserDetailViewComponent />
                 <button onClick={handleDelete}>
                   <MdDelete />
                 </button>
-                <UserDetailViewComponent />
               </td>
             </tr>
           );
@@ -76,4 +69,4 @@ const ColEightTable = ({ cols, data }) => {
   );
 };
 
-export default ColEightTable;
+export default MDDetTable;
