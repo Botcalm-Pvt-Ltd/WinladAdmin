@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
+import ViewRaffles from './ViewRaffles';
+import EditRaffles from './EditRaffles';
 
-const TableLight = ({ cols, data }) => {
+const Rafflestable = ({ cols, data }) => {
+    const [viewFAQ, setViewFAQ] = useState(null);
+    const [editFAQ, setEditFAQ] = useState(null);
+  
+    const openViewModal = (faq) => {
+      setViewFAQ(faq);
+    };
+    const openEditModal = (faq) => {
+      setEditFAQ(faq);
+    };
     return (
+    <div>
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
             <thead className="text-xs text-gray-7=600 capitalize bg-white">
                 <tr>
@@ -24,7 +36,7 @@ const TableLight = ({ cols, data }) => {
                 {
                     data.map((el, key) => {
                         return (
-                            <tr className="odd:bg-white  border-b dark:border-gray-300" key={key}>
+                            <tr className="border-b dark:border-gray-300" key={key}>
 
                                     
                                     <td className="px-6 py-4">
@@ -46,8 +58,8 @@ const TableLight = ({ cols, data }) => {
                             }
                              </td>
                              <td className="px-6 py-4 text-2xl text-gray-400 flex">
-                                <button className='mr-2'><AiFillEye /></button>
-                                <button><AiFillEdit /></button>
+                                <button className="mr-2" onClick={() => openViewModal(el)}><AiFillEye /></button>
+                                <button className="mr-2" onClick={() => openEditModal(el)}><AiFillEdit /></button>
                             </td>
                             </tr>
                         )
@@ -56,7 +68,14 @@ const TableLight = ({ cols, data }) => {
 
             </tbody>
         </table>
+        {viewFAQ && (
+            <ViewRaffles faq={viewFAQ} onClose={() => setViewFAQ(null)} />
+          )}
+          {editFAQ && (
+            <EditRaffles faq={editFAQ} onClose={() => setEditFAQ(null)} />
+          )}
+          </div>
     )
 }
 
-export default TableLight
+export default Rafflestable

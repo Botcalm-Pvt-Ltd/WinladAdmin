@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import Datepicker from "react-tailwindcss-datepicker";
 
-const AddRaffles = ({ onClose }) => {
+const EditRaffles = ({ faq, onClose }) => {
+  const [editedRaffles, setEditedRaffles] = useState({
+    name: faq.name,
+  });
+  const handleNameChange = (event) => {
+    setEditedRaffles({ ...editedRaffles, name: event.target.value });
+  };
   const [value, setValue] = useState({
     startDate: null,
     endDate: null,
@@ -22,9 +28,8 @@ const AddRaffles = ({ onClose }) => {
               </label>
               <input
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
-                id="username"
-                type="text"
-                // placeholder="Username"
+                value={editedRaffles.name}
+                onChange={handleNameChange}
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -180,4 +185,4 @@ const AddRaffles = ({ onClose }) => {
   );
 };
 
-export default AddRaffles;
+export default EditRaffles

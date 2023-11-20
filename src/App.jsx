@@ -5,7 +5,8 @@ import UserPermisson from "./pages/UserPermison/UserPermisson";
 import UserPermisson2 from "./pages/UserPermison/UserPermisson2";
 import UserPermisson3 from "./pages/UserPermison/UserPermisson3";
 import RafflesManagement from './components/RafflesManagement/RafflesManagement';
-import AddRiffles from './components/RafflesManagement/AddRaffles'
+import AddFAQ from './components/FAQ/AddFAQ';
+import FAQ from './components/FAQ/FAQ';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
           <Route path='/user-permisson-role-2' element={<UserPermisson2 />} />
           <Route path='/user-permisson-role-3' element={<UserPermisson3 />} />  
           <Route path='/RafflesManagement' element={<RafflesManagement/>} />  
-          <Route path='/addRiffles' element={<AddRiffles/>} />  
+          <Route path='/FAQ' element={<FAQ/>} />  
+          <Route path='/AddFAQ' element={<AddFAQ/>} />  
     </Routes>
     </BrowserRouter>
     
