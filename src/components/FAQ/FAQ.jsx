@@ -57,6 +57,9 @@ const FAQ = () => {
         <div className="lg:p-5 p-1">
           <TopBar />
         </div>
+        <h1 className="text-xl px-4 pt-10 max-md:pt-20">
+            FAQ Management
+          </h1>
         <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
           <div className="lg:w-8/12 w-full px-3 lg-px-0">
             <div className="flex items-center justify-between">

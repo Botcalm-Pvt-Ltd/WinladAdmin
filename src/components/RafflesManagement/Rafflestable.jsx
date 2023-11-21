@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
+import { AiFillEdit, AiFillEye, AiFillDelete } from 'react-icons/ai'
 import ViewRaffles from './ViewRaffles';
 import EditRaffles from './EditRaffles';
+import Swal from 'sweetalert2'
 
 const Rafflestable = ({ cols, data }) => {
     const [viewFAQ, setViewFAQ] = useState(null);
     const [editFAQ, setEditFAQ] = useState(null);
+
   
     const openViewModal = (faq) => {
       setViewFAQ(faq);
@@ -13,6 +15,26 @@ const Rafflestable = ({ cols, data }) => {
     const openEditModal = (faq) => {
       setEditFAQ(faq);
     };
+    
+    function raffleDetele(){
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your row has been deleted.",
+                icon: "success"
+              });
+            }
+          });
+    }
     return (
     <div>
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
@@ -60,6 +82,7 @@ const Rafflestable = ({ cols, data }) => {
                              <td className="px-6 py-4 text-2xl text-gray-400 flex">
                                 <button className="mr-2" onClick={() => openViewModal(el)}><AiFillEye /></button>
                                 <button className="mr-2" onClick={() => openEditModal(el)}><AiFillEdit /></button>
+                                <button className="mr-2" onClick={() => raffleDetele()}><AiFillDelete /></button>
                             </td>
                             </tr>
                         )

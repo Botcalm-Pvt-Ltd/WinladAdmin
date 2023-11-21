@@ -7,6 +7,7 @@ import UserPermisson3 from "./pages/UserPermison/UserPermisson3";
 import RafflesManagement from './components/RafflesManagement/RafflesManagement';
 import AddFAQ from './components/FAQ/AddFAQ';
 import FAQ from './components/FAQ/FAQ';
+import Setting from './components/Settings/Setting';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/RafflesManagement' element={<RafflesManagement/>} />  
           <Route path='/FAQ' element={<FAQ/>} />  
           <Route path='/AddFAQ' element={<AddFAQ/>} />  
+          <Route path='/setting' element={<Setting/>} />  
     </Routes>
     </BrowserRouter>
     

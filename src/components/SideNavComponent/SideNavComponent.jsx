@@ -13,7 +13,6 @@ import Support from "../../assets/SideNav/Support.png";
 import Reports from "../../assets/SideNav/Reports.png";
 import Logohome from "../../assets/SideNav/Logo-home.png";
 
-
 const SideNavComponent = ({ screen }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -28,8 +27,9 @@ const SideNavComponent = ({ screen }) => {
   return (
     <OutsideClickHandler onOutsideClick={notExpandSidebar}>
       <div
-        className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] ${expanded ? "" : "side-nav-half"
-          } w-12 xl:w-full    `}
+        className={`pt-20  h-${screen} pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] ${
+          expanded ? "" : "side-nav-half"
+        } w-12 xl:w-full    `}
       >
         <div
           onClick={expandSidebar}
@@ -51,7 +51,6 @@ const SideNavComponent = ({ screen }) => {
                 </p>
               </span>
             </button>
-
           </div>
 
           <div onClick={expandSidebar}>
@@ -157,8 +156,4 @@ const SideNavComponent = ({ screen }) => {
   );
 };
 
-export default SideNavComponent
-
-
-
-
+export default SideNavComponent;

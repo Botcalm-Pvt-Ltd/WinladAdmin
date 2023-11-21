@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.w-color-interactive{
+    border-radius: 25px !important;
+}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { AiFillEdit, AiFillEye } from "react-icons/ai";
+import { AiFillEdit, AiFillEye, AiFillDelete } from "react-icons/ai";
 import ViewFAQ from "./ViewFAQ";
 import EditFAQ from "./EditFAQ";
+import Swal from 'sweetalert2'
 
 const FAQtable = ({ cols, data }) => {
   const [viewFAQ, setViewFAQ] = useState(null);
@@ -13,6 +14,25 @@ const FAQtable = ({ cols, data }) => {
   const openEditModal = (faq) => {
     setEditFAQ(faq);
   };
+  function FAQdetele(){
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your row has been deleted.",
+            icon: "success"
+          });
+        }
+      });
+}
   return (
     <div>
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
@@ -43,6 +63,9 @@ const FAQtable = ({ cols, data }) => {
                   </button>
                   <button className="mr-2" onClick={() => openEditModal(el)}>
                     <AiFillEdit />
+                  </button>
+                  <button className="mr-2" onClick={() => FAQdetele()}>
+                    <AiFillDelete />
                   </button>
                 </td>
               </tr>

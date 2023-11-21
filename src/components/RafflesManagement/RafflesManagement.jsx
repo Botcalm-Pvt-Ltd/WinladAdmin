@@ -71,7 +71,7 @@ const RafflesManagement = () => {
           <TopBar />
         </div>
         <div>
-          <h1 className="text-xl px-20 pt-10 max-md:pt-20">
+          <h1 className="text-xl px-4 pt-10 max-md:pt-20">
             Raffles Management
           </h1>
         </div>
