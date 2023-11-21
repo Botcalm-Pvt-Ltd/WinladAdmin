@@ -10,7 +10,7 @@ function MasterDataDetailsComponent() {
 
   const MasterDataDetails = [
     "ID",
-    "Category Name",
+    "Category ID",
     "Name",
     "Description",
     "Sort ID",

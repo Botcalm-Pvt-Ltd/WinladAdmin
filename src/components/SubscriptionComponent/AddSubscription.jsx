@@ -6,6 +6,7 @@ function AddSubscription({ onClose }) {
     subscriptionName: "",
     type: "",
     cost: "",
+    raffleLimit: "",
     description: "",
   });
 
@@ -59,9 +60,9 @@ function AddSubscription({ onClose }) {
                 onChange={handleChange}
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
               >
-                <option value="">select type</option>
-                <option value="premium">premium</option>
-                <option value="normal">normal</option>
+                <option value="">Select type</option>
+                <option value="premium">Monthly</option>
+                <option value="normal">Anually</option>
               </select>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -72,6 +73,18 @@ function AddSubscription({ onClose }) {
                 type="text"
                 name="cost"
                 value={formData.cost}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
+                Raffle Limit
+              </label>
+              <input
+                type="text"
+                name="cost"
+                value={formData.raffleLimit}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
               />
