@@ -5,15 +5,18 @@ import { MdDelete } from "react-icons/md";
 import swal from "sweetalert";
 
 const MDDetTable = ({ cols, data }) => {
+  
   const handleDelete = () =>
     swal({
       title: "Are you sure?",
-      text: "Are you sure that you want to leave this page?",
+      text: "Are you sure that you want to delete this entry?",
       icon: "warning",
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        swal("Deleted!", "Your imaginary file has been deleted!", "success");
+        swal("Deleted!",
+              "Your entry has been deleted!",
+              "success");
       }
     });
   return (

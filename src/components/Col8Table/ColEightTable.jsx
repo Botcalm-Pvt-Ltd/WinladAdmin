@@ -9,14 +9,14 @@ const ColEightTable = ({ cols, data }) => {
       const handleDelete = () =>
         swal({
           title: "Are you sure?",
-          text: "Are you sure that you want to leave this page?",
+          text: "Are you sure that you want to delete this entry?",
           icon: "warning",
           dangerMode: true,
         }).then((willDelete) => {
           if (willDelete) {
             swal(
               "Deleted!",
-              "Your imaginary file has been deleted!",
+              "Your entry has been deleted!",
               "success"
             );
           }
@@ -63,10 +63,10 @@ const ColEightTable = ({ cols, data }) => {
                 <button className="mr-2">
                   <AiFillEye />
                 </button>
+                <UserDetailViewComponent />
                 <button onClick={handleDelete}>
                   <MdDelete />
                 </button>
-                <UserDetailViewComponent />
               </td>
             </tr>
           );
