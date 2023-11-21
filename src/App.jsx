@@ -10,6 +10,8 @@ import AddRiffles from "./components/RafflesManagement/AddRaffles";
 import MasterDataCategory from "./pages/MasterData/MasterDataCategory";
 import MasterDataDetails from "./pages/MasterData/MasterDataDetails";
 import Subscription from "./pages/Subscription/Subscription";
+import AddFAQ from './components/FAQ/AddFAQ';
+import FAQ from './components/FAQ/FAQ';
 
 function App() {
   return (
@@ -23,9 +25,14 @@ function App() {
           <Route path="/user-management" element={<UserManagement />} />
           <Route path="/RafflesManagement" element={<RafflesManagement />} />
           <Route path="/addRiffles" element={<AddRiffles />} />
-          <Route path="/master-data-category"element={<MasterDataCategory />}/>
+          <Route
+            path="/master-data-category"
+            element={<MasterDataCategory />}
+          />
           <Route path="/master-data-details" element={<MasterDataDetails />} />
           <Route path="/subscription-management" element={<Subscription />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/AddFAQ" element={<AddFAQ />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,65 +1,52 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
+import TableLight from "../TableLight";
 import Pagination from "../Pagination";
 import SideNavComponent from "../SideNavComponent/SideNavComponent";
 import TopBar from "../TopBar";
 import { PiMagnifyingGlassThin } from "react-icons/pi";
-import RMBlackSquare from "./RMBlackSquare";
+import RMBlackSquare from '../RafflesManagement/RMBlackSquare'
 import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
-import AddRaffles from "./AddRaffles";
-import Rafflestable from "./Rafflestable";
+import AddFAQ from "./AddFAQ";
+import FAQtable from './FAQtable';
 
-const RafflesManagement = () => {
+const FAQ = () => {
     const [showModal, setShowModal] = useState(false);
   const tableCols = [
-    "Raffle ID",
-    "Raffles Name",
-    "Raffle Category",
-    "Schedule Date",
-    "Status",
+    "FAQ Id",
+    "FAQ Description",
+    "FAQ Answer",
     "Action",
   ];
   const tableData = [
     {
       id: "01",
-      name: "Loto Max1",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Active",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
     {
       id: "02",
-      name: "Loto Max2",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Active",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
     {
       id: "03",
-      name: "Loto Max3",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Inactive",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
     {
       id: "04",
-      name: "Loto Max4",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Inactive",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
     {
       id: "05",
-      name: "Loto Max5",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Inactive",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
     {
       id: "06",
-      name: "Loto Max6",
-      category: "Luxury Range",
-      date: "2023-Sep-20",
-      status: "Inactive",
+      Description: "Lorem ipsum dolor sit amet consectetur. ",
+      Answer: "Lorem ipsum dolor sit amet consectetur. Dolor aliquet amet pellentesque scelerisque velit arcu bibend",
     },
   ];
   return (
@@ -69,11 +56,6 @@ const RafflesManagement = () => {
         <RMBlackSquare />
         <div className="lg:p-5 p-1">
           <TopBar />
-        </div>
-        <div>
-          <h1 className="text-xl px-20 pt-10 max-md:pt-20">
-            Raffles Management
-          </h1>
         </div>
         <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
           <div className="lg:w-8/12 w-full px-3 lg-px-0">
@@ -91,7 +73,7 @@ const RafflesManagement = () => {
               </div>
               <div className="flex gap-5">
                 <button className="bg-yellow-300 px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
-                  Add Raffles
+                  Add New
                 </button>
                 <select
                   name="filter"
@@ -103,7 +85,7 @@ const RafflesManagement = () => {
             </div>
 
             <div className="relative overflow-x-auto  sm:rounded-lg py-4 z-10">
-              <Rafflestable cols={tableCols} data={tableData} />
+              <FAQtable cols={tableCols} data={tableData} />
             </div>
             <div className="w-full">
               <Pagination />
@@ -114,9 +96,8 @@ const RafflesManagement = () => {
           </div>
         </div>
       </div>
-      {showModal ? <AddRaffles onClose={() => setShowModal(false)}/> : null}
-    </div>
-  );
-};
+      {showModal ? <AddFAQ onClose={() => setShowModal(false)}/> : null}
+    </div>)
+}
 
-export default RafflesManagement;
+export default FAQ

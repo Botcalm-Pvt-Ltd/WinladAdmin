@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import Datepicker from "react-tailwindcss-datepicker";
 
-const AddRaffles = ({ onClose }) => {
+const ViewRaffles = ({ faq, onClose }) => {
+
   const [value, setValue] = useState({
     startDate: null,
     endDate: null,
@@ -22,35 +23,29 @@ const AddRaffles = ({ onClose }) => {
               </label>
               <input
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
-                id="username"
-                type="text"
-                // placeholder="Username"
+                value={faq.name}
+                readOnly
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
                 Raffles Category
               </label>
-              <select
-                name="filter"
-                className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
-              >
-                <option value="">Filter</option>
-              </select>
+              <input
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                value={faq.category}
+                readOnly
+              />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
                 Schedule Date
               </label>
-              <div className="w-full">
-                <Datepicker
-                  useRange={false}
-                  asSingle={true}
-                  value={value}
-                  onChange={handleValueChange}
-                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
-                />
-              </div>
+              <input
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                value={faq.date}
+                readOnly
+              />
             </div>
 
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -68,7 +63,7 @@ const AddRaffles = ({ onClose }) => {
 
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                Gift Image
+                Gift Name
               </label>
               <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-48 justify-center items-center bg-[#7CE1F7] rounded-xl py-10">
                   <svg
@@ -159,9 +154,6 @@ const AddRaffles = ({ onClose }) => {
               </div>
             </div>
             <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-            <button className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                Save
-              </button>
               <button
                 className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
@@ -178,6 +170,6 @@ const AddRaffles = ({ onClose }) => {
       <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
     </>
   );
-};
+}
 
-export default AddRaffles;
+export default ViewRaffles
