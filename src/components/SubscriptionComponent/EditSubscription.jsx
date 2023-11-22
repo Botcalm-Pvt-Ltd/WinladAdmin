@@ -35,9 +35,8 @@ const EditSubscription = ({ sub, onClose }) => {
               readOnly
               className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
             >
-              <option value="">select type</option>
+            
               <option value="premium">premium</option>
-              <option value="normal">normal</option>
             </select>
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
