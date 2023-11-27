@@ -1,6 +1,6 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../components/Pagination";
-import MDCatTable from "../components/Col8Table/MDCatTable";
+import MDCatTable from "../components/Tables/MDCatTable";
 import RMBackground from "../assets/RafflesManagement/RMBackground.jpg";
 import { useState } from "react";
 import AddMasterDataCategory from "./AddMasterDataCategory";

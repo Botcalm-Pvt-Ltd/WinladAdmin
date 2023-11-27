@@ -1,18 +1,19 @@
-import React from "react";
-import Inputsearch from "../components/Inputsearch";
-import RoundIcon from "../components/roundIcon";
-import UserIcon from "../components/userIcon";
-import GreenCard from "../components/GreenCard";
-import { AiFillEdit, AiFillEye, AiOutlineDown } from "react-icons/ai";
-import PieChart from "../components/PieChart";
-import { PiMagnifyingGlassThin } from "react-icons/pi";
-import BarChart from "../components/BarChart";
-import Pagination from "../components/Pagination";
-import TableLight from "../components/TableLight";
-import TopBar from "../components/TopBar";
-import SideNavComponent from "../components/SideNavComponent/SideNavComponent";
-import BackSquare from "../components/BackgroundBlackSquare/BackSquare";
-import ColEightTable from "../components/Col8Table/ColEightTable";
+import React from 'react'
+import Inputsearch from '../components/Inputsearch'
+import RoundIcon from '../components/roundIcon'
+import UserIcon from '../components/userIcon'
+import GreenCard from '../components/GreenCard'
+import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
+import PieChart from '../components/Charts/PieChart'
+import { PiMagnifyingGlassThin } from 'react-icons/pi';
+import BarChart from '../components/Charts/BarChart'
+import Pagination from '../components/Pagination'
+import TableLight from '../components/Tables/TableLight'
+import TopBar from '../components/TopBar'
+import SideNavComponent from '../components/SideNavComponent/SideNavComponent'
+import BackSquare from '../components/BackgroundBlackSquare/BackSquare'
+import ColEightTable from '../components/Tables/ColEightTable'
+
 
 const AdminDashboard = () => {
   const table2Cols = [

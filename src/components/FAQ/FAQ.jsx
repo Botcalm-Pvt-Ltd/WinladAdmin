@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TableLight from "../TableLight";
+import TableLight from "../Tables/TableLight";
 import Pagination from "../Pagination";
 import SideNavComponent from "../SideNavComponent/SideNavComponent";
 import TopBar from "../TopBar";

@@ -1,6 +1,6 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../../components/Pagination";
-import SubManTable from "../../components/Col8Table/SubManTable";
+import SubManTable from "../../components/Tables/SubManTable";
 import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
 import { useState } from "react";
 import AddSubscription from "./AddSubscription";

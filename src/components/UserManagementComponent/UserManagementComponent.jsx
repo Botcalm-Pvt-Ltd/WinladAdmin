@@ -1,6 +1,6 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../../components/Pagination";
-import ColEightTable from "../../components/Col8Table/ColEightTable";
+import ColEightTable from "../../components/Tables/ColEightTable";
 import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
 import { useState } from "react";
 import AddUser from "./AddUser";

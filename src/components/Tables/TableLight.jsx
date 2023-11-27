@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
-import UserDetailViewComponent from './UserDetailView/UserDetailViewComponent'
+import UserDetailViewComponent from '../UserDetailView/UserDetailViewComponent'
 
 const TableLight = ({ cols, data }) => {
     return (
