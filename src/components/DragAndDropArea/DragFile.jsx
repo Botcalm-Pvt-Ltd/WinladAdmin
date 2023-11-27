@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { FiUpload } from "react-icons/fi";
 
 const DragFile = () => {
 
@@ -48,7 +49,7 @@ const DragFile = () => {
     return (
         <>
             <div
-                className={`cursor-pointer p-8 border-4 border-dashed ${dragging ? 'border-green-500' : 'border-gray-300'}`}
+                className={`cursor-pointer rounded-2xl p-12 w-full min-h-32 text-center bg-yellow-200 ${dragging ? 'border-green-500' : 'border-gray-300'}`}
                 onDragEnter={handleDragEnter}
                 onDragLeave={handleDragLeave}
                 onDragOver={handleDragOver}
@@ -63,7 +64,9 @@ const DragFile = () => {
                     multiple
                     id='fileField'
                 />
-                <label className="text-center text-gray-600" htmlFor='fileField'>Drag and drop files here</label>
+                <button className='text-2xl'><FiUpload/></button><br/>
+                <label className="text-center text-black" htmlFor='fileField'>Drag and drop files</label><br/>
+                <button className='px-4 py-2 bg-black text-white rounded-lg mt-2'>Browse</button>
             </div>
             {/* Display selected file */}
             {selectedFile && (
