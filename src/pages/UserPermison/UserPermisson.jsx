@@ -1,18 +1,36 @@
 import UserPermissionComponent from "../../components/UserPermissonComponent/UserPermissionComponent"
 import SideNavComponent from "../../components/SideNavComponent/SideNavComponent";
 import hiddenCar from "../../assets/hiddenCar.png";
+import Inputsearch from "../../components/Inputsearch";
+import RoundIcon from "../../components/RoundIcon";
+import UserIcon from "../../components/userIcon";
+import { motion } from "framer-motion";
+import MainCar from "../../assets/Dashboard/MainCar.png";
+import { Link } from "react-router-dom";
+import TopBar from "../../components/TopBar";
+import BackSquare from "../../components/BackgroundBlackSquare/BackSquare";
+import UserPagination from "../../components/UserPermissonComponent/UserPegination";
+import Role from "../../components/BackgroundBlackSquare/roles";
+
 function UserPermisson() {
   return (
-    <div className="flex flex-col-2  max-w-[2048px] mx-auto ">
-      <SideNavComponent screen="full" />
-      <div className="absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl  bg-black w-1/2 h-1/2">
-        <img
-          src={hiddenCar}
-          className="w-50 mt-auto absolute bottom-0 left-0"
-        />
+    <div className="flex lg:flex-row flex-row  items-start justify-between ">
+      <div className="">
+        <SideNavComponent />
       </div>
-      <div className="xl:w-3/4">
-        <UserPermissionComponent />
+      <div className="w-full lg:w-full bg-white ">
+        <Role />
+
+        <div className="lg:p-5 p-1">
+          <TopBar />
+        </div>
+        <div className="xl:w-2/5  w-5/12 ml-5">
+          <UserPermissionComponent />
+        </div>
+
+        <div className="mt-5">
+          <UserPagination />
+        </div>
       </div>
     </div>
   );
