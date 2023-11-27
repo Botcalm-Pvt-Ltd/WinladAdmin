@@ -42,19 +42,20 @@ const SideNavComponent = () => {
         </Link>
         <div className="flex flex-col space-y-4">
           <div onClick={expandSidebar}>
-            <button className="side-nav-contain">
-              <img src={Home} alt="protect" />
-              <span className="mobile-hide">
-                <p className="link-no-underlin  invisible xl:visible text-black">
-                  Home
-                </p>
-              </span>
-            </button>
-
+            <Link to="/">
+              <button className="side-nav-contain">
+                <img src={Home} alt="protect" />
+                <span className="mobile-hide">
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    Home
+                  </p>
+                </span>
+              </button>
+            </Link>
           </div>
 
           <div onClick={expandSidebar}>
-            <Link to="/">
+            <Link to="/settings">
               <button className="side-nav-contain">
                 <img src={Settings} alt="protect" />
                 <span className="mobile-hide">
@@ -66,7 +67,7 @@ const SideNavComponent = () => {
             </Link>
           </div>
           <div onClick={expandSidebar}>
-            <Link to="/">
+            <Link to="/user-management">
               <button className="side-nav-contain">
                 <img src={UserManagement} alt="protect" />
                 <span className="mobile-hide">
@@ -79,7 +80,7 @@ const SideNavComponent = () => {
           </div>
 
           <div onClick={expandSidebar}>
-            <Link to="/">
+            <Link to="/raffles">
               <button className="side-nav-contain">
                 <img src={RafflesMange} alt="protect" />
                 <span className="mobile-hide">
@@ -90,7 +91,7 @@ const SideNavComponent = () => {
               </button>
             </Link>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/master">
                 <button className="side-nav-contain">
                   <img src={MasterData} alt="protect" />
                   <span className="mobile-hide">
@@ -102,7 +103,7 @@ const SideNavComponent = () => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/faq">
                 <button className="side-nav-contain">
                   <img src={FAQ} alt="protect" />
                   <span className="mobile-hide">
@@ -114,7 +115,7 @@ const SideNavComponent = () => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/subscriptions">
                 <button className="side-nav-contain">
                   <img src={Subscription} alt="protect" />
                   <span className="mobile-hide">
@@ -126,7 +127,7 @@ const SideNavComponent = () => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/support">
                 <button className="side-nav-contain">
                   <img src={Support} alt="protect" />
                   <span className="mobile-hide">
@@ -138,7 +139,7 @@ const SideNavComponent = () => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/reports">
                 <button className="side-nav-contain">
                   <img src={Reports} alt="protect" />
                   <span className="mobile-hide">
