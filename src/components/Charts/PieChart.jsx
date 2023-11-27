@@ -20,10 +20,10 @@ const PieChart = ({ chartSeries = [22, 33, 50], labels = ['Label1', 'Label2', 'L
       },
     },
     responsive: [{
-      breakpoint: 480,
+      breakpoint: 800,
       options: {
         chart: {
-          width: 400,
+          width: 300,
         },
         legend: {
           position: 'bottom',
