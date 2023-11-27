@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { AiFillEdit, AiFillEye, AiOutlineDown } from "react-icons/ai";
 import UserDetailViewComponent from "../UserDetailView/UserDetailViewComponent";
-import EditUser from "../../components/UserManagementComponent/EditUser";
-import ViewUser from "../../components/UserManagementComponent/ViewUser";
+import ViewSubscription from "../../components/SubscriptionComponent/ViewSubscription";
+import EditSubscription from "../../components/SubscriptionComponent/EditSubscription";
 import { MdDelete } from "react-icons/md";
 import swal from "sweetalert";
 
-const ColEightTable = ({ cols, data }) => {
-  const [userViewModal, setUserViewModal] = useState(null);
-  const [useryEditModal, setUserEditModal] = useState(null);
+const SubManTable = ({ cols, data }) => {
+  const [subViewModal, setSubViewModal] = useState(null);
+  const [subEditModal, setsubEditModal] = useState(null);
 
-  const openViewModal = (user) => {
-    setUserViewModal(user);
+  const openViewModal = (sub) => {
+    setSubViewModal(sub);
   };
-  const openEditModal = (user) => {
-    setUserEditModal(user);
+  const openEditModal = (sub) => {
+    setsubEditModal(sub);
   };
 
   const handleDelete = () =>
@@ -34,30 +34,28 @@ const ColEightTable = ({ cols, data }) => {
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
         <thead className="text-xs text-gray-7=600 capitalize bg-white">
           <tr>
-            {cols.map((el, key) => {
+            {cols.map((sman, key) => {
               return (
                 <th scope="col" className="px-6 py-3" key={key}>
-                  {el}
+                  {sman}
                 </th>
               );
             })}
           </tr>
         </thead>
         <tbody>
-          {data.map((el, key) => {
+          {data.map((sman, key) => {
             return (
               <tr
                 className="odd:bg-white  border-b dark:border-gray-300"
                 key={key}
               >
-                <td className="px-6 py-4">{el.id}</td>
-                <td className="px-6 py-4">{el.name}</td>
-                <td className="px-6 py-4">{el.vlevel}</td>
-                <td className="px-6 py-4">{el.role}</td>
-                <td className="px-6 py-4">{el.email}</td>
-                <td className="px-6 py-4">{el.passport}</td>
+                <td className="px-6 py-4">{sman.id}</td>
+                <td className="px-6 py-4">{sman.name}</td>
+                <td className="px-6 py-4">{sman.type}</td>
+                <td className="px-6 py-4">{sman.description}</td>
                 <td className="px-6 py-4">
-                  {el.status == "Active" ? (
+                  {sman.status == "Active" ? (
                     <div className="px-3 py-2 rounded-md border border-1 border-green-400 bg-green-200 w-20 text-center">
                       Active
                     </div>
@@ -67,11 +65,11 @@ const ColEightTable = ({ cols, data }) => {
                     </div>
                   )}
                 </td>
-                <td className="px-6 py-4 text-2xl text-gray-400">
-                  <button className="mr-2" onClick={() => openViewModal(el)}>
+                <td className="text-xl text-gray-400">
+                  <button className="mr-2" onClick={() => openViewModal(sman)}>
                     <AiFillEye />
                   </button>
-                  <button className="mr-2" onClick={() => openEditModal(el)}>
+                  <button className="mr-2" onClick={() => openEditModal(sman)}>
                     <AiFillEdit />
                   </button>
                   <button onClick={handleDelete}>
@@ -83,17 +81,20 @@ const ColEightTable = ({ cols, data }) => {
           })}
         </tbody>
       </table>
-      {userViewModal && (
-        <ViewUser user={userViewModal} onClose={() => setUserViewModal(null)} />
+      {subViewModal && (
+        <ViewSubscription
+          sub={subViewModal}
+          onClose={() => setSubViewModal(null)}
+        />
       )}
-      {useryEditModal && (
-        <EditUser
-          user={useryEditModal}
-          onClose={() => setUserEditModal(null)}
+      {subEditModal && (
+        <EditSubscription
+          sub={subEditModal}
+          onClose={() => setsubEditModal(null)}
         />
       )}
     </div>
   );
 };
 
-export default ColEightTable;
+export default SubManTable;
