@@ -14,7 +14,7 @@ import Reports from "../../assets/SideNav/Reports.png";
 import Logohome from "../../assets/SideNav/Logo-home.png";
 
 
-const SideNavComponent = ({ screen }) => {
+const SideNavComponent = () => {
   const [expanded, setExpanded] = useState(false);
 
   const expandSidebar = () => {
@@ -25,167 +25,136 @@ const SideNavComponent = ({ screen }) => {
     setExpanded((pre) => false);
   };
 
-    return (
-      <OutsideClickHandler onOutsideClick={notExpandSidebar}>
+  return (
+    <OutsideClickHandler onOutsideClick={notExpandSidebar}>
+      <div
+        className={`pt-20 h-full  min-h-screen pr-2 rounded-r-xl space-y-4 bg-[#D6F6FF] ${expanded ? "" : "side-nav-half"} w-12 xl:w-full    `}
+      >
         <div
-          className={`pt-20  h-full  pr-10 rounded-r-xl gap-4 bg-[#D6F6FF]  px-5 ${
-            expanded ? "" : "side-nav-half"
-          } `}
-        >
-          <div
-            onClick={expandSidebar}
-            className="flex flex-row items-center mb-10 "
-          ></div>
+          onClick={expandSidebar}
+          className="flex flex-row items-center mb-10"
+        ></div>
+
+        <Link to="/profile">
+          <div>
+            <img src={Logohome} alt="user" />
+          </div>
+        </Link>
+        <div className="flex flex-col space-y-4">
           <div onClick={expandSidebar}>
             <Link to="/">
               <button className="side-nav-contain">
-                <img src={Logohome} alt="protect" />
+                <img src={Home} alt="protect" />
                 <span className="mobile-hide">
-                  <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                    Winlands
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    Home
                   </p>
                 </span>
               </button>
             </Link>
           </div>
 
-          <div className="flex flex-col space-y-4">
-            <div onClick={expandSidebar}>
+          <div onClick={expandSidebar}>
+            <Link to="/settings">
               <button className="side-nav-contain">
-                <img src={Home} alt="protect" />
+                <img src={Settings} alt="protect" />
                 <span className="mobile-hide">
-                  <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                    Home
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    Settings
                   </p>
                 </span>
               </button>
-            </div>
+            </Link>
+          </div>
+          <div onClick={expandSidebar}>
+            <Link to="/user-management">
+              <button className="side-nav-contain">
+                <img src={UserManagement} alt="protect" />
+                <span className="mobile-hide">
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    User Management
+                  </p>
+                </span>
+              </button>
+            </Link>
+          </div>
 
+          <div onClick={expandSidebar}>
+            <Link to="/raffles">
+              <button className="side-nav-contain">
+                <img src={RafflesMange} alt="protect" />
+                <span className="mobile-hide">
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    Raffles Mange
+                  </p>
+                </span>
+              </button>
+            </Link>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/master">
                 <button className="side-nav-contain">
-                  <img src={Settings} alt="protect" />
+                  <img src={MasterData} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Settings
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Master Data
                     </p>
                   </span>
                 </button>
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/user-permisson-role-1">
+              <Link to="/faq">
                 <button className="side-nav-contain">
-                  <img src={UserManagement} alt="protect" />
+                  <img src={FAQ} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      User Permisson
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      FAQ
                     </p>
                   </span>
                 </button>
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/user-management">
+              <Link to="/subscriptions">
                 <button className="side-nav-contain">
-                  <img src={UserManagement} alt="protect" />
+                  <img src={Subscription} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      User Management
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Subscription
                     </p>
                   </span>
                 </button>
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/RafflesManagement">
+              <Link to="/support">
                 <button className="side-nav-contain">
-                  <img src={RafflesMange} alt="protect" />
+                  <img src={Support} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Raffles Manage
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Support
                     </p>
                   </span>
                 </button>
               </Link>
-              <div onClick={expandSidebar}>
-                <Link to="/master-data-category">
-                  <button className="side-nav-contain">
-                    <img src={MasterData} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Master Data Category
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-
-              <div onClick={expandSidebar}>
-                <Link to="/master-data-details">
-                  <button className="side-nav-contain">
-                    <img src={MasterData} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Master Data Details
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-              <div onClick={expandSidebar}>
-                <Link to="/">
-                  <button className="side-nav-contain">
-                    <img src={FAQ} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        FAQ
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-              <div onClick={expandSidebar}>
-                <Link to="/subscription-management">
-                  <button className="side-nav-contain">
-                    <img src={Subscription} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Subscription
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-              <div onClick={expandSidebar}>
-                <Link to="/">
-                  <button className="side-nav-contain">
-                    <img src={Support} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Support
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-              <div onClick={expandSidebar}>
-                <Link to="/">
-                  <button className="side-nav-contain">
-                    <img src={Reports} alt="protect" />
-                    <span className="mobile-hide">
-                      <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                        Reports
-                      </p>
-                    </span>
-                  </button>
-                </Link>
-              </div>
+            </div>
+            <div onClick={expandSidebar}>
+              <Link to="/reports">
+                <button className="side-nav-contain">
+                  <img src={Reports} alt="protect" />
+                  <span className="mobile-hide">
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Reports
+                    </p>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-      </OutsideClickHandler>
-    );
+      </div>
+    </OutsideClickHandler>
+  );
 };
 
 export default SideNavComponent
