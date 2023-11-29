@@ -1,6 +1,6 @@
 import React from "react";
 
-const EditUser = ({ user, onClose }) => {
+const EditUserState = ({ user, onClose }) => {
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
@@ -121,4 +121,4 @@ const EditUser = ({ user, onClose }) => {
   );
 };
 
-export default EditUser;
+export default EditUserState;

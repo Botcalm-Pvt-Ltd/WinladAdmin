@@ -28,9 +28,7 @@ function UserPermisson() {
           <UserPermissionComponent />
         </div>
 
-        <div className="mt-5">
-          <UserPagination />
-        </div>
+     
       </div>
     </div>
   );

@@ -10,8 +10,8 @@ import AddRiffles from "./components/RafflesManagement/AddRaffles";
 import MasterDataCategory from "./pages/MasterData/MasterDataCategory";
 import MasterDataDetails from "./pages/MasterData/MasterDataDetails";
 import Subscription from "./pages/Subscription/Subscription";
-import AddFAQ from './components/FAQ/AddFAQ';
-import FAQ from './components/FAQ/FAQ';
+import AddFAQ from "./components/FAQ/AddFAQ";
+import FAQ from "./components/FAQ/FAQ";
 
 function App() {
   return (
