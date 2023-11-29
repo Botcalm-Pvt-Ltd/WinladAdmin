@@ -24,7 +24,7 @@ const Settings = () => {
                             <h5 className='mb-5 text-xl font-semibold'>Appearance Configuration</h5>
                             <DragFile />
 
-                            <select name="font" id="font" className='bg-yellow-200 p-3 rounded-full mt-4 w-full'>
+                            <select name="font" id="font" className='bg-yellow-200 px-3 py-3 rounded-full mt-4 w-full'>
                                 <option value="font">Font</option>
                             </select>
                         </div>
