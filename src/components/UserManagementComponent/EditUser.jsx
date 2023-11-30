@@ -1,13 +1,19 @@
 import React from "react";
+import vector from '../../assets/UserManagement/vector.png'
+
 
 const EditUser = ({ user, onClose }) => {
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#D6F6FF] px-10 py-6">
-            <div className="flex flex-col gap-2  my-10  justify-center items-center ">
+        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-white px-10">
+        <div className="flex justify-center">
+              <h1 className="text-xl py-5">Edit User</h1>
+            </div>
+            <div className="flex flex-col gap-2 justify-center items-center ">
+            <img src={vector} alt="vector" />
               <input id="imageUpload" type="file" className="hidden" />
-              <label htmlFor="imageUpload" className="cursor-pointer">
+              <label htmlFor="imageUpload" className="cursor-pointer absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -37,7 +43,7 @@ const EditUser = ({ user, onClose }) => {
                 type="text"
                 name="userId"
          
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -48,7 +54,7 @@ const EditUser = ({ user, onClose }) => {
                 type="text"
                 name="userName"
               
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -58,7 +64,7 @@ const EditUser = ({ user, onClose }) => {
               <select
                 name="userRole"
              
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               >
                 <option value="">Select User Role</option>
                 <option value="admin">Admin</option>
@@ -73,7 +79,7 @@ const EditUser = ({ user, onClose }) => {
               <select
                 name="userType"
              
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               >
                 <option value="">Select User Type</option>
                 <option value="admin">Verified</option>
@@ -89,7 +95,7 @@ const EditUser = ({ user, onClose }) => {
                 type="text"
                 name="passport"
               
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -100,7 +106,7 @@ const EditUser = ({ user, onClose }) => {
                 type="email"
                 name="email"
         
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
               />
             </div>
             <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">

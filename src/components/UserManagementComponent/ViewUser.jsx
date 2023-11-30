@@ -1,13 +1,19 @@
 import React from "react";
+import vector from '../../assets/UserManagement/vector.png'
+
 
 const ViewUser = ({ user, onClose }) => {
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#D6F6FF] px-10 py-6">
-          <div className="flex flex-col gap-2  my-10  justify-center items-center ">
+        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-white px-10">
+        <div className="flex justify-center">
+              <h1 className="text-xl py-5">View User</h1>
+            </div>
+          <div className="flex flex-col gap-2 justify-center items-center ">
             <input id="imageUpload" type="file" className="hidden" />
-            <label htmlFor="imageUpload" className="cursor-pointer">
+            <img src={vector} alt="vector" />
+            <label htmlFor="imageUpload" className="cursor-pointer absolute">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -35,7 +41,7 @@ const ViewUser = ({ user, onClose }) => {
             <input
               value={user.id}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -47,7 +53,7 @@ const ViewUser = ({ user, onClose }) => {
               name="userName"
               value={user.name}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             />
           </div>
 
@@ -59,7 +65,7 @@ const ViewUser = ({ user, onClose }) => {
               name="userRole"
               value={user.type}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             >
               <option value="admin">Admin</option>
             </select>
@@ -72,7 +78,7 @@ const ViewUser = ({ user, onClose }) => {
               name="userType"
               value={user.type}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             >
               <option value="admin">Verified</option>
               {/* Add more options as needed */}
@@ -87,7 +93,7 @@ const ViewUser = ({ user, onClose }) => {
               name="passport"
               value={user.passport}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -99,7 +105,7 @@ const ViewUser = ({ user, onClose }) => {
               name="email"
               value={user.email}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
             />
           </div>
           <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">

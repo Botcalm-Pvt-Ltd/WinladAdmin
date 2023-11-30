@@ -5,7 +5,7 @@ import RoundIcon from './roundIcon'
 
 const TopBar = () => {
   return (
-    <div className='flex items-center justify-end gap-3 w-full mb-3 px-3 lg:px-0'>
+    <div className='flex items-center justify-end gap-3 w-full mb-3 px-3 lg:px-0 max-xl:flex-col max-xl:items-end'>
                         <Inputsearch />
                         <UserIcon />
                         <RoundIcon />
