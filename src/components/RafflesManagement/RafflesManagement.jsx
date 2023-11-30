@@ -63,9 +63,8 @@ const RafflesManagement = () => {
     },
   ];
   return (
-    <div className="flex lg:flex-row flex-row  items-start justify-between">
-      <SideNavComponent />
-      <div className="w-full lg:w-full bg-white overflow-hidden max-xl:overflow-visible">
+
+      <>
         <RMBlackSquare />
         <div className="lg:p-5 p-1">
           <TopBar />
@@ -113,9 +112,9 @@ const RafflesManagement = () => {
             </div>
           </div>
         </div>
-      </div>
-      {showModal ? <AddRaffles onClose={() => setShowModal(false)}/> : null}
-    </div>
+        {showModal ? <AddRaffles onClose={() => setShowModal(false)}/> : null}
+      </>
+      
   );
 };
 

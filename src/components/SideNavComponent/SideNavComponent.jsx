@@ -27,7 +27,7 @@ const SideNavComponent = ({ screen }) => {
   return (
     <OutsideClickHandler onOutsideClick={notExpandSidebar}>
       <div
-        className={`pt-20  h-screen  pr-4 gap-4 bg-[#D6F6FF]  px-2 ${
+        className={`pt-20  min-h-screen h-full  pr-4 gap-4 bg-[#D6F6FF]  px-2 ${
           expanded ? "" : "side-nav-half"
         } `}
       >
@@ -50,6 +50,7 @@ const SideNavComponent = ({ screen }) => {
 
         <div className="flex flex-col space-y-4">
           <div onClick={expandSidebar}>
+          <Link to="/">
             {/* <button className="side-nav-contain">
                 <img src={Home} alt="protect" />
                 <span className="mobile-hide">
@@ -66,10 +67,11 @@ const SideNavComponent = ({ screen }) => {
                 </p>
               </span>
             </div>
+            </Link>
           </div>
 
           <div onClick={expandSidebar}>
-            <Link to="/">
+            <Link to="/settings">
               {/* <button className="side-nav-contain">
                   <img src={Settings} alt="protect" />
                   <span className="mobile-hide">
@@ -201,7 +203,7 @@ const SideNavComponent = ({ screen }) => {
               </Link>
             </div>
             <div onClick={expandSidebar}>
-              <Link to="/">
+              <Link to="/faq">
                 {/* <button className="side-nav-contain">
                     <img src={FAQ} alt="protect" />
                     <span className="mobile-hide">

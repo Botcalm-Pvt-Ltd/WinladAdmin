@@ -10,9 +10,8 @@ import RadioSelect from "../../components/Settings/RadioSelect";
 
 const Settings = () => {
   return (
-    <div className="flex lg:flex-row flex-row  items-start justify-between">
-      <SideNavComponent />
-      <div className="w-full lg:w-full bg-white overflow-hidden py-3">
+
+      <>
         <BackSquare />
         <div className="relative">
           <div className="lg:p-5 p-1">
@@ -220,8 +219,8 @@ const Settings = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </>
+  
   );
 };
 

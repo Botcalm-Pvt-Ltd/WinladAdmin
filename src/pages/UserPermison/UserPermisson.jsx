@@ -15,9 +15,6 @@ import Role from "../../components/BackgroundBlackSquare/roles";
 function UserPermisson() {
   return (
     <div className="flex lg:flex-row flex-row  items-start justify-between ">
-      <div className="">
-        <SideNavComponent />
-      </div>
       <div className="w-full lg:w-full bg-white ">
         <Role />
 
