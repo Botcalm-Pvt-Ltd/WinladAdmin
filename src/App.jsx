@@ -13,9 +13,6 @@ import Subscription from "./pages/Subscription/Subscription";
 import AddFAQ from "./components/FAQ/AddFAQ";
 import FAQ from "./components/FAQ/FAQ";
 import Settings from './pages/Settings/Settings';
-import RafflesManagement from './components/RafflesManagement/RafflesManagement';
-import FAQ from './components/FAQ/FAQ';
-import UserManagement from './components/UserManagementComponent/UserManagementComponent';
 
 function App() {
   return (

@@ -2,33 +2,6 @@ import React from 'react'
 import {MdArrowBackIosNew, MdArrowForwardIos} from 'react-icons/md';
 const Pagination = () => {
   return (
-<<<<<<< HEAD
-    <div className='pagination flex items-center justify-center gap-3 mx-auto float-right'>
-        <button className='ring-1 ring-black p-2 rounded-lg'>
-            <MdArrowBackIosNew/>
-        </button>
-        <button className='ring-1 ring-black py-1 px-2 text-center rounded-lg'>
-            1
-        </button>
-        <button className='ring-1 ring-black px-2 py-1 rounded-lg'>
-            2
-        </button>
-        <button className='ring-1 ring-black px-2 py-1 rounded-lg'>
-            3
-        </button>
-        <button className='ring-1 ring-black px-2 py-1 rounded-lg'>
-            4
-        </button>
-        <button>
-            ...
-        </button>
-        <button className='ring-1 ring-black px-2 py-1 rounded-lg'>
-            40
-        </button>
-        <button className='ring-1 ring-black p-2 rounded-lg'>
-            <MdArrowForwardIos/>
-        </button>
-=======
     <div className="pagination flex items-center justify-center gap-3 mx-auto float-right">
       <button className="bg-[#FFFFFF] border-2 border-[#000000] p-2 rounded-lg">
         <MdArrowBackIosNew />
@@ -52,7 +25,6 @@ const Pagination = () => {
       <button className="bg-[#FFFFFF] border-2 border-[#000000] p-2 rounded-lg">
         <MdArrowForwardIos />
       </button>
->>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
     </div>
   );
 }
