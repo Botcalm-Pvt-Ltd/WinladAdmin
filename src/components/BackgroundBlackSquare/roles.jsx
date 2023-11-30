@@ -3,7 +3,7 @@ import hiddenCar from "../../assets/hiddenCar.png";
 
 const Role = () => {
   return (
-    <div className="absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl  bg-black w-1/3 lg:w-1/2	 h-2/6 lg:h-1/2 m">
+    <div className="absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl  bg-black w-1/3 lg:w-1/2	 md:h-2/6  h-2/6 lg:h-1/2">
       <div className="flex flex-row gap-10 px-5 mt-20">
         <select
           name="filter"

@@ -6,7 +6,7 @@ const ViewMasterDataCategory = ({ category, onClose }) => {
       <div className="relative w-full mx-auto flex items-center justify-center  ">
         <div className="rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF]  border-2 border-[#000000] px-10 py-6">
           <div className="flex font-bold text-gray-700 xl:text-xl text-md py-5">
-            Master Data Management Category View
+            Master Data Category View
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
             <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">

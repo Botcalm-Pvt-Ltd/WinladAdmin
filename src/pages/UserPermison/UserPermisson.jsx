@@ -9,7 +9,7 @@ import MainCar from "../../assets/Dashboard/MainCar.png";
 import { Link } from "react-router-dom";
 import TopBar from "../../components/TopBar";
 import BackSquare from "../../components/BackgroundBlackSquare/BackSquare";
-import UserPagination from "../../components/UserPermissonComponent/UserPegination";
+
 import Role from "../../components/BackgroundBlackSquare/roles";
 
 function UserPermisson() {
@@ -21,7 +21,7 @@ function UserPermisson() {
       <div className="w-full lg:w-full bg-white ">
         <Role />
 
-        <div className="lg:p-5 p-1">
+        <div className="lg:p-5">
           <TopBar />
         </div>
         <div className="xl:w-2/5  w-5/12 ml-5">
