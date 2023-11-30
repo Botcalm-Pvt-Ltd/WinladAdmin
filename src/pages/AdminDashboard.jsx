@@ -1,6 +1,6 @@
 import React from 'react'
 import Inputsearch from '../components/Inputsearch'
-import RoundIcon from '../components/roundIcon'
+// import RoundIcon from '../components/roundIcon'
 import UserIcon from '../components/userIcon'
 import GreenCard from '../components/GreenCard'
 import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
@@ -148,7 +148,7 @@ const AdminDashboard = () => {
               text={"100/150"}
               subtext={"Average User Convergentratio"}
             />
-            <div className="bg-yellow-300 p-2 rounded-md flex items-center justify-between w-1/6 z-10">
+            <div className="bg-[#FFFFFF] p-2 rounded-md flex items-center justify-between w-1/6 z-10">
               <input
                 type="date"
                 name="calendar"
@@ -186,7 +186,7 @@ const AdminDashboard = () => {
         <div className="flex items-start justify-between gap-3 mt-8 flex-col lg:flex-row px-3 lg:px-0">
           <div className="lg:w-8/12 w-full">
             <div className="flex items-center justify-between">
-              <div className=" bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
+              <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
                 <div htmlFor="search" className="text-2xl mt-0">
                   <PiMagnifyingGlassThin />
                 </div>
@@ -194,12 +194,12 @@ const AdminDashboard = () => {
                   type="search"
                   name="search"
                   placeholder="Search For Anything"
-                  className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
+                  className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
                 />
               </div>
               <select
                 name="filter"
-                className="bg-yellow-300 px-3 py-2 rounded-lg"
+                className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
               >
                 <option value="">Filter</option>
               </select>
@@ -228,7 +228,7 @@ const AdminDashboard = () => {
         </div>
         <div className="relative   sm:rounded-lg py-0 my-6 lg:my-14 px-3">
           <div className="flex items-center justify-between">
-            <div className=" bg-yellow-300 rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
+            <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
               <div htmlFor="search" className="text-2xl mt-0">
                 <PiMagnifyingGlassThin />
               </div>
@@ -236,12 +236,12 @@ const AdminDashboard = () => {
                 type="search"
                 name="search"
                 placeholder="Search For Anything"
-                className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
+                className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
               />
             </div>
             <select
               name="filter"
-              className="bg-yellow-300 px-3 py-2 rounded-lg"
+              className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
             >
               <option value="">Filter</option>
             </select>

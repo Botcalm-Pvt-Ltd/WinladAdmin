@@ -28,10 +28,14 @@ function AddUser({ onClose }) {
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
+<<<<<<< HEAD
         <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-white px-10">
         <div className="flex justify-center">
               <h1 className="text-xl py-5">Add User</h1>
             </div>
+=======
+        <div className="rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF]  border-2 border-[#000000] px-10 py-6">
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
           <form onSubmit={handleSubmit} className="">
             <div className="flex flex-col gap-2 justify-center items-center ">
               <img src={vector} alt="vector" />
@@ -67,7 +71,11 @@ function AddUser({ onClose }) {
                 name="userId"
                 value={formData.userId}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -79,7 +87,11 @@ function AddUser({ onClose }) {
                 name="userName"
                 value={formData.userName}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -90,7 +102,11 @@ function AddUser({ onClose }) {
                 name="userRole"
                 value={formData.userRole}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               >
                 <option value="">Select User Role</option>
                 <option value="admin">Admin</option>
@@ -106,7 +122,11 @@ function AddUser({ onClose }) {
                 name="userType"
                 value={formData.userType}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               >
                 <option value="">Select User Type</option>
                 <option value="admin">Verified</option>
@@ -123,7 +143,11 @@ function AddUser({ onClose }) {
                 name="passport"
                 value={formData.passport}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -135,7 +159,11 @@ function AddUser({ onClose }) {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+=======
+                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+>>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
               />
             </div>
             <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">

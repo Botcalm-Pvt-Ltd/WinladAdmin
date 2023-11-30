@@ -1,12 +1,14 @@
 import MasterDataDetailsComponent from "../../MasterDataComponent/MasterDataDetailsComponent";
 import SideNavComponent from "../../components/SideNavComponent/SideNavComponent";
+import Sidenav from "../../components/SideNavComponent/Sidenav";
 import TopBar from "../../components/TopBar";
 import RMBlackSquare from "../../components/RafflesManagement/RMBlackSquare";
 
 function MasterDataDetails() {
   return (
     <div className="flex lg:flex-row flex-row  items-start justify-between">
-      <SideNavComponent />
+      {/* <SideNavComponent /> */}
+      <Sidenav />
       <div className="w-full lg:w-full bg-white overflow-hidden">
         <RMBlackSquare />
         <div className="lg:p-5 p-1">

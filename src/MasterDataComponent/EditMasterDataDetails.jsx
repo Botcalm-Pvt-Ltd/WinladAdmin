@@ -4,7 +4,10 @@ const EditMasterDataDetails = ({ details, onClose }) => {
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#D6F6FF] px-10 py-6">
+        <div className="rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF]  border border-[#000000] px-10 py-6">
+          <div className="flex font-bold text-gray-700 xl:text-xl text-md py-5">
+            Edit Master Data Management
+          </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
             <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
               User ID:
@@ -13,7 +16,7 @@ const EditMasterDataDetails = ({ details, onClose }) => {
               type="text"
               name="userId"
               value={details.id}
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border border-[#000000]"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -24,7 +27,7 @@ const EditMasterDataDetails = ({ details, onClose }) => {
               type="text"
               name="userId"
               value={details.categoryId}
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border border-[#000000]"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -35,7 +38,7 @@ const EditMasterDataDetails = ({ details, onClose }) => {
               type="text"
               name="userName"
               value={details.name}
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border border-[#000000]"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -46,7 +49,7 @@ const EditMasterDataDetails = ({ details, onClose }) => {
               type="text"
               name="userName"
               value={details.sortId}
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border border-[#000000]"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -57,7 +60,7 @@ const EditMasterDataDetails = ({ details, onClose }) => {
               type="textarea"
               name="description"
               value={details.description}
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#7CE1F7]"
+              className="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border border-[#000000]"
               rows={10} // you can adjust the number of rows as needed
             />
           </div>
