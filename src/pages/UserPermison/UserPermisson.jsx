@@ -1,9 +1,9 @@
 import UserPermissionComponent from "../../components/UserPermissonComponent/UserPermissionComponent"
 import SideNavComponent from "../../components/SideNavComponent/SideNavComponent";
 import hiddenCar from "../../assets/hiddenCar.png";
-import Inputsearch from "../../components/Inputsearch";
-import RoundIcon from "../../components/RoundIcon";
-import UserIcon from "../../components/userIcon";
+// import Inputsearch from "../../components/Inputsearch";
+// import RoundIcon from "../../components/RoundIcon";
+// import UserIcon from "../../components/userIcon";
 import { motion } from "framer-motion";
 import MainCar from "../../assets/Dashboard/MainCar.png";
 import { Link } from "react-router-dom";
