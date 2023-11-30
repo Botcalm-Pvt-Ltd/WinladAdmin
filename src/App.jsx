@@ -12,6 +12,7 @@ import MasterDataDetails from "./pages/MasterData/MasterDataDetails";
 import Subscription from "./pages/Subscription/Subscription";
 import AddFAQ from "./components/FAQ/AddFAQ";
 import FAQ from "./components/FAQ/FAQ";
+import Settings from './pages/Settings/Settings';
 
 function App() {
   return (
@@ -33,8 +34,10 @@ function App() {
           <Route path="/subscription-management" element={<Subscription />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/AddFAQ" element={<AddFAQ />} />
+            <Route path='/settings' element={<Settings />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
+    
     </>
   );
 }

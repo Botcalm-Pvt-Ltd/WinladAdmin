@@ -53,8 +53,8 @@ const SideNavComponent = ({ screen }) => {
             {/* <button className="side-nav-contain">
                 <img src={Home} alt="protect" />
                 <span className="mobile-hide">
-                  <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                    Home
+                  <p className="link-no-underlin  invisible xl:visible text-black">
+                    Settings
                   </p>
                 </span>
               </button> */}
@@ -73,8 +73,8 @@ const SideNavComponent = ({ screen }) => {
               {/* <button className="side-nav-contain">
                   <img src={Settings} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Settings
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Master Data
                     </p>
                   </span>
                 </button> */}
@@ -93,8 +93,8 @@ const SideNavComponent = ({ screen }) => {
               {/* <button className="side-nav-contain">
                   <img src={UserManagement} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      User Permisson
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      FAQ
                     </p>
                   </span>
                 </button> */}
@@ -132,8 +132,20 @@ const SideNavComponent = ({ screen }) => {
               {/* <button className="side-nav-contain">
                   <img src={RafflesMange} alt="protect" />
                   <span className="mobile-hide">
-                    <p className="link-no-underlin font-bold invisible xl:visible text-black">
-                      Raffles Manage
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Support
+                    </p>
+                  </span>
+                </button>
+              </Link>
+            </div>
+            <div onClick={expandSidebar}>
+              <Link to="/reports">
+                <button className="side-nav-contain">
+                  <img src={Reports} alt="protect" />
+                  <span className="mobile-hide">
+                    <p className="link-no-underlin  invisible xl:visible text-black">
+                      Reports
                     </p>
                   </span>
                 </button> */}
