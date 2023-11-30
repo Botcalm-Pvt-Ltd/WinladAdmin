@@ -1,16 +1,16 @@
-import React from 'react'
-import Inputsearch from './Inputsearch'
-import UserIcon from './userIcon'
-import RoundIcon from './roundIcon'
+import React from "react";
+import Inputsearch from "./Inputsearch";
+import UserIcon from "./UserIcon";
+import RoundIcon from "./RoundIcon";
 
 const TopBar = () => {
   return (
-    <div className='flex items-center justify-end gap-3 w-full mb-3 px-3 lg:px-0 max-xl:flex-col max-xl:items-end'>
-                        <Inputsearch />
-                        <UserIcon />
-                        <RoundIcon />
-                    </div>
-  )
-}
+    <div className="flex items-center justify-end gap-3 w-full mb-3 px-3 lg:px-0">
+      <Inputsearch />
+      <UserIcon />
+      <RoundIcon />
+    </div>
+  );
+};
 
-export default TopBar
+export default TopBar;

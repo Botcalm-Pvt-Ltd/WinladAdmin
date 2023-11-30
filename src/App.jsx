@@ -20,20 +20,6 @@ import UserManagement from './components/UserManagementComponent/UserManagementC
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <BrowserRouter>
-    <Routes>
-          <Route path='/' element={<AdminDashboard />} />
-          <Route path='/settings' element={<Settings />} />
-          <Route path='/RafflesManagement' element={<RafflesManagement />} />
-          <Route path='/FAQ' element={<FAQ />} />
-          <Route path='/UserManagement' element={<UserManagement />} />
-          <Route path='/user-permisson-role-1' element={<UserPermisson />} />
-          <Route path='/user-permisson-role-2' element={<UserPermisson2 />} />
-          <Route path='/user-permisson-role-3' element={<UserPermisson3 />} />  
-    </Routes>
-    </BrowserRouter>
-=======
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AdminDashboard />} />
@@ -54,7 +40,6 @@ function App() {
             <Route path='/settings' element={<Settings />} />
         </Routes>
       </BrowserRouter> 
->>>>>>> 3ba71e07be6f4a9c15b8a9703ce6e20c8beba727
     
     </>
   );
