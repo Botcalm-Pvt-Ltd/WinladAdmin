@@ -21,11 +21,11 @@ export default function Sidenav() {
           <KeyboardDoubleArrowRightIcon />
         )}
       </button>
-      <div className="side-nav-contain gap-5 py-0">
-        <div className="">
-          <img src={Logohome} alt="protect" />
+      <div className="side-nav-contain gap-5 py-0 items-center">
+        <div className={`${open ? '' : 'w-full'}`}>
+          <img src={Logohome} alt="protect"className="mx-auto" />
         </div>
-        <span className="">
+        <span className={`${open ? '' : 'hidden'}`}>
           <p className="font-bold  text-black">
             Winlands
           </p>

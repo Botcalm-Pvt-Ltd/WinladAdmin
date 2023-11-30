@@ -39,7 +39,7 @@ const Settings = () => {
               </button>
             </div>
           </div>
-          <hr className="my-8 bg-gray-200 w-4/5 mx-auto" />
+          <div className="my-8" />
           {/* Section 2 */}
           <h5 className="mb-5 text-xl font-semibold lg:px-5">
             Email Gateway Configaration

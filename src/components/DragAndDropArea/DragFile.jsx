@@ -49,7 +49,7 @@ const DragFile = () => {
     return (
         <>
             <div
-                className={`cursor-pointer rounded-2xl p-12 w-full min-h-32 text-center ring-1 ring-black ${dragging ? 'border-green-500' : 'border-gray-300'}`}
+                className={`bg-white cursor-pointer rounded-2xl p-12 w-full min-h-32 text-center ring-1 ring-black ${dragging ? 'border-green-500' : 'border-gray-300'}`}
                 onDragEnter={handleDragEnter}
                 onDragLeave={handleDragLeave}
                 onDragOver={handleDragOver}
