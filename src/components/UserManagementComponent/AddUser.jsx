@@ -1,4 +1,5 @@
 import  { useState } from "react";
+import vector from '../../assets/UserManagement/vector.png'
 
 function AddUser({ onClose }) {
 
@@ -29,9 +30,10 @@ function AddUser({ onClose }) {
       <div className="relative w-full mx-auto flex items-center justify-center  ">
         <div className="rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF]  border-2 border-[#000000] px-10 py-6">
           <form onSubmit={handleSubmit} className="">
-            <div className="flex flex-col gap-2  my-10  justify-center items-center ">
+            <div className="flex flex-col gap-2 justify-center items-center ">
+              <img src={vector} alt="vector" />
               <input id="imageUpload" type="file" className="hidden" />
-              <label htmlFor="imageUpload" className="cursor-pointer">
+              <label htmlFor="imageUpload" className="cursor-pointer absolute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

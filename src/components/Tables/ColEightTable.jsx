@@ -36,7 +36,7 @@ const ColEightTable = ({ cols, data }) => {
           <tr>
             {cols.map((el, key) => {
               return (
-                <th scope="col" className="px-6 py-3" key={key}>
+                <th scope="col" className="px-6 py-3 max-xl:px-3" key={key}>
                   {el}
                 </th>
               );
@@ -50,13 +50,13 @@ const ColEightTable = ({ cols, data }) => {
                 className="odd:bg-white  border-b dark:border-gray-300"
                 key={key}
               >
-                <td className="px-6 py-4">{el.id}</td>
-                <td className="px-6 py-4">{el.name}</td>
-                <td className="px-6 py-4">{el.vlevel}</td>
-                <td className="px-6 py-4">{el.role}</td>
-                <td className="px-6 py-4">{el.email}</td>
-                <td className="px-6 py-4">{el.passport}</td>
-                <td className="px-6 py-4">
+                <td className="px-6 py-4 max-xl:px-3">{el.id}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.name}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.vlevel}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.role}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.email}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.passport}</td>
+                <td className="px-6 py-4 max-xl:px-3">
                   {el.status == "Active" ? (
                     <div className="px-3 py-2 rounded-md border border-1 border-green-400 bg-green-200 w-20 text-center">
                       Active
@@ -67,7 +67,7 @@ const ColEightTable = ({ cols, data }) => {
                     </div>
                   )}
                 </td>
-                <td className="px-6 py-4 text-2xl text-gray-400">
+                <td className="px-6 py-4 text-2xl text-gray-400 flex">
                   <button className="mr-2" onClick={() => openViewModal(el)}>
                     <AiFillEye />
                   </button>

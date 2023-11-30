@@ -1,4 +1,6 @@
 import React from "react";
+import vector from '../../assets/UserManagement/vector.png'
+
 
 const EditUser = ({ user, onClose }) => {
   return (

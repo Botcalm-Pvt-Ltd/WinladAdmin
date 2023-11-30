@@ -11,9 +11,9 @@ import Rafflestable from "./Rafflestable";
 const RafflesManagement = () => {
     const [showModal, setShowModal] = useState(false);
   const tableCols = [
-    "Raffle ID",
-    "Raffles Name",
-    "Raffle Category",
+    "Giveaway ID",
+    "Giveaway Name",
+    "Giveaway Category",
     "Schedule Date",
     "Status",
     "Action",
@@ -65,20 +65,20 @@ const RafflesManagement = () => {
   return (
     <div className="flex lg:flex-row flex-row  items-start justify-between">
       <SideNavComponent />
-      <div className="w-full lg:w-full bg-white overflow-hidden">
+      <div className="w-full lg:w-full bg-white overflow-hidden max-xl:overflow-visible">
         <RMBlackSquare />
         <div className="lg:p-5 p-1">
           <TopBar />
         </div>
         <div>
-          <h1 className="text-xl px-20 pt-10 max-md:pt-20">
-            Raffles Management
+          <h1 className="text-xl px-8 max-xl:pt-20 pt-1 max-md:pt-20">
+          Giveaways Management
           </h1>
         </div>
-        <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
+        <div className="flex items-start justify-between gap-3 max-lg:mt-4 mt-8 flex-col-reverse lg:flex-row relative max-xl:top-5">
           <div className="lg:w-8/12 w-full px-3 lg-px-0">
-            <div className="flex items-center justify-between">
-              <div className=" bg-yellow-300 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
+            <div className="flex items-center justify-between pl-4">
+              <div className=" ring-1 ring-black rounded-full w-3/12  md:w-4/12 px-4 relative flex items-center justify-between">
                 <div htmlFor="search" className="text-2xl mt-0">
                   <PiMagnifyingGlassThin />
                 </div>
@@ -86,16 +86,16 @@ const RafflesManagement = () => {
                   type="search"
                   name="search"
                   placeholder="Search For Anything"
-                  className="px-4 py-2 w-full border-none  outline-none bg-yellow-300"
+                  className="px-4 py-2 w-full border-none  outline-none"
                 />
               </div>
               <div className="flex gap-5">
-                <button className="bg-yellow-300 px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
-                  Add Raffles
+                <button className="ring-1 ring-black px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
+                  Add Giveaway
                 </button>
                 <select
                   name="filter"
-                  className="bg-yellow-300 px-3 py-2 rounded-lg"
+                  className="ring-1 ring-black px-3 py-2 rounded-lg"
                 >
                   <option value="">Filter</option>
                 </select>
@@ -105,7 +105,7 @@ const RafflesManagement = () => {
             <div className="relative overflow-x-auto  sm:rounded-lg py-4 z-10">
               <Rafflestable cols={tableCols} data={tableData} />
             </div>
-            <div className="w-full">
+            <div className="w-full relative bottom-1">
               <Pagination />
             </div>
             <div className="absolute top-[450px] right-[150px] max-lg:top-96 max-lg:right-0">
