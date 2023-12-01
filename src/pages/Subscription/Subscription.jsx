@@ -5,9 +5,8 @@ import RMBlackSquare from "../../components/RafflesManagement/RMBlackSquare";
 
 function Subscription() {
   return (
-    <div className="flex lg:flex-row flex-row  items-start justify-between">
-      <SideNavComponent />
-      <div className="w-full lg:w-full bg-white overflow-hidden">
+
+      <>
         <RMBlackSquare />
         <div className="lg:p-5 p-1">
           <TopBar />
@@ -20,8 +19,8 @@ function Subscription() {
         <div className="">
           <SubscriptionComponent />
         </div>
-      </div>
-    </div>
+      </>
+
   );
 }
 

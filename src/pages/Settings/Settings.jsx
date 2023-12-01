@@ -10,9 +10,8 @@ import RadioSelect from "../../components/Settings/RadioSelect";
 
 const Settings = () => {
   return (
-    <div className="flex lg:flex-row flex-row  items-start justify-between">
-      <SideNavComponent />
-      <div className="w-full lg:w-full bg-white overflow-hidden py-3">
+
+      <>
         <BackSquare />
         <div className="relative">
           <div className="lg:p-5 p-1">
@@ -40,7 +39,7 @@ const Settings = () => {
               </button>
             </div>
           </div>
-          <hr className="my-8 bg-gray-200 w-4/5 mx-auto" />
+          <div className="my-8" />
           {/* Section 2 */}
           <h5 className="mb-5 text-xl font-semibold lg:px-5">
             Email Gateway Configaration
@@ -220,8 +219,8 @@ const Settings = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </>
+  
   );
 };
 

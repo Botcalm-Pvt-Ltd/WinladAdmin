@@ -20,7 +20,7 @@ export const navData = [
     id: 1,
     icon: <SettingsIcon />,
     text: "Settings",
-    link: "explore",
+    link: "settings",
   },
   {
     id: 2,
@@ -56,25 +56,25 @@ export const navData = [
     id: 7,
     icon: <HelpIcon />,
     text: "FAQ",
-    link: "settings",
+    link: "faq",
   },
 
   {
     id: 8,
     icon: <SubscriptionsIcon />,
     text: "Subscription",
-    link: "settings",
+    link: "subscription-management",
   },
   {
     id: 9,
     icon: <TravelExploreIcon />,
     text: "Support",
-    link: "settings",
+    link: "master-data-category",
   },
   {
     id: 10,
     icon: <BeenhereIcon />,
     text: "Reports",
-    link: "settings",
+    link: "master-data-details",
   },
 ];
