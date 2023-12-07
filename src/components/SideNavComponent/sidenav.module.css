@@ -1,31 +1,46 @@
 .sidenav {
-    width: 250px;
-    transition: width 0.3s ease-in-out;
+    width: 260px;
+    /* transition: width 0.3s ease-in-out; */
+  
     min-height: 100vh;
     height: auto;
-    background-color: rgb(214 246 255);
+    background-color: #242527;
     padding-top: 28px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
 }
 .sidenavClosed {
     composes: sidenav;
-    transition: width 0.3s ease-in-out;
-    width: 60px
+    /* transition: width 0.3s ease-in-out; */
+    width: 60px;
+    overflow: hidden;
+    
+    .linkText{
+        display: none;
+    }
+    
 }
+
 .sideitem {
     display: flex;
     align-items: center !important;
-    padding: 10px 20px;
+    padding: 12px 20px;
     cursor: pointer;
-    color: #000000;
+    color: #fff;
     text-decoration: none;
     overflow: hidden;
 }
 .linkText {
+    display: block;
     padding-left: 16px;
+    opacity: 1;
 }
 
 .sideitem:hover {
-    background-color: #244f7d1c;
+    background-color: #3A3B3D;
+
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 
 }
 .menuBtn {
@@ -37,4 +52,7 @@
     border: none;
     cursor: pointer;
     padding-left: 20px;
+    margin-bottom: 10px;
 }
+
+

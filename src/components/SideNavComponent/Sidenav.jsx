@@ -4,8 +4,8 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { navData } from "../../lib/navdata";
 import { useState } from "react";
-import Logohome from "../../assets/SideNav/Logo-home.png";
-
+import Logohome from "../../assets/SideNav/main_logo.png";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 
 export default function Sidenav() {
   const [open, setopen] = useState(true);
@@ -21,14 +21,12 @@ export default function Sidenav() {
           <KeyboardDoubleArrowRightIcon />
         )}
       </button>
-      <div className="side-nav-contain gap-5 py-0 items-center">
-        <div className={`${open ? '' : 'w-full'}`}>
-          <img src={Logohome} alt="protect"className="mx-auto" />
+      <div className="side-nav-contain gap-5 py-0 px-[15px] items-center">
+        <div className={`${open ? "" : "w-full"}`}>
+          <img src={Logohome} alt="protect" className="mx-auto" />
         </div>
-        <span className={`${open ? '' : 'hidden'}`}>
-          <p className="font-bold  text-black">
-            Winlands
-          </p>
+        <span className={`${open ? "" : "hidden"}`}>
+          <p className="font-bold  text-white">Winlands</p>
         </span>
       </div>
       {navData.map((item) => {
@@ -39,6 +37,11 @@ export default function Sidenav() {
           </NavLink>
         );
       })}
+
+      <NavLink className={`${styles.sideitem} mt-10`} to="">
+        <LogoutOutlinedIcon />
+        <span className={styles.linkText}>Sign Out</span>
+      </NavLink>
     </div>
   );
 }
