@@ -22,7 +22,7 @@ const DashboardLayout = () => {
   return (
     <div className="flex lg:flex-row flex-row  items-stretch justify-between">
       <Sidenav />
-      <div className="w-full lg:w-full bg-white overflow-hidden py-3 xl:px-3">
+      <div className="w-full lg:w-full bg-white overflow-hidden  xl:px-3">
         <Outlet/>
       </div>
     </div>

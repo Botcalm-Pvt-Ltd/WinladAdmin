@@ -1,19 +1,28 @@
-import React from 'react'
+import React from "react";
 // import Inputsearch from '../components/Inputsearch'
 // import RoundIcon from '../components/roundIcon'
 // import UserIcon from '../components/userIcon'
-import GreenCard from '../components/GreenCard'
-import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
-import PieChart from '../components/Charts/PieChart'
-import { PiMagnifyingGlassThin } from 'react-icons/pi';
-import BarChart from '../components/Charts/BarChart'
-import Pagination from '../components/Pagination'
-import TableLight from '../components/Tables/TableLight'
-import TopBar from '../components/TopBar'
-import SideNavComponent from '../components/SideNavComponent/SideNavComponent'
-import BackSquare from '../components/BackgroundBlackSquare/BackSquare'
-import ColEightTable from '../components/Tables/ColEightTable'
-
+import GreenCard from "../components/GreenCard";
+import { AiFillEdit, AiFillEye, AiOutlineDown } from "react-icons/ai";
+import PieChart from "../components/Charts/PieChart";
+import { PiMagnifyingGlassThin } from "react-icons/pi";
+import BarChart from "../components/Charts/BarChart";
+import Pagination from "../components/Pagination";
+import TableLight from "../components/Tables/TableLight";
+import TopBar from "../components/TopBar";
+import SideNavComponent from "../components/SideNavComponent/SideNavComponent";
+import BackSquare from "../components/BackgroundBlackSquare/BackSquare";
+import ColEightTable from "../components/Tables/ColEightTable";
+import { RiDonutChartLine } from "react-icons/ri";
+import { MdSsidChart } from "react-icons/md";
+import { IoBarChartOutline } from "react-icons/io5";
+import { FiBarChart2 } from "react-icons/fi";
+import { FiPieChart } from "react-icons/fi";
+import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 const AdminDashboard = () => {
   const table2Cols = [
@@ -135,126 +144,123 @@ const AdminDashboard = () => {
       status: "Inactive",
     },
   ];
+
+  const [openCalender, setopenCaleder] = useState(false)
   return (
-      <>
-        <BackSquare />
-        <div className="lg:p-5 p-1">
-          <TopBar />
-          <div className="flex items-center justify-end gap-3 w-full z-10 mt-5 px-3 lg:px-0">
-            <GreenCard text={100} subtext={"Active Lottery"} />
+    <>
+      <div className="p-5 pt-3 pb-20 bg-black rounded-b-3xl relative">
+        <p className="text-white text-xl mb-1 ">Giveaways Dashboard</p>
+
+        <TopBar />
+
+        <div className="flex items-start flex-wrap justify-end gap-3 w-full  mt-5 px-3 lg:px-0 ">
+          <GreenCard
+            text={"100/150"}
+            subtext={"Average User Convergentratio"}
+          />
+
+          <div className="bg-[#FFFFFF] p-2 rounded-md flex flex-col relative border-red-600">
+            <div className="flex items-center justify-between p-2 gap-10 cursor-pointer" onClick={()=>(setopenCaleder((pre)=>!pre))}>
+              <p>Calendar</p>
+              {openCalender ? (<MdOutlineKeyboardArrowUp size={25} />):( <MdKeyboardArrowDown size={25} />)}
+             
+            </div>
+            <div className="absolute right-0 top-[70px] z-20">
+              {openCalender &&  <Calendar  />}
+            </div>
+          </div>
+        </div>
+
+        <div className=" mt-5 w-full">
+          <div className="flex lg:items-center flex-wrap flex-row justify-end gap-3 w-full px-3 lg:px-0 ">
             <GreenCard
-              text={"100/150"}
+              icon={<RiDonutChartLine size={40} />}
+              text={"50"}
+              subtext={"Total User Count"}
+            />
+            <GreenCard
+              icon={<MdSsidChart size={40} />}
+              text={"40/50"}
               subtext={"Average User Convergentratio"}
             />
-            <div className="bg-[#FFFFFF] p-2 rounded-md flex items-center justify-between w-1/6 z-10">
-              <input
-                type="date"
-                name="calendar"
-                placeholder="Calendar"
-                className="bg-transparent outline-none w-full"
-              />
-              <AiOutlineDown />
-            </div>
-          </div>
-          <div className="chart-container flex items-center flex-col md:flex-row justify-between mt-4">
-            <div className="lg:w-2/5 w-full z-10 leading-none">
-              <PieChart
-                labels={["Luxury Range", "Mid Range", "Low Range"]}
-                heading={<h1>Lottery Configurations</h1>}
-              />
-            </div>
-            <div className="lg:w-2/5 w-full z-10 leading-none">
-              <PieChart
-                labels={[
-                  "Bornze Pack",
-                  "Silver Pack",
-                  "Gold Pack",
-                  "Platinum Pack",
-                  "Titanium Pack",
-                ]}
-                chartSeries={[51, 2, 11, 18, 27]}
-                labelCOlor="#fff"
-                heading={
-                  <h1 className="text-white">Subscription Distributions</h1>
-                }
-              />
-            </div>
-          </div>
-        </div>
-        <div className="flex items-start justify-between gap-3 mt-8 flex-col lg:flex-row px-3 lg:px-0">
-          <div className="lg:w-8/12 w-full">
-            <div className="flex items-center justify-between">
-              <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
-                <div htmlFor="search" className="text-2xl mt-0">
-                  <PiMagnifyingGlassThin />
-                </div>
-                <input
-                  type="search"
-                  name="search"
-                  placeholder="Search For Anything"
-                  className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
-                />
-              </div>
-              <select
-                name="filter"
-                className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
-              >
-                <option value="">Filter</option>
-              </select>
-            </div>
-
-            <div className="relative overflow-x-auto  sm:rounded-lg py-4">
-              <TableLight cols={table1cOls} data={table1Data} />
-            </div>
-            <div className="w-full">
-              <Pagination />
-            </div>
-          </div>
-          <div className="bg-black p-3 lg:w-4/12 w-full rounded-tl-3xl rounded-bl-3xl lg:rounded-tr-none lg:rounded-br-none rounded-tr-3xl rounded-br-3xl">
-            <BarChart />
-          </div>
-        </div>
-        <div className="my-5 lg:my-12 ">
-          <div className=" flex items-center gap-3 justify-center">
-            <GreenCard text={"100"} subtext={"Total UserCount"} />
             <GreenCard
-              text={"100/150"}
+              icon={<IoBarChartOutline size={30} />}
+              text={"20"}
+              subtext={"Unverify User Convergentratio"}
+            />
+            <GreenCard
+              icon={<FiBarChart2 size={40} />}
+              text={"100/50"}
               subtext={"Average User Convergentratio"}
             />
-            <GreenCard text={"20"} subtext={"Unverify User Convergentratio"} />
+            <GreenCard
+              icon={<FiPieChart size={40} />}
+              text={"100"}
+              subtext={"Active Lottery"}
+            />
           </div>
         </div>
-        <div className="relative   sm:rounded-lg py-0 my-6 lg:my-14 px-3">
-          <div className="flex items-center justify-between">
-            <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
-              <div htmlFor="search" className="text-2xl mt-0">
-                <PiMagnifyingGlassThin />
-              </div>
-              <input
-                type="search"
-                name="search"
-                placeholder="Search For Anything"
-                className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
-              />
+      </div>
+
+      <div className=" w-full px-3 lg:px-0 mt-10">
+        <div className="flex items-center justify-between">
+          <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
+            <div htmlFor="search" className="text-2xl mt-0">
+              <PiMagnifyingGlassThin />
             </div>
-            <select
-              name="filter"
-              className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
-            >
-              <option value="">Filter</option>
-            </select>
+            <input
+              type="search"
+              name="search"
+              placeholder="Search For Anything"
+              className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
+            />
           </div>
-          <div className="overflow-x-auto">
-            <ColEightTable cols={table2Cols} data={table2Data} />
-          </div>
+          <select
+            name="filter"
+            className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
+          >
+            <option value="">Filter</option>
+          </select>
+        </div>
 
-          {/* <TableLight cols={table2Cols} data={table2Data} /> */}
-          <div className="w-full">
-            <Pagination />
-          </div>
-          </div>
-        </>
+        <div className="relative overflow-x-auto  sm:rounded-lg py-4">
+          <TableLight cols={table1cOls} data={table1Data} />
+        </div>
+        <div className="w-full">
+          <Pagination />
+        </div>
+      </div>
 
+      <div className="relative   sm:rounded-lg py-0 my-6 lg:my-14 px-3 pt-8">
+        <div className="flex items-center justify-between">
+          <div className=" bg-[#FFFFFF]  border-2 border-[#000000] rounded-full w-3/12  md:w-90 overflow-hidden px-4 relative flex items-center justify-between">
+            <div htmlFor="search" className="text-2xl mt-0">
+              <PiMagnifyingGlassThin />
+            </div>
+            <input
+              type="search"
+              name="search"
+              placeholder="Search For Anything"
+              className="px-4 py-2 w-full border-none  outline-none bg-[#FFFFFF]  border-2 border-[#000000]"
+            />
+          </div>
+          <select
+            name="filter"
+            className="bg-[#FFFFFF]  border-2 border-[#000000] px-3 py-2 rounded-lg"
+          >
+            <option value="">Filter</option>
+          </select>
+        </div>
+        <div className="overflow-x-auto">
+          <ColEightTable cols={table2Cols} data={table2Data} />
+        </div>
+
+        {/* <TableLight cols={table2Cols} data={table2Data} /> */}
+        <div className="w-full mt-3">
+          <Pagination />
+        </div>
+      </div>
+    </>
   );
 };
 

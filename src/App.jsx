@@ -14,6 +14,7 @@ import AddFAQ from "./components/FAQ/AddFAQ";
 import FAQ from "./components/FAQ/FAQ";
 import Settings from './pages/Settings/Settings';
 import DashboardLayout from "./pages/Layout/DashboardLayout";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             {/* <Route path="AddFAQ" element={<AddFAQ />} /> */}
             <Route path='settings' element={<Settings />} />
           </Route>
+          <Route path='login' element={<Login />} />
         </Routes>
       </BrowserRouter>
 
