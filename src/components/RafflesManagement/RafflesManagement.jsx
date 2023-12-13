@@ -75,9 +75,9 @@ const RafflesManagement = () => {
           </h1>
         </div>
         <div className="flex items-start justify-between gap-3 max-lg:mt-4 mt-8 flex-col-reverse lg:flex-row relative max-xl:top-5">
-          <div className="lg:w-8/12 w-full px-3 lg-px-0">
+          <div className=" w-full px-3 lg-px-0">
             <div className="flex items-center justify-between pl-4">
-              <div className=" ring-1 ring-black rounded-full w-3/12  md:w-4/12 px-4 relative flex items-center justify-between">
+              <div className=" bg-gray-200 rounded-full w-3/12  md:w-4/12 px-4 relative flex items-center justify-between">
                 <div htmlFor="search" className="text-2xl mt-0">
                   <PiMagnifyingGlassThin />
                 </div>
@@ -85,16 +85,16 @@ const RafflesManagement = () => {
                   type="search"
                   name="search"
                   placeholder="Search For Anything"
-                  className="px-4 py-2 w-full border-none  outline-none"
+                  className="bg-inherit px-4 py-2 w-full border-none  outline-none"
                 />
               </div>
               <div className="flex gap-5">
-                <button className="ring-1 ring-black px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
+                <button className="bg-gray-200 px-3 py-2 rounded-lg" onClick={() => setShowModal(true)}>
                   Add Giveaway
                 </button>
                 <select
                   name="filter"
-                  className="ring-1 ring-black px-3 py-2 rounded-lg"
+                  className="bg-gray-200 px-3 py-2 rounded-lg"
                 >
                   <option value="">Filter</option>
                 </select>
@@ -107,9 +107,9 @@ const RafflesManagement = () => {
             <div className="w-full relative bottom-1">
               <Pagination />
             </div>
-            <div className="absolute top-[450px] right-[150px] max-lg:top-96 max-lg:right-0">
+            {/* <div className="absolute top-[450px] right-[150px] max-lg:top-96 max-lg:right-0">
               <img src={RMBackground} alt="" className="opacity-20 -z-10" />
-            </div>
+            </div> */}
           </div>
         </div>
         {showModal ? <AddRaffles onClose={() => setShowModal(false)}/> : null}

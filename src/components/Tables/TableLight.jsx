@@ -1,8 +1,42 @@
-import React from 'react'
-import { AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
+import React, { useState } from 'react'
+import { AiFillDelete, AiFillEdit, AiFillEye, AiOutlineDown } from 'react-icons/ai'
 import UserDetailViewComponent from '../UserDetailView/UserDetailViewComponent'
-
+import ViewRaffles from '../RafflesManagement/ViewRaffles';
+import EditRaffles from '../RafflesManagement/EditRaffles';
+import ViewRaffle from '../AdminDashboard/ViewRaffle';
+import { MdDelete } from 'react-icons/md';
+import EditRaffle from '../AdminDashboard/EditRaffle';
+import swal from "sweetalert";
 const TableLight = ({ cols, data }) => {
+    const [viewGive, setViewGive] = useState(false);
+    const [editGive, setEditGive] = useState(false);
+    const [selectedRaffle, setSelectedRaffle] = useState({});
+
+    const handleViewGiveaway=(row)=>{
+        setSelectedRaffle(row);
+        setViewGive(true);
+    }
+    const handleDelete = (row) =>
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure that you want to delete this entry?",
+      icon: "warning",
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Deleted!", "Your entry has been deleted!", "success");
+      }
+    });
+    const handleEditGiveaway = (row)=>{
+        setSelectedRaffle(row);
+        setEditGive(true);
+    }
+    
+
+    const handleClose=()=>{
+        setEditGive(false);
+        setViewGive(false);
+    }
     return (
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
             <thead className="text-xs text-gray-7=600 capitalize bg-white">
@@ -47,16 +81,25 @@ const TableLight = ({ cols, data }) => {
                             }
                              </td>
                              <td className="px-6 py-4 text-2xl text-gray-400 flex">
-                                <button className='mr-2'><AiFillEye /></button>
-                                <UserDetailViewComponent/>
+                                <button className='mr-2' onClick={()=>handleViewGiveaway(el)}><AiFillEye /></button>
+                                <button className='mr-2' onClick={()=>handleEditGiveaway(el)}><AiFillEdit /></button>
+                                <button className='mr-2' onClick={()=>handleDelete(el)}><MdDelete /></button>
+                                
                             </td>
 
                             </tr>
                         )
                     })
                 }
-
+    
             </tbody>
+            {
+                editGive && <EditRaffle faq={selectedRaffle} onClose={handleClose}/>
+            }
+            
+            {  
+                viewGive && <ViewRaffle faq={selectedRaffle} onClose={handleClose}/>
+            }
         </table>
     )
 }

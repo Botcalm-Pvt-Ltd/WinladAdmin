@@ -1,15 +1,19 @@
 import React from "react";
 import vector from '../../assets/UserManagement/vector.png'
+import { IoMdClose } from "react-icons/io";
 
 
 const ViewUser = ({ user, onClose }) => {
   return (
-    <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
+    <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="border-0 rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-white px-10">
-        <div className="flex justify-center">
-              <h1 className="text-xl py-5">View User</h1>
-            </div>
+        <div className="border-0 rounded-3xl shadow-2xl relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-white px-10">
+          <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
+            <IoMdClose />
+          </div>
+          <div className="flex justify-center">
+            <h1 className="text-xl py-5">View User</h1>
+          </div>
           <div className="flex flex-col gap-2 justify-center items-center ">
             <input id="imageUpload" type="file" className="hidden" />
             <img src={vector} alt="vector" />
@@ -41,19 +45,19 @@ const ViewUser = ({ user, onClose }) => {
             <input
               value={user.id}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
             <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-              User Name:
+              Name:
             </label>
             <input
               type="text"
               name="userName"
               value={user.name}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             />
           </div>
 
@@ -65,20 +69,20 @@ const ViewUser = ({ user, onClose }) => {
               name="userRole"
               value={user.type}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             >
               <option value="admin">Admin</option>
             </select>
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
             <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-              User Type:
+              Verification Level:
             </label>
             <select
               name="userType"
               value={user.type}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             >
               <option value="admin">Verified</option>
               {/* Add more options as needed */}
@@ -86,14 +90,14 @@ const ViewUser = ({ user, onClose }) => {
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
             <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-              Passport:
+              NIC:
             </label>
             <input
               type="text"
               name="passport"
               value={user.passport}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             />
           </div>
           <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -105,20 +109,15 @@ const ViewUser = ({ user, onClose }) => {
               name="email"
               value={user.email}
               readOnly
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+              className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
             />
           </div>
-          <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">
-            <button
-              className="text-white bg-black rounded-lg background-transparent  font-bold uppercase xl:px-6 px-3  py-2 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover-up"
-              type="button"
-              onClick={() => {
-                onClose();
-              }}
-            >
-              Close
-            </button>
+          <div className="flex items-center justify-end">
+            <div className='px-3 py-1 rounded-md border border-1 bg-gray-200 w-20 text-black text-center'>Active</div> :
+            <div className='px-3 py-1 rounded-md border border-1  bg-red-200 w-20  text-center text-red-600'>Inactive</div>
           </div>
+
+          <button className="bg-black text-white px-3 py-1 rounded-lg w-fit ml-auto my-4">Save</button>
         </div>
       </div>
     </div>

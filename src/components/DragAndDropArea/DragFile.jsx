@@ -49,7 +49,7 @@ const DragFile = () => {
     return (
         <>
             <div
-                className={`bg-white cursor-pointer rounded-2xl p-12 w-full min-h-32 text-center ring-1 ring-black ${dragging ? 'border-green-500' : 'border-gray-300'}`}
+                className={` cursor-pointer rounded-2xl p-12 w-full min-h-32 text-center ${dragging ? 'border-green-500 bg-gray-300' : 'border-gray-300 bg-gray-200'}`}
                 onDragEnter={handleDragEnter}
                 onDragLeave={handleDragLeave}
                 onDragOver={handleDragOver}
@@ -71,8 +71,8 @@ const DragFile = () => {
             {/* Display selected file */}
             {selectedFile && (
                 <div className="mt-4">
-                    <h2 className="text-xl font-semibold">Selected File:</h2>
-                    <p>{selectedFile.name}</p>
+                    <h2 className="text-lg">Selected File:</h2>
+                    <p className='text-xs'>{selectedFile.name}</p>
                 </div>
             )}
         </>

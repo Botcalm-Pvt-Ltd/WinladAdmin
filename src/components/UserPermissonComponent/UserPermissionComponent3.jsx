@@ -27,73 +27,73 @@ function UserPermission3() {
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
           <input
             type="checkbox"
             id="hs-basic-usage"
-            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none appearance-none dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
+            className="relative w-[3.25rem] h-7  border-2 rounded-full cursor-pointer transition-colors ease-in-out duration-200 border-transparent  ring-offset-white focus:outline-none  dark:bg-[#FF6363] dark:checked:bg-[#7FFF6F]
                     before:inline-block before:w-6 before:h-6   before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-white dark:checked:before:bg-white"
           />
 

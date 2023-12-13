@@ -42,7 +42,7 @@ function App() {
             <Route path="" element={<AdminDashboard />} />
             <Route path="user-permisson-role-1" element={<UserPermisson />} />
             <Route path="user-management" element={<UserManagement />} />
-            <Route path="RafflesManagement" element={<RafflesManagement />} />
+            <Route path="Management" element={<RafflesManagement />} />
             {/* <Route path="addRiffles" element={<AddRiffles />} /> */}
             <Route path="master-data-category" element={<MasterDataCategory />}/>
             <Route path="master-data-details" element={<MasterDataDetails />} />

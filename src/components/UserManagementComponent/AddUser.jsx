@@ -1,34 +1,38 @@
-import  { useState } from "react";
+import { useState } from "react";
 import vector from '../../assets/UserManagement/vector.png'
+import { IoMdClose } from "react-icons/io";
 
 function AddUser({ onClose }) {
 
 
 
-    const [formData, setFormData] = useState({
-      userId: "",
-      userName: "",
-      userRole: "",
-      userType: "",
-      passport: "",
-      email: "",
-    });
+  const [formData, setFormData] = useState({
+    userId: "",
+    userName: "",
+    userRole: "",
+    userType: "",
+    passport: "",
+    email: "",
+  });
 
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-    
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-     const handleSubmit = (e) => {
-       e.preventDefault();
-       // Handle form submission logic here
-       console.log("Form submitted:", formData);
-     };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+  };
   return (
-    <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  backdrop-blur-sm">
+    <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="rounded-3xl shadow-lg relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF]  border-2 border-[#000000] px-10 py-6">
+        <div className="rounded-3xl shadow-2xl relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF] px-10 py-6">
+          <div className='absolute top-3 right-3 cursor-pointer text-xl' onClick={()=>onClose()}>
+            <IoMdClose />
+          </div>
           <form onSubmit={handleSubmit} className="">
             <div className="flex flex-col gap-2 justify-center items-center ">
               <img src={vector} alt="vector" />
@@ -64,7 +68,7 @@ function AddUser({ onClose }) {
                 name="userId"
                 value={formData.userId}
                 onChange={handleChange}
-                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -76,7 +80,7 @@ function AddUser({ onClose }) {
                 name="userName"
                 value={formData.userName}
                 onChange={handleChange}
-                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -87,7 +91,7 @@ function AddUser({ onClose }) {
                 name="userRole"
                 value={formData.userRole}
                 onChange={handleChange}
-                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               >
                 <option value="">Select User Role</option>
                 <option value="admin">Admin</option>
@@ -103,7 +107,7 @@ function AddUser({ onClose }) {
                 name="userType"
                 value={formData.userType}
                 onChange={handleChange}
-                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               >
                 <option value="">Select User Type</option>
                 <option value="admin">Verified</option>
@@ -113,14 +117,14 @@ function AddUser({ onClose }) {
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                Passport:
+                NIC:
               </label>
               <input
                 type="text"
-                name="passport"
+                name="nic"
                 value={formData.passport}
                 onChange={handleChange}
-                className="shadow appearance-none rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -132,7 +136,7 @@ function AddUser({ onClose }) {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="shadow appearance-none  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#FFFFFF]  border-2 border-[#000000]"
+                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               />
             </div>
             <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">
