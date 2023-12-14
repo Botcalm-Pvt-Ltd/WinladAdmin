@@ -180,7 +180,7 @@ const Setting = () => {
                       Host Name
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Host Name"
@@ -191,7 +191,7 @@ const Setting = () => {
                       SMTP User Name
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="SMTP User Name"
@@ -217,7 +217,7 @@ const Setting = () => {
                       Port Number
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Port Number"
@@ -228,7 +228,7 @@ const Setting = () => {
                       SMTP Password
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="SMTP Password"
@@ -239,7 +239,7 @@ const Setting = () => {
                       Sender Name
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Sender Name"
@@ -252,7 +252,7 @@ const Setting = () => {
                       Email
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Email"
@@ -340,7 +340,7 @@ const Setting = () => {
                       Publish Key
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Publish Key"
@@ -351,7 +351,7 @@ const Setting = () => {
                       Secret Key
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Secret Key"
@@ -395,7 +395,7 @@ const Setting = () => {
                       Account SID
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Account SID"
@@ -406,7 +406,7 @@ const Setting = () => {
                       SMS Gateway Request Type
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="SMS Gateway Request Type"
@@ -432,7 +432,7 @@ const Setting = () => {
                                 id="html"
                                 name="type"
                                 type="radio"
-                                className="before:content[''] bg-[#EBDFD7] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-md before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                                className="before:content[''] bg-[#EBDFD7] peer relative h-5 w-5 cursor-pointer  rounded-md border border-blue-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-md before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                               />
                               <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-green-500 opacity-0 transition-opacity peer-checked:opacity-100">
                                 <svg
@@ -458,7 +458,7 @@ const Setting = () => {
                                 id="react"
                                 name="type"
                                 type="radio"
-                                className="before:content[''] bg-[#EBDFD7] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-md before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"
+                                className="before:content[''] bg-[#EBDFD7] peer relative h-5 w-5 cursor-pointer  rounded-md border border-blue-gray-200 text-green-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-md before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-green-500 checked:before:bg-green-500 hover:before:opacity-10"
                               />
                               <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-green-500 opacity-0 transition-opacity peer-checked:opacity-100">
                                 <svg
@@ -484,7 +484,7 @@ const Setting = () => {
                       SMS Gateway URL
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="SMS Gateway URL"
@@ -498,33 +498,33 @@ const Setting = () => {
                     </div>
                     <div className="flex flex-col gap-4">
                       <div className="flex gap-5">
-                        <label className="w-1/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
+                        <label className="w-1/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
                           To
                         </label>
                         <input
-                          className="w-3/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                          className="w-3/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                           id="grid-last-name"
                           type="text"
                           placeholder=""
                         />
                       </div>
                       <div className="flex gap-5">
-                        <label className="w-1/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
+                        <label className="w-1/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
                           Body
                         </label>
                         <input
-                          className="w-3/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                          className="w-3/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                           id="grid-last-name"
                           type="text"
                           placeholder=""
                         />
                       </div>
                       <div className="flex gap-5">
-                        <label className="w-1/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
+                        <label className="w-1/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center">
                           From
                         </label>
                         <input
-                          className="w-3/4 appearance-none block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                          className="w-3/4  block text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                           id="grid-last-name"
                           type="text"
                           placeholder=""
@@ -539,7 +539,7 @@ const Setting = () => {
                       Auth Token
                     </label>
                     <input
-                      className="appearance-none block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
+                      className=" block w-full text-gray-700 border border-gray-200 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 placeholder-black bg-[#FFECA8] text-center placeholder-center"
                       id="grid-last-name"
                       type="text"
                       placeholder="Auth Token"

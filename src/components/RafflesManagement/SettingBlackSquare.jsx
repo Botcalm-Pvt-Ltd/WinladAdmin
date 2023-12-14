@@ -2,12 +2,12 @@ import React from 'react'
 import hiddenCar from '../../assets/hiddenCar.png';
 
 
-const RMBlackSquare = () => {
+const SettingBlackSquare = () => {
   return (
-    <div className='absolute top-0 right-0 rounded-bl-[50px] rounded-br-3xl  bg-black w-3/5 h-[70px] 2xl:h-[90px] '>
+    <div className='absolute top-0 right-0 rounded-bl-[50px]  bg-black lg:w-1/2 lg:h-[5%] h-[5%] w-2/3'>
             <img src={hiddenCar} className='w-50 mt-auto absolute bottom-0 left-0' />
         </div>
   )
 }
 
-export default RMBlackSquare
+export default SettingBlackSquare

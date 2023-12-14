@@ -8,11 +8,11 @@ function MasterDataCategory() {
 
       <>
         <RMBlackSquare />
-        <div className="lg:p-5 p-1">
+        <div className="xl:p-5 p-1">
           <TopBar />
         </div>
         <div>
-          <h1 className="xl:text-2xl text-md font-semibold  px-10 xl:pt-10 pt-20 max-md:pt-20">
+          <h1 className="xl:text-2xl text-md font-normal  px-8 xl:pt-10 pt-20 max-md:pt-20">
             Master Data Management Category
           </h1>
         </div>

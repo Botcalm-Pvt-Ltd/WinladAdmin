@@ -32,13 +32,24 @@ export const navData = [
   {
     id: 2,
     icon: <PersonAddIcon />,
+    subnav: [{
+      id: 21,
+      icon: <AccountBalanceWalletOutlinedIcon />,
+      text: "Users",
+      link: "user-management",
+    }, {
+      id: 22,
+      icon: <AccountBalanceWalletOutlinedIcon />,
+      text: "User Permission",
+      link: "user-permisson-role-1",
+    }],
     text: "User Management",
-    link: "user-permisson-role-1",
+    link: "",
   },
   {
     id: 3,
     icon: <AccountBalanceWalletOutlinedIcon />,
-    text: "Raffles Management",
+    text: "Giveaway Management",
     link: "Management",
   },
   // {
@@ -69,9 +80,19 @@ export const navData = [
     id: 7,
     icon: <BeenhereOutlinedIcon />,
     text: "Master Data",
-    link: "faq",
+    subnav: [{
+      id: 71,
+      icon: <AccountBalanceWalletOutlinedIcon />,
+      text: "Master Data Details",
+      link: "master-data-details",
+    }, {
+      id: 72,
+      icon: <AccountBalanceWalletOutlinedIcon />,
+      text: "Master Data Category",
+      link: "master-data-category",
+    }],
   },
-  
+
   {
     id: 8,
     icon: <SubscriptionsOutlinedIcon />,
@@ -82,7 +103,7 @@ export const navData = [
     id: 9,
     icon: <RecordVoiceOverOutlinedIcon />,
     text: "Support",
-    link: "master-data-category",
+    link: "user-permisson-role-1",
   },
   {
     id: 10,

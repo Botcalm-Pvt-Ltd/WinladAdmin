@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 import Datepicker from "react-tailwindcss-datepicker";
 
 const EditRaffles = ({ faq, onClose }) => {
@@ -19,9 +20,12 @@ const EditRaffles = ({ faq, onClose }) => {
   };
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
         <div className="relative w-full max-w-screen-xl mx-auto flex items-center justify-center">
-          <div className="border-0 rounded-3xl shadow-lg relative flex flex-col w-full outline-none focus:outline-none bg-white px-10">
+          <div className="border-0 rounded-3xl shadow-2xl relative flex flex-col w-full outline-none focus:outline-none bg-white px-10">
+          <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
+            <IoMdClose />
+          </div>
             <div className="flex justify-center">
               <h1 className="text-xl py-5">Edit Giveaways</h1>
             </div>
@@ -30,7 +34,7 @@ const EditRaffles = ({ faq, onClose }) => {
               Giveaway Name
               </label>
               <input
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 value={editedRaffles.name}
                 onChange={handleNameChange}
               />
@@ -41,7 +45,7 @@ const EditRaffles = ({ faq, onClose }) => {
               </label>
               <select
                 name="filter"
-                className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               >
                 <option value="">Filter</option>
               </select>
@@ -56,7 +60,7 @@ const EditRaffles = ({ faq, onClose }) => {
                   asSingle={true}
                   value={value}
                   onChange={handleValueChange}
-                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 />
               </div>
             </div>
@@ -66,7 +70,7 @@ const EditRaffles = ({ faq, onClose }) => {
                 Gift Name
               </label>
               <input
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 id="username"
                 type="text"
                 // placeholder="Username"
@@ -77,7 +81,7 @@ const EditRaffles = ({ faq, onClose }) => {
               <label className="w-full block text-gray-700 text-xl mb-2">
                 Gift Image
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center ring-1 ring-black rounded-xl">
+              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -115,11 +119,11 @@ const EditRaffles = ({ faq, onClose }) => {
                 </button>
               </div>
             </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
+            <div className="w-full mb-10 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
               Giveaway Icon
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center ring-1 ring-black rounded-xl">
+              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -157,7 +161,7 @@ const EditRaffles = ({ faq, onClose }) => {
                 </button>
               </div>
             </div>
-            <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+            {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
               <button className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 Save
               </button>
@@ -170,7 +174,7 @@ const EditRaffles = ({ faq, onClose }) => {
               >
                 Close
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

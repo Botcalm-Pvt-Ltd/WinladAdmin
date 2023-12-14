@@ -18,12 +18,21 @@ import Sidenav from '../../components/SideNavComponent/Sidenav';
 
 
 const DashboardLayout = () => {
-  
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   return (
     <div className="flex lg:flex-row flex-row  items-stretch justify-between">
       <Sidenav />
-      <div className="w-full lg:w-full bg-white overflow-hidden  xl:px-3">
-        <Outlet/>
+      <div className="w-full lg:w-full bg-white overflow-hidden  ">
+        <div className='xl:px-3 w-full'>
+          <Outlet />
+        </div>
+
+        <footer className="bg-zinc-700 w-full text-white p-1 mt-10 text-center">
+          © Copyright {currentYear}
+        </footer>
       </div>
     </div>
   );

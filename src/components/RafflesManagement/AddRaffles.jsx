@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 import Datepicker from "react-tailwindcss-datepicker";
 
 const AddRaffles = ({ onClose }) => {
@@ -13,9 +14,12 @@ const AddRaffles = ({ onClose }) => {
   };
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
         <div className="relative w-full max-w-screen-xl mx-auto flex items-center justify-center">
-          <div className="border-0 rounded-3xl shadow-lg relative flex flex-col w-full outline-none focus:outline-none bg-white px-10">
+          <div className="shadow-2xl border-0 rounded-3xl relative flex flex-col w-full outline-none focus:outline-none bg-white px-10">
+          <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
+            <IoMdClose />
+          </div>
             <div className="flex justify-center">
               <h1 className="text-xl py-5">Add Giveaways</h1>
             </div>
@@ -24,7 +28,7 @@ const AddRaffles = ({ onClose }) => {
               Giveaway Name
               </label>
               <input
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 id="username"
                 type="text"
                 // placeholder="Username"
@@ -36,7 +40,7 @@ const AddRaffles = ({ onClose }) => {
               </label>
               <select
                 name="filter"
-                className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               >
                 <option value="">Filter</option>
               </select>
@@ -51,7 +55,7 @@ const AddRaffles = ({ onClose }) => {
                   asSingle={true}
                   value={value}
                   onChange={handleValueChange}
-                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 />
               </div>
             </div>
@@ -61,7 +65,7 @@ const AddRaffles = ({ onClose }) => {
                 Gift Name
               </label>
               <input
-                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 id="username"
                 type="text"
                 // placeholder="Username"
@@ -72,7 +76,7 @@ const AddRaffles = ({ onClose }) => {
               <label className="w-full block text-gray-700 text-lg mb-2">
                 Gift Image
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center ring-1 ring-black rounded-xl">
+              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -114,7 +118,7 @@ const AddRaffles = ({ onClose }) => {
               <label className="w-full block text-gray-700 text-lg mb-2">
               Giveaway Icon
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center ring-1 ring-black rounded-xl">
+              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
