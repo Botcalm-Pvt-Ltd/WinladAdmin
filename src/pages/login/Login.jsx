@@ -2,8 +2,37 @@ import "./login.css";
 import Car from "../../assets/login/car.png";
 import { motion } from "framer-motion";
 import { carAnimation } from "../../assets/animation/animation";
+import { useState } from "react";
+import axios from "axios";
+import Cookies from 'js-cookies';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    try {
+      const isLoggedIn =await axios.post(`${apiKey}/adminLogin`,{email,password});
+      if(isLoggedIn){
+        // console.log(isLoggedIn.data);
+        Cookies.setItem('token', isLoggedIn.data.token);
+        navigate('/');
+      }
+
+    } catch (error) {
+      console.log(error);
+      setError(error.response.data.message)
+      
+    }finally{
+      setTimeout(()=>{
+        setError('');
+      },2000)
+    }
+  }
   return (
     <div className="login h-screen ">
       <div className="mx-auto container   ">
@@ -13,8 +42,8 @@ const Login = () => {
             <p className="font-bold xl:text-5xl md:text-4xl sm:text-3xl text-2xl text-center xl:text-start">
               Login
             </p>
-
             <div className="mt-10 md:mt-12 lg:mt-16 xl:mt-20 flex flex-col">
+            {error && <p className="text-red-500 ml-2">{error}</p>}
               <label
                 className=" text-sm md:text-base mb-1 ml-2"
                 htmlFor="email"
@@ -26,6 +55,8 @@ const Login = () => {
                 id="email"
                 type="text"
                 placeholder="E.g. name@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -41,11 +72,13 @@ const Login = () => {
                 id="password"
                 type="password"
                 placeholder="**************"
+                value={password}
+                onChange={e => setPassword(e.target.value)}
               />
             </div>
 
             <div className="mt-10 md:mt-12 lg:mt-16 xl:mt-20 flex ">
-              <button className="bg-black hover:bg-[#1E1E1E] text-white font-semibold py-3 lg:py-5 px-3 lg:px-4 w-full text-base lg:text-lg  rounded-lg">
+              <button onClick={handleLogin} className="bg-black hover:bg-[#1E1E1E] text-white font-semibold py-3 lg:py-5 px-3 lg:px-4 w-full text-base lg:text-lg  rounded-lg">
                 Login
               </button>
             </div>
