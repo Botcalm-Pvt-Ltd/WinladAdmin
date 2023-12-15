@@ -1,17 +1,33 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import Datepicker from "react-tailwindcss-datepicker";
 
-const ViewRaffles = ({ faq, onClose }) => {
-  const [value, setValue] = useState({
-    startDate: null,
-    endDate: null,
+const EditRafflesRound = ({ faq, onClose }) => {
+  const [editedFAQ, setEditedFAQ] = useState({
+    name: faq.name,
+    date: faq.date,
+    type: faq.type,
+    color: faq.color,
+    image: faq.image,
   });
 
-  const handleValueChange = (newValue) => {
-    console.log("newValue:", newValue);
-    setValue(newValue);
+  const handleNameChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, name: event.target.value });
   };
+
+  const handleDateChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, date: event.target.value });
+  };
+
+  const handleTypeChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, type: event.target.value });
+  };
+  const handleColorChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, color: event.target.value });
+  };
+  const handleImageChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, image: event.target.value });
+  };
+
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
@@ -20,91 +36,75 @@ const ViewRaffles = ({ faq, onClose }) => {
           <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
             <IoMdClose />
           </div>
-            <div className="flex justify-center">
-              <h1 className="text-xl py-5">View Giveaways</h1>
+          <div className="flex justify-center">
+              <h1 className="text-xl py-5">Edit FAQ</h1>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Name
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.name}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              Starting time
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.startingtime}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              End time
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.endtime}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Category
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.category}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-                Schedule Date
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.date}
-                readOnly
-              />
-            </div>
-
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-                Gift Name
+              Name
               </label>
               <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 id="username"
                 type="text"
-                // placeholder="Username"
+                value={editedFAQ.name}
+                onChange={handleNameChange}
               />
             </div>
-
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                Gift Image
+              Date
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
-                <img src="https://th.bing.com/th/id/R.eeb4e54ca23b0e02503d1dd9522fe95a?rik=rQDE3ZkcNMJ1CA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f03%2fGift-PNG-Image.png&ehk=HJkLlb1Q6BxNLZmj9qRwE5eTxKTUkEB71CfwGL3iCn8%3d&risl=&pid=ImgRaw&r=0" alt="gift-image" className="w-full h-full object-contain"/>
-             
-              </div>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.date}
+                onChange={handleDateChange}
+              />
             </div>
-            <div className="w-full  flex justify-between items-center gap-20 mb-10">
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Icon
+              Type
               </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
-                  <img src="https://th.bing.com/th/id/R.eeb4e54ca23b0e02503d1dd9522fe95a?rik=rQDE3ZkcNMJ1CA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f03%2fGift-PNG-Image.png&ehk=HJkLlb1Q6BxNLZmj9qRwE5eTxKTUkEB71CfwGL3iCn8%3d&risl=&pid=ImgRaw&r=0" alt="giveaway-icon" className="w-full h-full object-contain" />
-              </div>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.type}
+                onChange={handleTypeChange}
+              />
             </div>
-            {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-              <button
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              Color
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.color}
+                onChange={handleColorChange}
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              image
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.image}
+                onChange={handleImageChange}
+              />
+            </div>
+            
+            <div className="flex items-center justify-end py-6 border-t border-solid border-blueGray-200 rounded-b">
+              <button className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mb-1 ease-linear transition-all duration-150">
+                Save
+              </button>
+              {/* <button
                 className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
                 onClick={() => {
@@ -112,8 +112,8 @@ const ViewRaffles = ({ faq, onClose }) => {
                 }}
               >
                 Close
-              </button>
-            </div> */}
+              </button> */}
+            </div>
           </div>
         </div>
       </div>
@@ -122,4 +122,4 @@ const ViewRaffles = ({ faq, onClose }) => {
   );
 };
 
-export default ViewRaffles;
+export default EditRafflesRound;

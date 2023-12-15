@@ -1,17 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoMdClose } from "react-icons/io";
-import Datepicker from "react-tailwindcss-datepicker";
 
-const ViewRaffles = ({ faq, onClose }) => {
-  const [value, setValue] = useState({
-    startDate: null,
-    endDate: null,
-  });
-
-  const handleValueChange = (newValue) => {
-    console.log("newValue:", newValue);
-    setValue(newValue);
-  };
+const ViewRafflesRound = ({ faq, onClose }) => {
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
@@ -20,89 +10,70 @@ const ViewRaffles = ({ faq, onClose }) => {
           <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
             <IoMdClose />
           </div>
-            <div className="flex justify-center">
-              <h1 className="text-xl py-5">View Giveaways</h1>
+          <div className="flex justify-center">
+              <h1 className="text-xl py-5">View FAQ</h1>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Name
+              Name
               </label>
               <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
                 value={faq.name}
                 readOnly
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-              Starting time
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.startingtime}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              End time
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.endtime}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Category
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.category}
-                readOnly
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-                Schedule Date
-              </label>
-              <input
-                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.date}
-                readOnly
-              />
-            </div>
-
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-                Gift Name
+              Date
               </label>
               <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
                 id="username"
                 type="text"
-                // placeholder="Username"
+                value={faq.date}
+                readOnly
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              Type
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={faq.type}
+                readOnly
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              Color
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={faq.color}
+                readOnly
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              image
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={faq.image}
+                readOnly
               />
             </div>
 
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-                Gift Image
-              </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
-                <img src="https://th.bing.com/th/id/R.eeb4e54ca23b0e02503d1dd9522fe95a?rik=rQDE3ZkcNMJ1CA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f03%2fGift-PNG-Image.png&ehk=HJkLlb1Q6BxNLZmj9qRwE5eTxKTUkEB71CfwGL3iCn8%3d&risl=&pid=ImgRaw&r=0" alt="gift-image" className="w-full h-full object-contain"/>
-             
-              </div>
-            </div>
-            <div className="w-full  flex justify-between items-center gap-20 mb-10">
-              <label className="w-full block text-gray-700 text-xl mb-2">
-              Giveaway Icon
-              </label>
-              <div className="flex flex-col gap-2 ml-[-8px] w-[101%] h-36 justify-center items-center bg-gray-200 rounded-xl">
-                  <img src="https://th.bing.com/th/id/R.eeb4e54ca23b0e02503d1dd9522fe95a?rik=rQDE3ZkcNMJ1CA&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f03%2fGift-PNG-Image.png&ehk=HJkLlb1Q6BxNLZmj9qRwE5eTxKTUkEB71CfwGL3iCn8%3d&risl=&pid=ImgRaw&r=0" alt="giveaway-icon" className="w-full h-full object-contain" />
-              </div>
-            </div>
             {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
               <button
                 className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -122,4 +93,4 @@ const ViewRaffles = ({ faq, onClose }) => {
   );
 };
 
-export default ViewRaffles;
+export default ViewRafflesRound;

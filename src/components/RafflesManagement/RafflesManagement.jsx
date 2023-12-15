@@ -13,6 +13,8 @@ const RafflesManagement = () => {
   const tableCols = [
     "Giveaway ID",
     "Giveaway Name",
+    "Starting time",
+    "End time",
     "Giveaway Category",
     "Schedule Date",
     "Status",
@@ -22,6 +24,8 @@ const RafflesManagement = () => {
     {
       id: "01",
       name: "Loto Max1",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Active",
@@ -29,6 +33,8 @@ const RafflesManagement = () => {
     {
       id: "02",
       name: "Loto Max2",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Active",
@@ -36,6 +42,8 @@ const RafflesManagement = () => {
     {
       id: "03",
       name: "Loto Max3",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Inactive",
@@ -43,6 +51,8 @@ const RafflesManagement = () => {
     {
       id: "04",
       name: "Loto Max4",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Inactive",
@@ -50,6 +60,8 @@ const RafflesManagement = () => {
     {
       id: "05",
       name: "Loto Max5",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Inactive",
@@ -57,6 +69,8 @@ const RafflesManagement = () => {
     {
       id: "06",
       name: "Loto Max6",
+      startingtime: "2023-01-01T00:00:00Z",
+      endtime: "2023-01-01T00:00:00Z",
       category: "Luxury Range",
       date: "2023-Sep-20",
       status: "Inactive",

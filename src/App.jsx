@@ -15,6 +15,7 @@ import FAQ from "./components/FAQ/FAQ";
 import Settings from './pages/Settings/Settings';
 import DashboardLayout from "./pages/Layout/DashboardLayout";
 import Login from "./pages/login/Login";
+import RafflesRound from "./components/RafflesRound/RafflesRound";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             <Route path="FAQ" element={<FAQ />} />
             {/* <Route path="AddFAQ" element={<AddFAQ />} /> */}
             <Route path='settings' element={<Settings />} />
+            <Route path='RafflesRound' element={<RafflesRound />} />
           </Route>
           <Route path='login' element={<Login />} />
         </Routes>
