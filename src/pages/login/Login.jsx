@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { carAnimation } from "../../assets/animation/animation";
 import { useState } from "react";
 import axios from "axios";
-import Cookies from 'js-cookies';
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../utils/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,13 +13,14 @@ const Login = () => {
   const [error, setError] = useState('');
   const apiKey = import.meta.env.VITE_API_KEY;
   const navigate = useNavigate();
+  const {login} = useAuth();
 
   const handleLogin = async () => {
     try {
       const isLoggedIn =await axios.post(`${apiKey}/adminLogin`,{email,password});
       if(isLoggedIn){
         // console.log(isLoggedIn.data);
-        Cookies.setItem('token', isLoggedIn.data.token);
+        login(isLoggedIn.data.token);
         navigate('/');
       }
 

@@ -15,11 +15,13 @@ import FAQ from "./components/FAQ/FAQ";
 import Settings from './pages/Settings/Settings';
 import DashboardLayout from "./pages/Layout/DashboardLayout";
 import Login from "./pages/login/Login";
+import { AuthProvider } from "./utils/AuthContext";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <AuthProvider>
         <Routes>
 
            {/* <Route path="/" element={<AdminDashboard />} /> */}
@@ -38,6 +40,7 @@ function App() {
           {/* <Route path="/FAQ" element={<FAQ />} /> */}
           {/* <Route path="/AddFAQ" element={<AddFAQ />} /> */}
           {/* <Route path='/settings' element={<Settings />} /> */}
+        
           <Route path="/" element={<DashboardLayout />} >
             <Route path="" element={<AdminDashboard />} />
             <Route path="user-permisson-role-1" element={<UserPermisson />} />
@@ -51,8 +54,10 @@ function App() {
             {/* <Route path="AddFAQ" element={<AddFAQ />} /> */}
             <Route path='settings' element={<Settings />} />
           </Route>
+         
           <Route path='login' element={<Login />} />
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
 
     </>
