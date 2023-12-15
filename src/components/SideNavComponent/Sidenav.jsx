@@ -13,6 +13,7 @@ export default function Sidenav() {
   const [open, setopen] = useState(true);
   const {logout} = useAuth();
   const navigate = useNavigate();
+  const [selectedNav, setSelectedNav] = useState(0);
   // State to manage visibility of each submenu
   const [subMenuVisibility, setSubMenuVisibility] = useState({});
   const toggleOpen = () => {
@@ -64,7 +65,7 @@ export default function Sidenav() {
                 </div>
               </NavLink>
               {subMenuVisibility[item.id] && item.subnav.map((sub) => (
-                <NavLink key={sub.id} to={sub.link} className={styles.subitem}>
+                <NavLink key={sub.id} to={sub.link} className={`${styles.subitem} ${selectedNav === sub.id ? 'bg-gray-600' : ''} `} onClick={()=>setSelectedNav(sub.id)}>
                   {sub.icon}
                   <span className={styles.linkText}>{sub.text}</span>
                 </NavLink>
@@ -73,7 +74,7 @@ export default function Sidenav() {
           );
         } else {
           return (
-            <NavLink key={item.id} className={styles.sideitem} to={item.link}>
+            <NavLink key={item.id} className={`${styles.sideitem} ${selectedNav === item.id ? 'bg-gray-400' : ''}`} to={item.link} onClick={()=>setSelectedNav(item.id)}>
               {item.icon}
               <span className={styles.linkText}>{item.text}</span>
             </NavLink>
