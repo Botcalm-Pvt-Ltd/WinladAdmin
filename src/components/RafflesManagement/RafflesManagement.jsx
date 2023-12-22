@@ -65,16 +65,12 @@ const RafflesManagement = () => {
   return (
 
       <>
-        <RMBlackSquare />
-        <div className="lg:p-5 p-1">
-          <TopBar />
-        </div>
         <div>
-          <h1 className="text-xl px-8 max-xl:pt-20 pt-1 max-md:pt-20">
+          <h1 className="text-xl px-3 mb-5">
           Giveaways Management
           </h1>
         </div>
-        <div className="flex items-start justify-between gap-3 max-lg:mt-4 mt-8 flex-col-reverse lg:flex-row relative max-xl:top-5">
+        <div className="flex items-start justify-between gap-3 max-lg:mt-4 mt-8 flex-col-reverse lg:flex-row relative max-xl:top-5 bg-white pt-5">
           <div className=" w-full px-3 lg-px-0">
             <div className="flex items-center justify-between pl-4">
               <div className=" bg-gray-200 rounded-full w-3/12  md:w-4/12 px-4 relative flex items-center justify-between">

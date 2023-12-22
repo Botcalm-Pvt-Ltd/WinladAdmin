@@ -22,25 +22,7 @@ function App() {
     <>
       <BrowserRouter>
       <AuthProvider>
-        <Routes>
-
-           {/* <Route path="/" element={<AdminDashboard />} /> */}
-          {/* <Route path="/user-permisson-role-1" element={<UserPermisson />} /> */}
-          {/* <Route path="/user-permisson-role-2" element={<UserPermisson2 />} />
-          <Route path="/user-permisson-role-3" element={<UserPermisson3 />} /> */}
-          {/* <Route path="/user-management" element={<UserManagement />} /> */}
-          {/* <Route path="/RafflesManagement" element={<RafflesManagement />} /> */}
-          {/* <Route path="/addRiffles" element={<AddRiffles />} /> */}
-          {/* <Route
-            path="/master-data-category"
-            element={<MasterDataCategory />}
-          /> */}
-          {/* <Route path="/master-data-details" element={<MasterDataDetails />} /> */}
-          {/* <Route path="/subscription-management" element={<Subscription />} /> */}
-          {/* <Route path="/FAQ" element={<FAQ />} /> */}
-          {/* <Route path="/AddFAQ" element={<AddFAQ />} /> */}
-          {/* <Route path='/settings' element={<Settings />} /> */}
-        
+        <Routes>      
           <Route path="/" element={<DashboardLayout />} >
             <Route path="" element={<AdminDashboard />} />
             <Route path="user-permisson-role-1" element={<UserPermisson />} />

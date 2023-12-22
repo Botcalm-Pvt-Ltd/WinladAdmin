@@ -1,12 +1,8 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../../components/Pagination";
 import ColEightTable from "../../components/Tables/ColEightTable";
-import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
 import { useState } from "react";
 import AddUser from "./AddUser";
-import SideNavComponent from "../SideNavComponent/SideNavComponent";
-import RMBlackSquare from "../RafflesManagement/RMBlackSquare";
-import TopBar from "../TopBar";
 
 function UserManagementComponent() {
   const [UserModal, setUserModal] = useState(false);
@@ -78,21 +74,15 @@ function UserManagementComponent() {
     },
   ];
   return (
-    <div className="flex lg:flex-row flex-row  items-start justify-between mb-10">
-      <RMBlackSquare />
+    <div className="flex lg:flex-row flex-row  items-start justify-between">
       <div className="w-full lg:w-full overflow-hidden max-xl:overflow-visible relative max-xl:left-0">
-      
-        <div className="lg:p-5">
-          
-          <TopBar />
-        </div>
         <div>
-          <h1 className="text-xl px-8 max-xl:pt-20 pt-1 max-md:pt-20">
+          <h1 className="text-xl px-3 mb-5">
             User Management
           </h1>
         </div>
-        <div className="flex items-start justify-between gap-3 mt-10 flex-col-reverse lg:flex-row relative max-xl:top-10">
-          <div className="w-full px-3 lg-px-0">
+        <div className="flex items-start justify-between gap-3 mt-10 flex-col-reverse lg:flex-row relative max-xl:top-10 bg-white pt-5">
+          <div className="w-full">
             <div className="flex items-center justify-between  pl-4">
               <div className="bg-gray-200 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
                 <div htmlFor="search" className="text-2xl mt-0">
@@ -130,9 +120,6 @@ function UserManagementComponent() {
             <div className="w-full relative pr-5">
               <Pagination />
             </div>
-            {/* <div className="absolute top-[250px] max-xl:top-[450px] right-[150px] max-lg:top-96 max-lg:right-0">
-              <img src={RMBackground} alt="" className="opacity-20 -z-10" />
-            </div> */}
           </div>
         </div>
       </div>

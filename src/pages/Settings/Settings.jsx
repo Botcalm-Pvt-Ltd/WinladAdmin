@@ -1,34 +1,21 @@
 import React, { useRef, useState } from "react";
-import TopBar from "../../components/TopBar";
-import SideNavComponent from "../../components/SideNavComponent/SideNavComponent";
-import BackSquare from "../../components/BackgroundBlackSquare/BackSquare";
 import DragFile from "../../components/DragAndDropArea/DragFile";
 import InputField from "../../components/Settings/InputField";
 import PaymentSwitch from "../../components/Settings/PaymentSwitch";
-import Maincar from "../../assets/Dashboard/MainCar.png";
 import RadioSelect from "../../components/Settings/RadioSelect";
-import RMBlackSquare from "../../components/RafflesManagement/RMBlackSquare";
-import SettingBlackSquare from "../../components/RafflesManagement/SettingBlackSquare";
 
 const Settings = () => {
   return (
 
     <>
-
-      <div>
-        {/* <SettingBlackSquare /> */}
-        <RMBlackSquare/>
-        <div className="xl:p-5 p-1">
-          <TopBar />
-        </div>
+      <h5 className="mb-5 text-xl px-3">
+        Appearance Configuration
+      </h5>
+      <div className="bg-white pt-5">
         {/* Section 1 */}
         <div className=" flex items-end justify-between gap-3 mt-0 flex-row px-3 lg:px-5 z-10">
           <div className="w-1/3">
-            <h5 className="mb-5 text-xl font-semibold">
-              Appearance Configuration
-            </h5>
             <DragFile />
-
             <select
               name="font"
               id="font"
@@ -199,8 +186,8 @@ const Settings = () => {
         <hr className="my-8 bg-gray-200 w-4/5 mx-auto" />
 
         {/* Section 5 */}
-        <div>
-          <div className="text-2xl">Subscription Configaration</div>
+        <div className="px-4">
+          <div className="text-2xl">Subscription Configuration</div>
           <div className="flex w-full">
             <div className="flex flex-col flex-1 py-10 gap-5">
               <div className="w-full px-3 flex justify-start items-center flex-1 gap-20">

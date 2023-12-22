@@ -67,7 +67,7 @@ function SubscriptionComponent() {
     },
   ];
   return (
-    <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row">
+    <div className="flex items-start justify-between gap-3 mt-12 flex-col-reverse lg:flex-row bg-white pt-5">
       <div className="w-full px-3 lg-px-0">
         <div className="flex items-center justify-between  ">
           <div className=" bg-gray-200 rounded-full w-3/12  md:w-4/12 overflow-hidden px-4 relative flex items-center justify-between">
@@ -108,9 +108,6 @@ function SubscriptionComponent() {
         <div className="w-full">
           <Pagination />
         </div>
-        {/* <div className="absolute top-[600px] right-[100px] max-lg:top-96 max-lg:right-0">
-          <img src={RMBackground} alt="" className="opacity-20 -z-10" />
-        </div> */}
       </div>
     </div>
   );

@@ -18,38 +18,36 @@ function UserPermisson() {
   const [role, setRole] = useState('user');
   const [typeValue, setType] = useState('level01');
 
-  const handleRoleChange=(value)=>{
-    if(value == 'admin'){
+  const handleRoleChange = (value) => {
+    if (value == 'admin') {
       setType('admin');
-    }else{
+    } else {
       setType('level01')
     }
     setRole(value);
   }
   return (
-    <div className="flex lg:flex-row flex-row  items-end justify-between ">
-      <div className="w-full lg:w-full bg-white ">
-        <Role setRole={handleRoleChange} roleValue={role} setType={setType} typeValue={typeValue}/>
-
-        <div className="xl:p-5 p-1">
-          <RMBlackSquare />
-          <TopBar />
-        </div>
-        <div className="ml-5 flex items-end justify-between">
-          <div className="xl:w-2/5  w-11/12">
-            <UserPermissionComponent typeValue={typeValue} roleValue={role}/>
-          </div>
-          <div className="w-[500px] hidden items-end xl:flex">
-            <div>
-              <img src={MainCar} className="w-full h-full" />
+    <>
+      <div className=" xl:text-xl px-3 mb-5 text-md">User Permissions Management </div>
+      <div className="flex lg:flex-row flex-row  items-start justify-between relative">
+        <div className="w-full lg:w-full bg-white ">
+          <Role setRole={handleRoleChange} roleValue={role} setType={setType} typeValue={typeValue} />
+          <div className="ml-5 flex items-end justify-between">
+            <div className="xl:w-2/5  w-11/12">
+              <UserPermissionComponent typeValue={typeValue} roleValue={role} />
             </div>
-            <button className="bg-black px-3 py-1 rounded-lg mb-5 text-white">Save</button>
+            <div className="w-[500px] hidden items-end xl:flex">
+              <div>
+                <img src={MainCar} className="w-full h-full" />
+              </div>
+              <button className="bg-black px-3 py-1 rounded-lg mb-5 text-white">Save</button>
+            </div>
           </div>
+          <button className="bg-black px-3 py-1 rounded-lg mb-5 text-white xl:hidden block mx-auto my-5">Save</button>
         </div>
-        <button className="bg-black px-3 py-1 rounded-lg mb-5 text-white xl:hidden block mx-auto my-5">Save</button>
-      </div>
 
-    </div>
+      </div>
+    </>
   );
 }
 

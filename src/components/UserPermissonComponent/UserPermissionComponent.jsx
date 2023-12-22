@@ -5,7 +5,6 @@ function UserPermissionComponent({ roleValue, typeValue }) {
   const [page, setPage] = useState(1);
   return (
     <div className="flex-col flex-1 space-y-4 xl:flex 2xl:mt-10 mt-20 relative">
-      <div className=" xl:text-2xl  text-md">User Permissions Management </div>
       <div className=" bg-gray-200  rounded-3xl pl-4 flex flex-row justify-between py-20  px-5 cursor-pointer overflow-y-auto max-h-[750px] min-h-[700px]">
         {/* <div className="gold-card-inner-sec1"> */}
         <div className="flex flex-col xl:gap-3 gap-2 space-y-1 px-2">
