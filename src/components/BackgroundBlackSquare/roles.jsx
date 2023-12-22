@@ -13,8 +13,8 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
           onChange={(e) => setRole(e.target.value)}
         >
           {/* <option value="">User Portal</option> */}
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
+          <option value="user">User Portal</option>
+          <option value="admin">Admin Portal</option>
         </select>
         <select
           name="For"
@@ -26,9 +26,11 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
             roleValue == 'user' ? <>
               <option value="level01">Level 01 Verified User</option>
               <option value="level02">Level 02 Verified User</option>
+              <option value="level01">Admin User</option>
+              <option value="level02">Super Admin User</option>
             </> : <>
-              <option value="admin">Admin Application</option>
-              <option value="super-admin">Super Admin Application</option>
+              <option value="admin">Admin User</option>
+              <option value="super-admin">Super Admin User</option>
             </>
           }
 
@@ -38,11 +40,11 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
 
         <select
           name="Group"
+          placeholder="Group"
           className="bg-gray-200 px-3 py-2 rounded-lg   xl:w-1/2  w-1/4  text-center  outline-none"
         >
-          <option value="">Group</option>
           <option value="">Verified</option>
-          <option value="">Unverifed</option>
+          <option value="">non-verifed</option>
         </select>
       </div>
       {/* <img src={hiddenCar} className="w-50 mt-auto absolute bottom-0 left-0" /> */}

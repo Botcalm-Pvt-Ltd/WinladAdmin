@@ -29,7 +29,7 @@ function UserPermisson() {
   return (
     <>
       <div className=" xl:text-xl px-3 mb-5 text-md">User Permissions Management </div>
-      <div className="flex lg:flex-row flex-row  items-start justify-between relative">
+      <div className="flex lg:flex-row flex-row  items-start justify-between relative h-full bg-white">
         <div className="w-full lg:w-full bg-white ">
           <Role setRole={handleRoleChange} roleValue={role} setType={setType} typeValue={typeValue} />
           <div className="ml-5 flex items-end justify-between">
