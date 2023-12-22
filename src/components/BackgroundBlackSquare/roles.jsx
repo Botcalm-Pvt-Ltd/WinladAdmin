@@ -13,8 +13,8 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
           onChange={(e) => setRole(e.target.value)}
         >
           {/* <option value="">User Portal</option> */}
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
+          <option value="user">User Portal</option>
+          <option value="admin">Admin Portal</option>
         </select>
         <select
           name="For"
@@ -26,9 +26,11 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
             roleValue == 'user' ? <>
               <option value="level01">Level 01 Verified User</option>
               <option value="level02">Level 02 Verified User</option>
+              <option value="admin-user">Admin User</option>
+              <option value="super-admin-user">Super Admin User</option>
             </> : <>
-              <option value="admin">Admin Application</option>
-              <option value="super-admin">Super Admin Application</option>
+              <option value="admin">Admin User</option>
+              <option value="super-admin">Super Admin User</option>
             </>
           }
 

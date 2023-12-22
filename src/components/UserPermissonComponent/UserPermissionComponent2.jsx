@@ -15,8 +15,8 @@ function UserPermissionComponent2() {
           <span className="xl:text-2xl  text-md">Edit Raffle Details</span>
           <span className="xl:text-2xl  text-md">View Permissions</span>
           <span className="xl:text-2xl  text-md">Edit Permissions</span>
-          <span className="xl:text-2xl  text-md">View FAQ Settings</span>
-          <span className="xl:text-2xl  text-md">Edit FAQ Settings</span>
+          <span className="xl:text-2xl  text-md">View FAQs</span>
+          <span className="xl:text-2xl  text-md">Edit FAQs</span>
           <span className="xl:text-2xl  text-md">View Report</span>
           <span className="xl:text-2xl  text-md">Export Reports</span>
         </div>

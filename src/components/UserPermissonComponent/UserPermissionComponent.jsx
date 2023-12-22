@@ -10,7 +10,7 @@ function UserPermissionComponent({ roleValue, typeValue }) {
         {/* <div className="gold-card-inner-sec1"> */}
         <div className="flex flex-col xl:gap-3 gap-2 space-y-1 px-2">
           {
-            roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02') ? <>
+            roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02' || typeValue == 'admin-user'|| typeValue == 'super-admin-user') ? <>
               <span className="xl:text-2xl  text-md">Home</span>
               <span className="xl:text-2xl  text-md">Subscription Purchases</span>
               <span className="xl:text-2xl  text-md">Raffle Purchases/Join For Raffle</span>
@@ -32,8 +32,8 @@ function UserPermissionComponent({ roleValue, typeValue }) {
               <span className="xl:text-2xl  text-md">Edit Raffle Details</span>
               <span className="xl:text-2xl  text-md">View Permissions</span>
               <span className="xl:text-2xl  text-md">Edit Permissions</span>
-              <span className="xl:text-2xl  text-md">View FAQ Settings</span>
-              <span className="xl:text-2xl  text-md">Edit FAQ Settings</span>
+              <span className="xl:text-2xl  text-md">View FAQs</span>
+              <span className="xl:text-2xl  text-md">Edit FAQs</span>
               <span className="xl:text-2xl  text-md">View Report</span>
               <span className="xl:text-2xl  text-md">Export Reports</span>
             </>:roleValue == 'admin' && typeValue == 'super-admin' && page == 2 ? <>
@@ -51,7 +51,7 @@ function UserPermissionComponent({ roleValue, typeValue }) {
         </div>
         <div className="flex flex-col xl:gap-5 gap-2 items-center xl:mr-4 px-2">
           {
-            roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02') ? <>
+            roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02'|| typeValue == 'admin-user'|| typeValue == 'super-admin-user') ? <>
               <input
                 type="checkbox"
                 id="hs-basic-usage"

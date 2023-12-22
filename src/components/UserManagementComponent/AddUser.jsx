@@ -1,11 +1,12 @@
 import { useState } from "react";
 import vector from '../../assets/UserManagement/vector.png'
 import { IoMdClose } from "react-icons/io";
+import authAxios from "../../utils/AuthAxios";
 
 function AddUser({ onClose }) {
 
 
-
+  const apiKey = import.meta.env.VITE_API_KEY;
   const [formData, setFormData] = useState({
     userId: "",
     userName: "",
@@ -21,10 +22,19 @@ function AddUser({ onClose }) {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
+    try {
+      const isSubmit = await authAxios.post(`${apiKey}/`,formData);
+      if(isSubmit.data){
+        console.log('User created');
+      }
+
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">

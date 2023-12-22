@@ -1,15 +1,30 @@
 import { PiMagnifyingGlassThin } from "react-icons/pi";
 import Pagination from "../../components/Pagination";
 import ColEightTable from "../../components/Tables/ColEightTable";
-import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddUser from "./AddUser";
-import SideNavComponent from "../SideNavComponent/SideNavComponent";
 import RMBlackSquare from "../RafflesManagement/RMBlackSquare";
 import TopBar from "../TopBar";
+import authAxios from "../../utils/AuthAxios";
 
 function UserManagementComponent() {
+  const [AllUsers, setAllUsers] = useState([]);
   const [UserModal, setUserModal] = useState(false);
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+
+  const getAllUsers = async()=>{
+    try {
+      const all = await authAxios.get(`${apiKey}/adminGetUsers`);
+      setAllUsers(all.data);
+      console.log(all.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    getAllUsers();
+  },[])
 
   const table2Cols = [
     "User Id",
@@ -125,7 +140,7 @@ function UserManagementComponent() {
             </div>
 
             <div className="relative overflow-x-auto  sm:rounded-lg py-4">
-              <ColEightTable cols={table2Cols} data={table2Data} />
+              <ColEightTable cols={table2Cols} data={AllUsers} />
             </div>
             <div className="w-full relative pr-5">
               <Pagination />
