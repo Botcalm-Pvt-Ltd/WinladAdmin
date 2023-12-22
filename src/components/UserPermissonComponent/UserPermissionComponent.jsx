@@ -5,9 +5,9 @@ function UserPermissionComponent({ roleValue, typeValue }) {
   const [page, setPage] = useState(1);
   return (
     <div className="flex-col flex-1 space-y-4 xl:flex 2xl:mt-10 mt-20 relative ">
-      <div className=" bg-gray-200  rounded-3xl pl-4 flex flex-row justify-between py-20  px-5 cursor-pointer overflow-y-auto max-h-[750px] min-h-[600px]">
+      <div className=" bg-gray-200  rounded-3xl pl-4 flex flex-row justify-between py-10  px-5 cursor-pointer overflow-y-auto max-h-[750px] min-h-[400px]">
         {/* <div className="gold-card-inner-sec1"> */}
-        <div className="flex flex-col xl:gap-1 gap-1 space-y-1 px-2">
+        <div className="flex flex-col xl:gap-0 gap-0 space-y-1 px-2">
           {
             roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02') ? <>
               <span className="xl:text-xl  text-md">Home</span>
@@ -48,7 +48,7 @@ function UserPermissionComponent({ roleValue, typeValue }) {
           }
 
         </div>
-        <div className="flex flex-col xl:gap-2 gap-1 items-center xl:mr-4 px-2">
+        <div className="flex flex-col xl:gap-1 gap-1 items-center xl:mr-4 px-2">
           {
             roleValue == 'user' && (typeValue == 'level01' || typeValue == 'level02') ? <>
               <input
