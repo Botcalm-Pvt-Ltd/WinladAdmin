@@ -93,7 +93,7 @@ const Settings = () => {
           SMS Gateway Configaration
         </h5>
         <div>
-          <div className="flex w-full">
+          <div className="flex w-full px-3">
             <div className="flex flex-col flex-1 py-10 gap-5">
               <div className="w-full px-3 flex-1">
                 <InputField label={"Account SID"} name={"Account"} />
@@ -186,8 +186,8 @@ const Settings = () => {
         <hr className="my-8 bg-gray-200 w-4/5 mx-auto" />
 
         {/* Section 5 */}
-        <div className="px-4">
-          <div className="text-2xl">Subscription Configuration</div>
+        <div className="px-3">
+          <div className="text-xl">Subscription Configuration</div>
           <div className="flex w-full">
             <div className="flex flex-col flex-1 py-10 gap-5">
               <div className="w-full px-3 flex justify-start items-center flex-1 gap-20">

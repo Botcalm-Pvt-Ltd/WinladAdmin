@@ -134,7 +134,7 @@ const AdminDashboard = () => {
       <div className="px-3 mb-5 rounded-b-3xl relative">
         <p className="text-black text-xl mb-1 ">Giveaways Dashboard</p>
       </div>
-      <div className="flex items-center justify-between my-5 px-3 max-w-[2000px]">
+      <div className="flex items-center justify-between my-5 px-3 xl:gap-3 max-w-[1800px] flex-wrap">
         <ViewBox color="blue" label="Active Users"/>
         <ViewBox color="green" label="Total Users"/>
         <ViewBox color="pink" label="Average Users"/>
