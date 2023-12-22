@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-import TableLight from "../Tables/TableLight";
-import Pagination from "../Pagination";
-import SideNavComponent from "../SideNavComponent/SideNavComponent";
-import TopBar from "../TopBar";
 import { PiMagnifyingGlassThin } from "react-icons/pi";
-import RMBlackSquare from "../RafflesManagement/RMBlackSquare";
-import RMBackground from "../../assets/RafflesManagement/RMBackground.jpg";
-import AddFAQ from "./AddFAQ";
-import FAQtable from "./FAQtable";
+import Pagination from "../../components/Pagination";
+import FAQtable from "../../components/FAQ/FAQtable";
+import AddFAQ from "../../components/FAQ/AddFAQ";
 
 const FAQ = () => {
   const [showModal, setShowModal] = useState(false);
@@ -53,16 +48,12 @@ const FAQ = () => {
   return (
 
       <>
-        <RMBlackSquare />
-        <div className="lg:p-5 p-1">
-          <TopBar />
-        </div>
         <div>
-          <h1 className="text-xl px-8 relative bottom-5 max-xl:top-20">
+          <h1 className="text-xl px-3 mb-5">
             FAQ
           </h1>
         </div>
-        <div className="flex items-start justify-between gap-3 flex-col-reverse lg:flex-row relative max-xl:top-32 top-0 mt-8 mb-24">
+        <div className="flex items-start justify-between gap-3 flex-col-reverse lg:flex-row relative max-xl:top-32 top-0 mt-8 mb-24 bg-white h-full pt-5">
           <div className=" w-full px-3 lg-px-0">
             <div className="flex items-center justify-between pl-4">
               <div className="bg-gray-200 rounded-full w-3/12  md:w-4/12 px-4 relative flex items-center justify-between">

@@ -9,7 +9,7 @@ const UserIcon = () => {
     setMenu((prev)=> !prev);
   }
   return (
-    <div className='flex items-center justify-between w-4/12  md:w-4/12 lg:w-2/12 gap-2 px-1 py-0.5 bg-white rounded-full z-10 relative'>
+    <div className='flex items-center justify-between w-4/12  md:w-4/12 lg:w-2/12 gap-2 px-1 py-0.5 rounded-full z-10 relative bg-gray-200'>
         <div className='w-10 rounded-full overflow-hidden text-center aspect-square'>
             <img src={userIcon} alt="usericon" className='w-full h-full object-cover'/>
         </div>

@@ -36,7 +36,7 @@ const ColEightTable = ({ cols, data }) => {
           <tr>
             {cols.map((el, key) => {
               return (
-                <th scope="col" className="px-6 py-3 max-xl:px-3" key={key}>
+                <th scope="col" className={`px-6 py-3 max-xl:px-3 ${key == 7 ? 'text-right' : ''}`} key={key}>
                   {el}
                 </th>
               );
@@ -67,16 +67,18 @@ const ColEightTable = ({ cols, data }) => {
                     </div>
                   )}
                 </td>
-                <td className="px-6 py-4 text-2xl text-gray-400 flex">
-                  <button className="mr-2" onClick={() => openViewModal(el)}>
-                    <AiFillEye />
-                  </button>
-                  <button className="mr-2" onClick={() => openEditModal(el)}>
-                    <AiFillEdit />
-                  </button>
-                  <button onClick={handleDelete}>
-                    <MdDelete />
-                  </button>
+                <td className=" py-4 text-2xl text-gray-400">
+                  <div className="flex items-center justify-end">
+                    <button className="mr-2" onClick={() => openViewModal(el)}>
+                      <AiFillEye />
+                    </button>
+                    <button className="mr-2" onClick={() => openEditModal(el)}>
+                      <AiFillEdit />
+                    </button>
+                    <button onClick={handleDelete}>
+                      <MdDelete />
+                    </button>
+                  </div>
                 </td>
               </tr>
             );
