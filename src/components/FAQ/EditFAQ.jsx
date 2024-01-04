@@ -3,21 +3,21 @@ import { IoMdClose } from "react-icons/io";
 
 const EditFAQ = ({ faq, onClose }) => {
   const [editedFAQ, setEditedFAQ] = useState({
-    id: faq.id,
-    Description: faq.Description,
-    Answer: faq.Answer,
+    _id: faq._id,
+    q: faq.q,
+    a: faq.a,
   });
 
   const handleIdChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, id: event.target.value });
+    setEditedFAQ({ ...editedFAQ, _id: event.target.value });
   };
 
   const handleDescriptionChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, Description: event.target.value });
+    setEditedFAQ({ ...editedFAQ, q: event.target.value });
   };
 
   const handleAnswerChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, Answer: event.target.value });
+    setEditedFAQ({ ...editedFAQ, a: event.target.value });
   };
 
   return (
@@ -38,7 +38,7 @@ const EditFAQ = ({ faq, onClose }) => {
               <input
                 onChange={handleIdChange}
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={editedFAQ.id}
+                value={editedFAQ._id}
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -46,7 +46,7 @@ const EditFAQ = ({ faq, onClose }) => {
                 FAQ Description
               </label>
               <textarea
-                value={editedFAQ.Description}
+                value={editedFAQ.q}
                 onChange={handleDescriptionChange}
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               ></textarea>
@@ -56,7 +56,8 @@ const EditFAQ = ({ faq, onClose }) => {
                 FAQ Answer
               </label>
               <textarea
-                value={editedFAQ.Answer}
+              rows="10"
+                value={editedFAQ.a}
                 onChange={handleAnswerChange}
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               ></textarea>

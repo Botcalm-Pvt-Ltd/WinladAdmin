@@ -47,9 +47,9 @@ const FAQtable = ({ cols, data }) => {
                 className="border-b dark:border-gray-300"
                 key={key}
               >
-                <td className="px-6 py-4">{el.id}</td>
-                <td className="px-6 py-4">{el.Description}</td>
-                <td className="px-6 py-4">{el.Answer}</td>
+                <td className="px-6 py-4">{el._id}</td>
+                <td className="px-6 py-4">{el.q}</td>
+                <td className="px-6 py-4">{el.a}</td>
                 <td className="px-6 py-4 text-2xl text-gray-400 flex">
                   <button className="mr-2" onClick={() => openViewModal(el)}>
                     <AiFillEye />
