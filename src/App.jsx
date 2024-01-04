@@ -11,6 +11,7 @@ import Subscription from "./pages/Subscription/Subscription";
 import Settings from './pages/Settings/Settings';
 import DashboardLayout from "./pages/Layout/DashboardLayout";
 import Login from "./pages/login/Login";
+import RafflesRound from "./components/RafflesRound/RafflesRound";
 import { AuthProvider } from "./utils/AuthContext";
 import GiveawayManagement from "./pages/GiveawayManagement/GiveawayManagement";
 import FAQ from "./pages/FAQ/FAQ.jsx";
@@ -31,6 +32,7 @@ function App() {
             <Route path="subscription-management" element={<Subscription />} />
             <Route path="FAQ" element={<FAQ/>} />
             <Route path='settings' element={<Settings />} />
+            <Route path='RafflesRound' element={<RafflesRound />} />
           </Route>
           <Route path='login' element={<Login />} />
         </Routes>

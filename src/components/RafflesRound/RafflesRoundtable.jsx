@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { AiFillEdit, AiFillEye } from "react-icons/ai";
-import ViewFAQ from "./ViewFAQ";
-import EditFAQ from "./EditFAQ";
 import { MdDelete } from "react-icons/md";
+import ViewRafflesRound from "./ViewRafflesRound";
+import EditRafflesRound from "./EditRafflesRound";
 
-const FAQtable = ({ cols, data }) => {
+const RafflesRoundtable = ({ cols, data }) => {
   const [viewFAQ, setViewFAQ] = useState(null);
   const [editFAQ, setEditFAQ] = useState(null);
 
@@ -47,9 +47,11 @@ const FAQtable = ({ cols, data }) => {
                 className="border-b dark:border-gray-300"
                 key={key}
               >
-                <td className="px-6 py-4">{el._id}</td>
-                <td className="px-6 py-4">{el.q}</td>
-                <td className="px-6 py-4">{el.a}</td>
+                <td className="px-6 py-4">{el.name}</td>
+                <td className="px-6 py-4">{el.date}</td>
+                <td className="px-6 py-4">{el.type}</td>
+                <td className="px-6 py-4">{el.color}</td>
+                <td className="px-6 py-4">{el.image}</td>
                 <td className="px-6 py-4 text-2xl text-gray-400 flex">
                   <button className="mr-2" onClick={() => openViewModal(el)}>
                     <AiFillEye />
@@ -68,13 +70,13 @@ const FAQtable = ({ cols, data }) => {
         </tbody>
       </table>
       {viewFAQ && (
-        <ViewFAQ faq={viewFAQ} onClose={() => setViewFAQ(null)} />
+        <ViewRafflesRound faq={viewFAQ} onClose={() => setViewFAQ(null)} />
       )}
       {editFAQ && (
-        <EditFAQ faq={editFAQ} onClose={() => setEditFAQ(null)} />
+        <EditRafflesRound faq={editFAQ} onClose={() => setEditFAQ(null)} />
       )}
     </div>
   );
 };
 
-export default FAQtable;
+export default RafflesRoundtable;

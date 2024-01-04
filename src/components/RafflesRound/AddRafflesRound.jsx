@@ -1,35 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IoMdClose } from "react-icons/io";
-import { addApi } from "../../Api/Faq/addApi";
-import { useDispatch, useSelector } from "react-redux";
 
-const AddFAQ = ({ onClose }) => {
-  const dispatch = useDispatch();
-  const addFaq = useSelector((state) => state.faq.addFaq);
-  const [faqData, setFaqData] = useState({
-    id: "",
-    q: "",
-    a: "",
-  });
-  const handleAdd = (e) => {
-    e.preventDefault();
-    addApi({ data: faqData });
-  };
-
-const handleChange = (field, value) => {
-  setFaqData((prevData) => {
-    const newData = {
-      ...prevData,
-      [field]: value,
-    };
-    return newData;
-  });
-};
-
-useEffect(() => {
-  onClose();
-}, [addFaq]);
-  
+const AddRafflesRound = ({ onClose }) => {
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
@@ -46,46 +18,56 @@ useEffect(() => {
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ ID
+                Name
               </label>
               <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                id="id"
+                id="username"
                 type="text"
-                value={faqData.id}
-                onChange={(e) => handleChange("id", e.target.value)}
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ Description
+                Date
               </label>
-              <textarea
-                id="q"
-                rows="10"
+              <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faqData.q}
-                onChange={(e) => handleChange("q", e.target.value)}
-              ></textarea>
+                id="username"
+                type="text"
+              />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ Answer
+                Type
               </label>
-              <textarea
-                id="a"
-                rows="10"
+              <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faqData.a}
-                onChange={(e) => handleChange("a", e.target.value)}
-              ></textarea>
+                id="username"
+                type="text"
+              />
             </div>
-
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+                Color
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+                Image
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+              />
+            </div>
             <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-              <button
-                className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                onClick={(e) => handleAdd(e)}
-              >
+              <button className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 Save
               </button>
               <button
@@ -106,4 +88,4 @@ useEffect(() => {
   );
 };
 
-export default AddFAQ;
+export default AddRafflesRound;

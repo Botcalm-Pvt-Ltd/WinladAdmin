@@ -1,23 +1,31 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const EditFAQ = ({ faq, onClose }) => {
+const EditRafflesRound = ({ faq, onClose }) => {
   const [editedFAQ, setEditedFAQ] = useState({
-    _id: faq._id,
-    q: faq.q,
-    a: faq.a,
+    name: faq.name,
+    date: faq.date,
+    type: faq.type,
+    color: faq.color,
+    image: faq.image,
   });
 
-  const handleIdChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, _id: event.target.value });
+  const handleNameChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, name: event.target.value });
   };
 
-  const handleDescriptionChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, q: event.target.value });
+  const handleDateChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, date: event.target.value });
   };
 
-  const handleAnswerChange = (event) => {
-    setEditedFAQ({ ...editedFAQ, a: event.target.value });
+  const handleTypeChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, type: event.target.value });
+  };
+  const handleColorChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, color: event.target.value });
+  };
+  const handleImageChange = (event) => {
+    setEditedFAQ({ ...editedFAQ, image: event.target.value });
   };
 
   return (
@@ -33,36 +41,65 @@ const EditFAQ = ({ faq, onClose }) => {
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ ID
+              Name
               </label>
               <input
-                onChange={handleIdChange}
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={editedFAQ._id}
+                id="username"
+                type="text"
+                value={editedFAQ.name}
+                onChange={handleNameChange}
               />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ Description
+              Date
               </label>
-              <textarea
-                value={editedFAQ.q}
-                onChange={handleDescriptionChange}
+              <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              ></textarea>
+                id="username"
+                type="text"
+                value={editedFAQ.date}
+                onChange={handleDateChange}
+              />
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
-                FAQ Answer
+              Type
               </label>
-              <textarea
-              rows="10"
-                value={editedFAQ.a}
-                onChange={handleAnswerChange}
+              <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              ></textarea>
+                id="username"
+                type="text"
+                value={editedFAQ.type}
+                onChange={handleTypeChange}
+              />
             </div>
-
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              Color
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.color}
+                onChange={handleColorChange}
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              image
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                id="username"
+                type="text"
+                value={editedFAQ.image}
+                onChange={handleImageChange}
+              />
+            </div>
+            
             <div className="flex items-center justify-end py-6 border-t border-solid border-blueGray-200 rounded-b">
               <button className="text-white bg-black rounded-lg background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mb-1 ease-linear transition-all duration-150">
                 Save
@@ -85,4 +122,4 @@ const EditFAQ = ({ faq, onClose }) => {
   );
 };
 
-export default EditFAQ;
+export default EditRafflesRound;

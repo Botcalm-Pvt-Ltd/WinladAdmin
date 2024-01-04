@@ -36,6 +36,34 @@ const AddRaffles = ({ onClose }) => {
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-lg mb-2">
+              Starting time
+              </label>
+              <div className="w-full">
+                <Datepicker
+                  useRange={false}
+                  asSingle={true}
+                  value={value}
+                  onChange={handleValueChange}
+                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                />
+              </div>
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-lg mb-2">
+              End time
+              </label>
+              <div className="w-full">
+                <Datepicker
+                  useRange={false}
+                  asSingle={true}
+                  value={value}
+                  onChange={handleValueChange}
+                  inputClassName="shadow border rounded-lg ml-[-8px] w-[101%] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                />
+              </div>
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-lg mb-2">
                 Giveaway Category
               </label>
               <select

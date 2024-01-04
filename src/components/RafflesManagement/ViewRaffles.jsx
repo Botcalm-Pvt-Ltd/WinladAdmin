@@ -35,6 +35,26 @@ const ViewRaffles = ({ faq, onClose }) => {
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
               <label className="w-full block text-gray-700 text-xl mb-2">
+              Starting time
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                value={faq.startingtime}
+                readOnly
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
+              End time
+              </label>
+              <input
+                className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                value={faq.endtime}
+                readOnly
+              />
+            </div>
+            <div className="w-full mb-4 flex justify-between items-center gap-20">
+              <label className="w-full block text-gray-700 text-xl mb-2">
               Giveaway Category
               </label>
               <input

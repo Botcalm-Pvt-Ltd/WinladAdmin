@@ -59,6 +59,12 @@ const Rafflestable = ({ cols, data }) => {
                                         {el.name}
                                     </td>
                                     <td className="px-6 py-4">
+                                        {el.startingtime}
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        {el.endtime}
+                                    </td>
+                                    <td className="px-6 py-4">
                                         {el.category}
                                     </td>
                                     <td className="px-6 py-4">
