@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { AiFillEdit, AiFillEye, AiOutlineDown } from "react-icons/ai";
+import { AiFillEye } from "react-icons/ai";
+import { FaRegEdit } from "react-icons/fa";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import UserDetailViewComponent from "../UserDetailView/UserDetailViewComponent";
 import EditUser from "../../components/UserManagementComponent/EditUser";
 import ViewUser from "../../components/UserManagementComponent/ViewUser";
@@ -30,13 +32,19 @@ const ColEightTable = ({ cols, data }) => {
     });
 
   return (
-    <div>
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
-        <thead className="text-xs text-gray-7=600 capitalize bg-white">
+    <div className="px-5 overflow-hidden">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+        <thead className="text-sm text-gray-600 capitalize bg-white border-b dark:border-gray-300">
           <tr>
             {cols.map((el, key) => {
               return (
-                <th scope="col" className={`px-6 py-3 max-xl:px-3 ${key == 7 ? 'text-right' : ''}`} key={key}>
+                <th
+                  scope="col"
+                  className={`px-6 py-3 max-xl:px-3 ${
+                    key == 8 ? "text-right" : ""
+                  }`}
+                  key={key}
+                >
                   {el}
                 </th>
               );
@@ -47,36 +55,39 @@ const ColEightTable = ({ cols, data }) => {
           {data.map((el, key) => {
             return (
               <tr
-                className="odd:bg-white  border-b dark:border-gray-300"
+                className="bg-white  border-b dark:border-gray-300 hover:bg-[#F2F8FF]"
                 key={key}
               >
                 <td className="px-6 py-4 max-xl:px-3">{el.id}</td>
                 <td className="px-6 py-4 max-xl:px-3">{el.name}</td>
-                <td className="px-6 py-4 max-xl:px-3">{el.vlevel}</td>
                 <td className="px-6 py-4 max-xl:px-3">{el.role}</td>
-                <td className="px-6 py-4 max-xl:px-3">{el.email}</td>
-                <td className="px-6 py-4 max-xl:px-3">{el.passport}</td>
-                <td className="px-6 py-4 max-xl:px-3">
+                <td className="px-6 py-4 max-xl:px-3">{el.UType}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.NIC}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.MNumber}</td>
+                <td className="px-6 py-4 max-xl:px-3">{el.SPlan}</td>
+                <td className="px-6 py-4 max-xl:px-3 pl-0">
                   {el.status == "Active" ? (
-                    <div className="px-3 py-2 rounded-md border border-1 border-green-400 bg-green-200 w-20 text-center">
-                      Active
+                    <div className="px-3 py-2 rounded-full bg-green-100/60 w-24 text-center flex justify-center items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <h1 className="text-green-700">Active</h1>
                     </div>
                   ) : (
-                    <div className="px-3 py-2 rounded-md border border-1 border-red-400 bg-red-200 w-20 text-center">
-                      Inactive
+                    <div className="px-3 py-2 rounded-full bg-red-100/60 w-24 text-center flex justify-center items-center gap-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <h1 className="text-red-700">Inactive</h1>
                     </div>
                   )}
                 </td>
                 <td className=" py-4 text-2xl text-gray-400">
-                  <div className="flex items-center justify-end">
+                  <div className="flex items-center justify-end pr-5">
                     <button className="mr-2" onClick={() => openViewModal(el)}>
                       <AiFillEye />
                     </button>
                     <button className="mr-2" onClick={() => openEditModal(el)}>
-                      <AiFillEdit />
+                      <FaRegEdit className="w-5"/>
                     </button>
                     <button onClick={handleDelete}>
-                      <MdDelete />
+                      <RiDeleteBin6Line className="w-5"/>
                     </button>
                   </div>
                 </td>

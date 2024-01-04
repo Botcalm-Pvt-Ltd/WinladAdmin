@@ -23,34 +23,31 @@ const Ticked = () => {
   );
 };
 
-const RadioSelect = () => {
+const RadioSubscription = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option === selectedOption ? null : option);
   };
   return (
-    <div className="">
-    <div className="flex justify-start font-bold pb-50 py-10 text-black">
-    Gateway URL Method
-    </div>
     <div className="flex flex-col gap-5">
-      {[
-        { label: "Get", key: "Get" },
-        { label: "Post", key: "Post" },
-      ].map((option) => (
-        <div
-          key={option.key}
-          className="flex justify-start items-center gap-5"
-          onClick={() => handleOptionClick(option.key)}
-        >
-          {selectedOption === option.key ? <Ticked /> : <div className="Tick cursor-pointer"></div>}
-          <span className="text-black">{option.label}</span>
-        </div>
-      ))}
+      {[{ label: "Subscription Method", key: "Subscription Method" }].map(
+        (option) => (
+          <div
+            key={option.key}
+            className="flex justify-start items-center gap-5"
+            onClick={() => handleOptionClick(option.key)}
+          >
+            {selectedOption === option.key ? (
+              <Ticked />
+            ) : (
+              <div className="Tick cursor-pointer"></div>
+            )}
+            <span className="text-black">{option.label}</span>
+          </div>
+        )
+      )}
     </div>
-  </div>
-);
+  );
 };
-
-export default RadioSelect;
+export default RadioSubscription;

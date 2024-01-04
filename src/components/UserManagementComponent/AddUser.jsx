@@ -1,11 +1,10 @@
 import { useState } from "react";
-import vector from '../../assets/UserManagement/vector.png'
+import vector from "../../assets/UserManagement/vector.png";
 import { IoMdClose } from "react-icons/io";
+import ModelInputField from "../ModelInputField";
+import ModelFilterField from "../ModelFilterField";
 
 function AddUser({ onClose }) {
-
-
-
   const [formData, setFormData] = useState({
     userId: "",
     userName: "",
@@ -20,22 +19,28 @@ function AddUser({ onClose }) {
     setFormData({ ...formData, [name]: value });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
   return (
-    <div className=" subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">
+    <div className="subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
-        <div className="rounded-3xl shadow-2xl relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF] px-10 py-6">
-          <div className='absolute top-3 right-3 cursor-pointer text-xl' onClick={()=>onClose()}>
+        <div className="rounded-3xl shadow-2xl relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF] px-10 pt-6">
+          <h1 className="text-xl px-3 mb-5 font-semibold text-black">
+            User Management
+          </h1>
+
+          <div
+            className="absolute top-3 right-3 cursor-pointer text-xl"
+            onClick={() => onClose()}
+          >
             <IoMdClose />
           </div>
-          <form onSubmit={handleSubmit} className="">
+          <form onSubmit={handleSubmit} className="relative bottom-16">
             <div className="flex flex-col gap-2 justify-center items-center ">
-              <img src={vector} alt="vector" />
+              <img src={vector} alt="vector" className="w-20" />
               <input id="imageUpload" type="file" className="hidden" />
               <label htmlFor="imageUpload" className="cursor-pointer absolute">
                 <svg
@@ -59,7 +64,7 @@ function AddUser({ onClose }) {
               </label>
             </div>
 
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
+            {/* <div className="w-full mb-4 flex justify-between items-center gap-20 relative">
               <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
                 User ID:
               </label>
@@ -96,7 +101,6 @@ function AddUser({ onClose }) {
                 <option value="">Select User Role</option>
                 <option value="admin">Admin</option>
                 <option value="user">User</option>
-                {/* Add more options as needed */}
               </select>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -112,7 +116,6 @@ function AddUser({ onClose }) {
                 <option value="">Select User Type</option>
                 <option value="admin">Verified</option>
                 <option value="user">UnVerified</option>
-                {/* Add more options as needed */}
               </select>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -138,8 +141,43 @@ function AddUser({ onClose }) {
                 onChange={handleChange}
                 className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               />
+            </div> */}
+            <div>
+              <div className="flex gap-10">
+                <ModelInputField label={"User Id"} />
+                <ModelInputField label={"User Name"} />
+              </div>
+              <div className="flex gap-10">
+                <ModelFilterField label={"User Id"} />
+                <ModelFilterField label={"User Name"} />
+              </div>
+              <div className="flex gap-10">
+                <ModelInputField label={"NIC"} />
+                <ModelInputField label={"User Email"} />
+              </div>
+              <div>
+                <ModelInputField label={"Postal Address"} />
+              </div>
+              <div className="flex gap-10">
+                <ModelInputField label={"Date Of Birth (MM/DD/YYYY)"} />
+                <ModelInputField label={"Mobile Number"} />
+                <ModelInputField label={"License Number"} />
+              </div>
+              <div className="flex gap-10">
+                <ModelInputField label={"Referral ID"} />
+                <ModelInputField label={"TIN"} />
+              </div>
+              <div className="flex gap-10">
+                <ModelFilterField label={"Subscription Plan"} />
+                <ModelInputField label={"Earning Balance"} />
+              </div>
             </div>
-            <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">
+            <div className="flex justify-end items-end flex-col flex-1 gap-5 text-right relative top-5">
+              <button className="text-white bg-black rounded-xl py-2 ml-auto w-1/6">
+                Save
+              </button>
+            </div>
+            {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">
               <button
                 className="text-white bg-black rounded-lg background-transparent font-bold uppercase xl:px-6 px-3  py-2 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover-up"
                 type="submit"
@@ -156,7 +194,7 @@ function AddUser({ onClose }) {
               >
                 Close
               </button>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
