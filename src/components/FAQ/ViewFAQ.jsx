@@ -7,10 +7,13 @@ const ViewFAQ = ({ faq, onClose }) => {
       <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none bg-white bg-opacity-50">
         <div className="relative w-full max-w-screen-xl mx-auto flex items-center justify-center">
           <div className="border-0 rounded-3xl shadow-2xl relative flex flex-col w-full outline-none focus:outline-none bg-white px-10">
-          <div className='absolute top-6 right-5 cursor-pointer text-xl' onClick={() => onClose()}>
-            <IoMdClose />
-          </div>
-          <div className="flex justify-center">
+            <div
+              className="absolute top-6 right-5 cursor-pointer text-xl"
+              onClick={() => onClose()}
+            >
+              <IoMdClose />
+            </div>
+            <div className="flex justify-center">
               <h1 className="text-xl py-5">View FAQ</h1>
             </div>
             <div className="w-full mb-4 flex justify-between items-center gap-20">
@@ -19,7 +22,7 @@ const ViewFAQ = ({ faq, onClose }) => {
               </label>
               <input
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-                value={faq.id}
+                value={faq._id}
                 readOnly
               />
             </div>
@@ -28,7 +31,7 @@ const ViewFAQ = ({ faq, onClose }) => {
                 FAQ Description
               </label>
               <textarea
-                value={faq.Description}
+                value={faq.q}
                 readOnly
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               ></textarea>
@@ -38,7 +41,8 @@ const ViewFAQ = ({ faq, onClose }) => {
                 FAQ Answer
               </label>
               <textarea
-                value={faq.Answer}
+                rows="10"
+                value={faq.a}
                 readOnly
                 className="shadow  border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
               ></textarea>
