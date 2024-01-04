@@ -1,5 +1,5 @@
 import styles from "./sidenav.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { navData } from "../../lib/navdata";
@@ -7,8 +7,13 @@ import { useEffect, useState } from "react";
 import Logohome from "../../assets/SideNav/main_logo.png";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useAuth } from "../../utils/AuthContext";
+
 export default function Sidenav() {
   const [open, setopen] = useState(true);
+  const {logout} = useAuth();
+  const navigate = useNavigate();
+  const [selectedNav, setSelectedNav] = useState(0);
   // State to manage visibility of each submenu
   const [subMenuVisibility, setSubMenuVisibility] = useState({});
   const toggleOpen = () => {
@@ -21,6 +26,10 @@ export default function Sidenav() {
       [itemId]: !prevVisibility[itemId],
     }));
   };
+  const handleLogout = ()=>{
+    logout();
+    
+  }
 
   // useEffect to reset submenu visibility when sidebar is closed
   useEffect(() => {
@@ -56,7 +65,7 @@ export default function Sidenav() {
                 </div>
               </NavLink>
               {subMenuVisibility[item.id] && item.subnav.map((sub) => (
-                <NavLink key={sub.id} to={sub.link} className={styles.subitem}>
+                <NavLink key={sub.id} to={sub.link} className={`${styles.subitem} ${selectedNav === sub.id ? 'bg-gray-600' : ''} `} onClick={()=>setSelectedNav(sub.id)}>
                   {sub.icon}
                   <span className={styles.linkText}>{sub.text}</span>
                 </NavLink>
@@ -65,7 +74,7 @@ export default function Sidenav() {
           );
         } else {
           return (
-            <NavLink key={item.id} className={styles.sideitem} to={item.link}>
+            <NavLink key={item.id} className={`${styles.sideitem} ${selectedNav === item.id ? 'bg-gray-400' : ''}`} to={item.link} onClick={()=>setSelectedNav(item.id)}>
               {item.icon}
               <span className={styles.linkText}>{item.text}</span>
             </NavLink>
@@ -73,7 +82,7 @@ export default function Sidenav() {
         }
       })}
 
-      <NavLink className={`${styles.sideitem} mt-10`} to="">
+      <NavLink className={`${styles.sideitem} mt-10`} onClick={handleLogout}>
         <LogoutOutlinedIcon />
         <span className={styles.linkText}>Sign Out</span>
       </NavLink>
