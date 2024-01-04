@@ -1,42 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
+
+const Ticked = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="18"
+        height="18"
+        rx="9"
+        stroke="#0A7AFF"
+        strokeWidth="2"
+      />
+      <rect x="5" y="5" width="10" height="10" rx="5" fill="#0A7AFF" />
+    </svg>
+  );
+};
 
 const PaymentSwitch = () => {
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleOptionClick = (option) => {
+    setSelectedOptions((prevSelectedOptions) => {
+      if (prevSelectedOptions.includes(option)) {
+        return prevSelectedOptions.filter((selected) => selected !== option);
+      } else {
+        return [...prevSelectedOptions, option];
+      }
+    });
+  };
+
   return (
-    <div className="flex flex-col flex-1 py-4 gap-5">
-      <div className="bg-gray-200 rounded-3xl p-6">
-        <div className="flex justify-center pb-5  text-black">
-          Payment Type
-        </div>
-        <div className="flex flex-col gap-5">
-          <div className="flex justify-between items-center">
-            <span className=" text-black">Card Payment</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" value="" className="sr-only peer" />
-              <div className="w-11 h-6 bg-gray-400 peer-focus:outline-none peer-focus:ring-0 rounded-full peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-black peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#7FFF6F] peer-checked:shadow-none"></div>
-            </label>
+    <div className="">
+      <div className="flex justify-start font-bold pb-5 text-black">
+        Payment Type
+      </div>
+      <div className="flex flex-col gap-5">
+        {[
+          { label: "Card Payment", key: "card" },
+          { label: "Crypto Payment", key: "crypto" },
+          { label: "Local Diestel", key: "local" },
+          { label: "Wallet Payment", key: "wallet" },
+        ].map((option) => (
+          <div
+            key={option.key}
+            className="flex justify-start items-center gap-5"
+            onClick={() => handleOptionClick(option.key)}
+          >
+            {selectedOptions.includes(option.key) ? (
+              <Ticked />
+            ) : (
+              <div className="Tick cursor-pointer"></div>
+            )}
+            <span className="text-black">{option.label}</span>
           </div>
-          <div className="flex justify-between items-center">
-            <span className=" text-black">Crypto Payment</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" value="" className="sr-only peer" />
-              <div className="w-11 h-6 bg-gray-400 peer-focus:outline-none peer-focus:ring-0 rounded-full peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-black peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#7FFF6F] peer-checked:shadow-none"></div>
-            </label>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className=" text-black">Local Diestel</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" value="" className="sr-only peer" />
-              <div className="w-11 h-6 bg-gray-400 peer-focus:outline-none peer-focus:ring-0 rounded-full peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-black peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#7FFF6F] peer-checked:shadow-none"></div>
-            </label>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className=" text-black">Wallet Payment</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" value="" className="sr-only peer" />
-              <div className="w-11 h-6 bg-gray-400 peer-focus:outline-none peer-focus:ring-0 rounded-full peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-black peer-checked:after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#7FFF6F] peer-checked:shadow-none"></div>
-            </label>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

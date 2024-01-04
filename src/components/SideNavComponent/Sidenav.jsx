@@ -57,8 +57,8 @@ export default function Sidenav() {
       {navData.map((item) => {
         if (item.subnav) {
           return (
-            <>
-              <NavLink key={item.id} className={styles.sideitem} onClick={() => toggleSubMenu(item.id)}>{item.icon}
+            <div key={item.id}>
+              <NavLink className={styles.sideitem} onClick={() => toggleSubMenu(item.id)}>{item.icon}
                 <span className={styles.linkText}>{item.text}</span>
                 <div className="ml-auto">
                   {open &&<FaChevronDown  className={`transform transition-[500]  ${subMenuVisibility[item.id] ? 'rotate-180' : 'rotate-0'} `}/>}
@@ -70,7 +70,7 @@ export default function Sidenav() {
                   <span className={styles.linkText}>{sub.text}</span>
                 </NavLink>
               ))}
-            </>
+           </div>
           );
         } else {
           return (

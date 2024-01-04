@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .hover-up {
   transition: transform 0.3s ease; /* You can adjust the duration and easing as needed */
 }
 
 .hover-up:hover {
-  transform: translateY(-5px); /* Adjust the value to control how much it moves up */
+  transform: translateY(
+    -5px
+  ); /* Adjust the value to control how much it moves up */
+}
+.Tick {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 2px solid var(--System-Grey-Dark-SG-D-2, #636366);
 }
