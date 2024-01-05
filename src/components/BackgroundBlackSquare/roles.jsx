@@ -3,25 +3,31 @@ import hiddenCar from "../../assets/hiddenCar.png";
 
 const Role = ({ setRole, roleValue,typeValue, setType }) => {
   return (
-    <div className="absolute top-0 right-0 rounded-bl-3xl rounded-br-3xl lg:w-1/2	 md:h-2/6  h-2/6 lg:h-1/2">
-      <div className="flex flex-row gap-10 px-5 mt-10">
+      <div className="w-full flex gap-10">
+        <div className="w-[30%] self-start flex justify-end items-end">
+
         <select
           name="filter"
-          className="bg-gray-200 px-3 py-2 rounded-lg   xl:w-1/2  w-1/4  text-center  outline-none "
+          className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
           placeholder="User Portal"
           value={roleValue}
+          id="sel"
           onChange={(e) => setRole(e.target.value)}
-        >
+          >
           {/* <option value="">User Portal</option> */}
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
+          <option value="user" className="4xl:text-sm w-20">User</option>
+          <option value="admin" className="4xl:text-sm">Admin</option>
         </select>
+          </div>
+        <div className="w-[30%] self-start flex justify-end items-end">
+
+
         <select
           name="For"
           value={typeValue}
           onChange={(e)=> setType(e.target.value)}
-          className="bg-gray-200 px-3 py-2 rounded-lg  xl:w-1/2  w-1/4  text-center  outline-none"
-        >
+          className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
+          >
           {
             roleValue == 'user' ? <>
               <option value="level01">Level 01 Verified User</option>
@@ -35,18 +41,21 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
 
 
         </select>
+          </div>
+          <div className="w-[30%] self-start flex justify-end items-end">
 
         <select
           name="Group"
-          className="bg-gray-200 px-3 py-2 rounded-lg   xl:w-1/2  w-1/4  text-center  outline-none"
+          className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
         >
           <option value="">Group</option>
           <option value="">Verified</option>
           <option value="">Unverifed</option>
         </select>
       </div>
-      {/* <img src={hiddenCar} className="w-50 mt-auto absolute bottom-0 left-0" /> */}
-    </div>
+      <div className="w-[10%] self-start flex justify-end items-end"></div>
+
+      </div>
   );
 };
 
