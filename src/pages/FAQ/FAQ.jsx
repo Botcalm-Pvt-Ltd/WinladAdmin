@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Pagination from "../Pagination";
+import Pagination from "../../components/Pagination";
 import { PiMagnifyingGlassThin } from "react-icons/pi";
-import AddFAQ from "./AddFAQ";
-import FAQtable from "./FAQtable";
+import AddFAQ from "../../components/FAQ/AddFAQ";
+import FAQtable from "../../components/FAQ/FAQtable";
 import { getApi } from "../../Api/Faq/getApi";
 import { useDispatch, useSelector } from "react-redux";
-import { PiMagnifyingGlassThin } from "react-icons/pi";
-import Pagination from "../../components/Pagination";
-import FAQtable from "../../components/FAQ/FAQtable";
-import AddFAQ from "../../components/FAQ/AddFAQ";
 
 const FAQ = () => {
   const dispatch = useDispatch();
