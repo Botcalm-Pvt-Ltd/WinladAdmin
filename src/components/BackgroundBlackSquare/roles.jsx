@@ -1,11 +1,11 @@
 import hiddenCar from "../../assets/hiddenCar.png";
+import Select from "../Select";
 
-
-const Role = ({ setRole, roleValue,typeValue, setType }) => {
+const Role = ({ setRole, roleValue, typeValue, setType }) => {
   return (
-      <div className="w-full flex gap-10">
-        <div className="w-[30%] self-start flex justify-end items-end">
-
+    <div className="w-full flex gap-10 max-xl:gap-3">
+      <div className="w-full">
+        {/* 
         <select
           name="filter"
           className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
@@ -14,48 +14,50 @@ const Role = ({ setRole, roleValue,typeValue, setType }) => {
           id="sel"
           onChange={(e) => setRole(e.target.value)}
           >
-          {/* <option value="">User Portal</option> */}
           <option value="user" className="4xl:text-sm w-20">User</option>
           <option value="admin" className="4xl:text-sm">Admin</option>
-        </select>
-          </div>
-        <div className="w-[30%] self-start flex justify-end items-end">
-
-
-        <select
-          name="For"
-          value={typeValue}
-          onChange={(e)=> setType(e.target.value)}
-          className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
-          >
-          {
-            roleValue == 'user' ? <>
-              <option value="level01">Level 01 Verified User</option>
-              <option value="level02">Level 02 Verified User</option>
-            </> : <>
-              <option value="admin">Admin Application</option>
-              <option value="super-admin">Super Admin Application</option>
-            </>
+        </select> */}
+        <Select
+          options={[
+            { id: "user", name: "User" },
+            { id: "admin", name: "Admin" },
+          ]}
+          defaultSelected={{
+            id: roleValue,
+            name: roleValue === "user" ? "User" : "Admin",
+          }}
+          onChange={(value) => setRole(value.id)}
+        />
+      </div>
+      <div className="w-full">
+        <Select
+          options={
+            roleValue === "user"
+              ? [
+                  { id: "level01", name: "Level 01 Verified User" },
+                  { id: "level02", name: "Level 02 Verified User" },
+                ]
+              : [
+                  { id: "admin", name: "Admin Application" },
+                  { id: "super-admin", name: "Super Admin Application" },
+                ]
           }
-
-
-
-        </select>
-          </div>
-          <div className="w-[30%] self-start flex justify-end items-end">
-
-        <select
-          name="Group"
-          className="bg-white px-3 py-3 rounded-lg ring-2 ring-gray-300 w-full text-gray-500 4xl:py-5 4xl:text-2xl"
-        >
-          <option value="">Group</option>
-          <option value="">Verified</option>
-          <option value="">Unverifed</option>
-        </select>
+          defaultSelected={{ id: typeValue, name: typeValue }}
+          onChange={(value) => setType(value.id)}
+        />
       </div>
-      <div className="w-[10%] self-start flex justify-end items-end"></div>
-
+      <div className="w-full">
+        <Select
+          options={[
+            { id: "Group", name: "Group" },
+            { id: "verified", name: "Verified" },
+            { id: "unverified", name: "Unverified" },
+          ]}
+          defaultSelected={{ id: "Group", name: "Group" }}
+        />
       </div>
+      <div className="w-[30%] max-xl:w-0 self-start flex justify-end items-end"></div>
+    </div>
   );
 };
 

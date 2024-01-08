@@ -4,6 +4,62 @@ import { IoMdClose } from "react-icons/io";
 import ModelInputField from "../ModelInputField";
 import ModelFilterField from "../ModelFilterField";
 
+const FilterUserId = [
+  {
+    id: 1,
+    name: "User Id 1",
+  },
+  {
+    id: 2,
+    name: "User Id 2",
+  },
+  {
+    id: 3,
+    name: "User Id 3",
+  },
+  {
+    id: 4,
+    name: "User Id 4",
+  },
+];
+
+const FilterUserName = [
+  {
+    id: 1,
+    name: "User Name 1",
+  },
+  {
+    id: 2,
+    name: "User Name 2",
+  },
+  {
+    id: 3,
+    name: "User Name 3",
+  },
+  {
+    id: 4,
+    name: "User Name 4",
+  },
+];
+
+const SubscriptionPlan = [
+  {
+    id: 1,
+    name: "Subscription Plan 1",
+  },
+  {
+    id: 2,
+    name: "Subscription Plan 2",
+  },
+  {
+    id: 3,
+    name: "Subscription Plan 3",
+  },
+  {
+    id: 4,
+    name: "Subscription Plan 4",
+  },
+];
 function AddUser({ onClose }) {
   const [formData, setFormData] = useState({
     userId: "",
@@ -21,28 +77,28 @@ function AddUser({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
+
   return (
     <div className="subCard fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none  bg-opacity-50  bg-white">
       <div className="relative w-full mx-auto flex items-center justify-center  ">
         <div className="rounded-3xl shadow-2xl relative flex flex-col xl:w-1/2 w-3/4  outline-none focus:outline-none bg-[#FFFFFF] px-10 pt-6">
-          <h1 className="text-xl px-3 mb-5 font-semibold text-black">
-            User Management
+          <h1 className="text-xl px-3 mb-5 font-semibold text-black 4xl:text-5xl">
+            Add User
           </h1>
 
           <div
             className="absolute top-3 right-3 cursor-pointer text-xl"
             onClick={() => onClose()}
           >
-            <IoMdClose />
+            <IoMdClose className="4xl:w-10 4xl:h-10"/>
           </div>
           <form onSubmit={handleSubmit} className="relative bottom-16">
             <div className="flex flex-col gap-2 justify-center items-center ">
-              <img src={vector} alt="vector" className="w-20" />
+              <img src={vector} alt="vector" className="w-20 4xl:w-40" />
               <input id="imageUpload" type="file" className="hidden" />
-              <label htmlFor="imageUpload" className="cursor-pointer absolute">
+              <label htmlFor="imageUpload" className="cursor-pointer absolute 4xl:scale-150">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -63,93 +119,14 @@ function AddUser({ onClose }) {
                 </svg>
               </label>
             </div>
-
-            {/* <div className="w-full mb-4 flex justify-between items-center gap-20 relative">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                User ID:
-              </label>
-              <input
-                type="text"
-                name="userId"
-                value={formData.userId}
-                onChange={handleChange}
-                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                User Name:
-              </label>
-              <input
-                type="text"
-                name="userName"
-                value={formData.userName}
-                onChange={handleChange}
-                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                User Role:
-              </label>
-              <select
-                name="userRole"
-                value={formData.userRole}
-                onChange={handleChange}
-                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              >
-                <option value="">Select User Role</option>
-                <option value="admin">Admin</option>
-                <option value="user">User</option>
-              </select>
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                User Type:
-              </label>
-              <select
-                name="userType"
-                value={formData.userType}
-                onChange={handleChange}
-                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              >
-                <option value="">Select User Type</option>
-                <option value="admin">Verified</option>
-                <option value="user">UnVerified</option>
-              </select>
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                NIC:
-              </label>
-              <input
-                type="text"
-                name="nic"
-                value={formData.passport}
-                onChange={handleChange}
-                className="shadow  rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              />
-            </div>
-            <div className="w-full mb-4 flex justify-between items-center gap-20">
-              <label className="w-full block text-gray-700 xl:text-xl text-md mb-2">
-                Email:
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="shadow   rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
-              />
-            </div> */}
             <div>
               <div className="flex gap-10">
                 <ModelInputField label={"User Id"} />
                 <ModelInputField label={"User Name"} />
               </div>
               <div className="flex gap-10">
-                <ModelFilterField label={"User Id"} />
-                <ModelFilterField label={"User Name"} />
+                <ModelFilterField options={FilterUserId} placeholder="User Role"/>
+                <ModelFilterField options={FilterUserName} placeholder="User Type"/>
               </div>
               <div className="flex gap-10">
                 <ModelInputField label={"NIC"} />
@@ -168,33 +145,15 @@ function AddUser({ onClose }) {
                 <ModelInputField label={"TIN"} />
               </div>
               <div className="flex gap-10">
-                <ModelFilterField label={"Subscription Plan"} />
+                <ModelFilterField options={SubscriptionPlan} placeholder="Subscription Plan"/>
                 <ModelInputField label={"Earning Balance"} />
               </div>
             </div>
             <div className="flex justify-end items-end flex-col flex-1 gap-5 text-right relative top-5">
-              <button className="text-white bg-black rounded-xl py-2 ml-auto w-1/6">
+              <button className="text-white bg-black rounded-xl py-2 ml-auto w-1/6 4xl:w-1/12 4xl:py-4 4xl:text-4xl max-xl:w-full">
                 Save
               </button>
             </div>
-            {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-3">
-              <button
-                className="text-white bg-black rounded-lg background-transparent font-bold uppercase xl:px-6 px-3  py-2 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover-up"
-                type="submit"
-              >
-                Save
-              </button>
-
-              <button
-                className="text-white bg-black rounded-lg background-transparent  font-bold uppercase xl:px-6 px-3  py-2 text-xs outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover-up"
-                type="button"
-                onClick={() => {
-                  onClose();
-                }}
-              >
-                Close
-              </button>
-            </div> */}
           </form>
         </div>
       </div>

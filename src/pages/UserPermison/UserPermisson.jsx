@@ -28,12 +28,11 @@ function UserPermisson() {
     setRole(value);
   };
   return (
-    <>
-      <div className="px-10 pb-5 4xl:text-4xl 4xl:pb-10">
+    <div className="px-10 max-xl:mt-5">
+      <div className="pb-5 text-xl 4xl:text-6xl font-semibold 4xl:pb-10">
         User Permissions Management
       </div>
-        <div className="w-full flex gap-10 px-10">
-          <div className="w-full self-start flex justify-end items-end">
+          <div className="w-full">
             <Role
             setRole={handleRoleChange}
             roleValue={role}
@@ -41,16 +40,15 @@ function UserPermisson() {
             typeValue={typeValue}
           />
           </div>
-        </div>
-        <div className="w-full pt-5 px-10 z-20">
+        <div className="w-full pt-5 z-20">
         <RadioUserPermisson typeValue={typeValue} roleValue={role} />
         </div>
-        <div className="absolute right-10 bottom-14 w-20 z-10">
-          <button className="text-white bg-black rounded-xl py-2 ml-auto w-full">
+        <div className="absolute right-10 bottom-14 w-20 z-10 4xl:w-40">
+          <button className="text-white bg-black rounded-xl py-2 ml-auto w-full 4xl:text-4xl 4xl:py-4">
             Save
           </button>
         </div>
-    </>
+    </div>
   );
 }
 

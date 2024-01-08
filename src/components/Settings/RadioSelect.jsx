@@ -31,10 +31,10 @@ const RadioSelect = () => {
   };
   return (
     <div className="">
-    <div className="flex justify-start font-bold pb-50 py-10 text-black">
+    <div className="flex justify-start font-bold pb-50 py-10 text-black 4xl:text-3xl">
     Gateway URL Method
     </div>
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 4xl:text-3xl">
       {[
         { label: "Get", key: "Get" },
         { label: "Post", key: "Post" },

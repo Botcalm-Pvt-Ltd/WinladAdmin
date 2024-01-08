@@ -68,14 +68,14 @@ const DragFile = () => {
           id="fileField"
         />
         <button className="text-2xl">
-          <FiUpload />
+          <FiUpload className="4xl:w-10 4xl:h-10 max-xl:w-5 max-xl:h-5"/>
         </button>
         <br />
-        <label className="text-center text-black" htmlFor="fileField">
+        <label className="text-center text-black 4xl:text-3xl max-xl:text-sm" htmlFor="fileField">
           Drag and drop files
         </label>
         <br />
-        <button className="px-4 py-2 bg-black text-white rounded-lg mt-2">
+        <button className="px-4 py-2 bg-black text-white rounded-lg mt-2 4xl:text-3xl max-xl:text-sm">
           Browse
         </button>
       </div>

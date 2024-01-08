@@ -30,7 +30,7 @@ const RadioSubscription = () => {
     setSelectedOption(option === selectedOption ? null : option);
   };
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 4xl:text-3xl">
       {[{ label: "Subscription Method", key: "Subscription Method" }].map(
         (option) => (
           <div

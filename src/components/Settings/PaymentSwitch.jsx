@@ -38,10 +38,10 @@ const PaymentSwitch = () => {
 
   return (
     <div className="">
-      <div className="flex justify-start font-bold pb-5 text-black">
+      <div className="flex justify-start font-bold pb-5 text-black 4xl:text-4xl">
         Payment Type
       </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 4xl:text-3xl">
         {[
           { label: "Card Payment", key: "card" },
           { label: "Crypto Payment", key: "crypto" },
